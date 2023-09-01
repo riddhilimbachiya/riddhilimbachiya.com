@@ -1,6 +1,8 @@
-import './globals.css';
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
+
+import './globals.css';
+import Header from '@/components/layout/header';
 
 const raleway = Raleway({ subsets: ['latin'] });
 
@@ -15,7 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={raleway.className}>{children}</body>
+      <body
+        className={`${raleway.className} flex justify-center w-full flex-col`}>
+        <Header />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
