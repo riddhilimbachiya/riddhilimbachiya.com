@@ -1,4 +1,5 @@
 import { twMerge } from 'tailwind-merge';
+
 interface TypographyProps extends React.HTMLAttributes<HTMLHeadingElement> {
   variant: string;
   component?: string;
@@ -11,7 +12,7 @@ type KeyValuePairProps = {
 const variantsMapping: KeyValuePairProps = {
   h1: 'text-5xl tracking-[-0.3px] font-medium sm:text-3xl font-medium text-gray-900',
   h2: 'text-base tracking-[2.4px] font-bold',
-  h3: 'text-2x; tracking-[0.4px] font-semibold',
+  h3: 'text-2xl tracking-[0.4px] font-semibold',
   body1: 'text-base text-gray-900',
   body2: 'text-xs text-gray-900',
 };
@@ -36,7 +37,6 @@ const Typography = ({
   const Comp = (
     component ? component : variant ? elementMapping[variant] : 'p'
   ) as ComponentElement;
-  console.log(twMerge(variantsMapping[variant], className), 'hello');
   return (
     <Comp className={twMerge(variantsMapping[variant], className)} {...props}>
       {children}

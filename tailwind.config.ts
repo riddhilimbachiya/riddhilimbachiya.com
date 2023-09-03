@@ -9,10 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        custom: {
-          purple: '#E4DBEA',
-          red: '#EAC7C7',
-        },
+        purple: '#E4DBEA',
+        red: '#EAC7C7',
       },
     },
   },
