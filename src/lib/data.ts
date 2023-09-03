@@ -11,6 +11,12 @@ import LogoFigma from '/public/icons/icon-figma.svg';
 import LogoStorybook from '/public/icons/icon-storybook.svg';
 import LogoCypress from '/public/icons/icon-cypress.svg';
 
+import LogoFiskil from '/public/icons/logo-fiskil.svg';
+import LogoShosho from '/public/icons/logo-shosho.svg';
+import LogoAccenture from '/public/icons/logo-accenture.svg';
+import LogoLantern from '/public/icons/logo-lantern.svg';
+import LogoGreenApex from '/public/icons/logo-greenapex.svg';
+
 import ProjectFiskil from '/public/images/project-fiskil.png';
 import ProjectScraye from '/public/images/project-scraye.png';
 import ProjectLantern from '/public/images/project-lantern.png';
@@ -154,5 +160,47 @@ export const TESTIMONIALS = [
     company: 'Founder, Shosho Design',
     testimonial: `I've known Josh for years, and he's built some incredible things with React. This course does a fantastic job explaining how React works and how to get the most out of it. If there's someone who can make you feel comfortable with React, it's Josh!`,
     avatar: AvatarEugen,
+  },
+];
+
+export const COMPANIESANDCLIENTS = [
+  {
+    name: 'Fiskil',
+    logo: LogoFiskil,
+  },
+  {
+    name: 'Shosho',
+    logo: LogoShosho,
+  },
+  {
+    name: 'Accenture',
+    logo: LogoAccenture,
+  },
+  {
+    name: 'Green Apex',
+    logo: LogoGreenApex,
+  },
+  {
+    name: 'Lantern',
+    logo: LogoLantern,
+  },
+];
+
+export const FOOTERLINKS = [
+  {
+    label: 'GITHUB',
+    href: '',
+  },
+  {
+    label: 'FIGMA',
+    href: '',
+  },
+  {
+    label: 'TWITTER',
+    href: '',
+  },
+  {
+    label: 'CV',
+    href: '',
   },
 ];
