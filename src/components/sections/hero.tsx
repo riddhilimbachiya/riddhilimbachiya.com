@@ -11,7 +11,9 @@ const Hero = () => {
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
               <Typography variant="body1">Heyyo👋, I'm</Typography>
-              <Typography variant="h1">RIDDHI LIMBACHIYA</Typography>
+              <Typography variant="h1" className="uppercase">
+                Riddhi Limbachiya
+              </Typography>
             </div>
             <div className="flex gap-1 flex-col">
               <Typography variant="body1">
