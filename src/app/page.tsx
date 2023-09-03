@@ -1,5 +1,6 @@
 import AboutMe from '@/components/sections/about-me';
 import Hero from '@/components/sections/hero';
+import Testimonials from '@/components/sections/testimonials';
 import Work from '@/components/sections/work';
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <Work />
+      <Testimonials />
     </main>
   );
 }

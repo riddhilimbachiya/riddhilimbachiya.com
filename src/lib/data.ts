@@ -15,6 +15,9 @@ import ProjectFiskil from '/public/images/project-fiskil.png';
 import ProjectScraye from '/public/images/project-scraye.png';
 import ProjectLantern from '/public/images/project-lantern.png';
 
+import AvatarJake from '/public/images/avatar-jake.png';
+import AvatarEugen from '/public/images/avatar-eugen.png';
+
 export const NAV_LINKS = [
   {
     label: 'about',
@@ -136,5 +139,20 @@ export const PROJECTS = [
     previewImage: ProjectLantern,
     color: 'bg-purple',
     isDescriptionOnLeft: false,
+  },
+];
+
+export const TESTIMONIALS = [
+  {
+    name: 'Jake Parker',
+    company: 'Founder, Fiskil',
+    testimonial: `I've known Josh for years, and he's built some incredible things with React. This course does a fantastic job explaining how React works and how to get the most out of it. If there's someone who can make you feel comfortable with React, it's Josh!`,
+    avatar: AvatarJake,
+  },
+  {
+    name: 'Eugen Esanu',
+    company: 'Founder, Shosho Design',
+    testimonial: `I've known Josh for years, and he's built some incredible things with React. This course does a fantastic job explaining how React works and how to get the most out of it. If there's someone who can make you feel comfortable with React, it's Josh!`,
+    avatar: AvatarEugen,
   },
 ];
