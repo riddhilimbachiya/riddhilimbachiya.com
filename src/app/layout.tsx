@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import { Raleway } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 
 import './globals.css';
 import Header from '@/components/layout/header';
 
-const raleway = Raleway({ subsets: ['latin'] });
+const raleway = Montserrat({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Riddhi Limbachiya',

@@ -13,7 +13,7 @@ type ClientProps = {
 
 const Client = ({ name, avatar, testimonial, company }: ClientProps) => {
   return (
-    <div className="w-full max-w-sm flex flex-col gap-6">
+    <div className="w-full max-w-lg flex flex-col gap-6">
       <Image src={LogoClientLove} alt="Client love icon" />
       <Typography variant="body1">{testimonial}</Typography>
       <div className="flex gap-6 items-center">

@@ -10,9 +10,9 @@ type KeyValuePairProps = {
 };
 
 const variantsMapping: KeyValuePairProps = {
-  h1: 'text-5xl tracking-[-0.3px] font-medium sm:text-3xl font-medium text-gray-900',
-  h2: 'text-base tracking-[2.4px] font-bold',
-  h3: 'text-2xl tracking-[0.4px] font-semibold',
+  h1: 'text-3xl tracking-[-0.3px] font-medium sm:text-5xl font-medium text-gray-900',
+  h2: 'text-2xl tracking-[0.36px] font-semibold',
+  h3: 'text-xl font-semibold',
   body1: 'text-base text-gray-900',
   body2: 'text-xs text-gray-900',
 };
@@ -25,7 +25,7 @@ let elementMapping: KeyValuePairProps = {
   body2: 'p',
 };
 
-type ComponentElement = 'h1' | 'h2' | 'h3' | 'p' | 'span';
+type ComponentElement = 'h1' | 'h2' | 'p' | 'span';
 
 const Typography = ({
   variant,

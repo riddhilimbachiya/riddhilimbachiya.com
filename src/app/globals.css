@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .clip-shape {
+    /* clip-path: polygon(50% 0%, 100% 100%, 0% 100%); */
+    clip-path: ellipse(70px 70px at 10% 20%);
+  }
+}

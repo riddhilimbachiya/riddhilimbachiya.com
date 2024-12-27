@@ -1,4 +1,4 @@
-import AboutMe from '@/components/sections/about-me';
+import AboutMe from '@/components/sections/journey';
 import Footer from '@/components/sections/footer';
 import Hero from '@/components/sections/hero';
 import Testimonials from '@/components/sections/testimonials';
