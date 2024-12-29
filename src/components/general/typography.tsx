@@ -25,7 +25,7 @@ let elementMapping: KeyValuePairProps = {
   body2: 'p',
 };
 
-type ComponentElement = 'h1' | 'h2' | 'p' | 'span';
+type ComponentElement = 'h1' | 'h2' | 'h3' | 'p' | 'span';
 
 const Typography = ({
   variant,

@@ -6,7 +6,7 @@ import Social from '../general/social';
 
 const Hero = () => {
   return (
-    <div className="w-full py-24 flex justify-center max-lg:py-16 max-lg:pt-0">
+    <section className="w-full py-24 flex justify-center max-lg:py-16 max-lg:pt-0">
       <div className="w-full max-w-[1120px] px-8 flex justify-between items-center max-lg:max-full max-lg:flex-col max-lg:p-4 max-lg:pt-0 max-xl:w-full gap-8">
         <div className="flex flex-col gap-12 max-lg:order-1">
           <div className="flex flex-col gap-8">
@@ -16,7 +16,7 @@ const Hero = () => {
               </Typography>
               <Typography
                 variant="h1"
-                className="uppercase bg-gradient-to-r from-pink-100 to-sky-100 bg-[length:100%_14px] bg-no-repeat bg-bottom">
+                className="uppercase bg-gradient-to-r from-pink-100 to-sky-100 bg-[length:100%_14px] bg-no-repeat bg-bottom w-fit">
                 Riddhi Limbachiya
               </Typography>
             </div>
@@ -44,7 +44,7 @@ const Hero = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

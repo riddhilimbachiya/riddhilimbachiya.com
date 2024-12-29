@@ -27,6 +27,24 @@ const config: Config = {
           700: '#B6C1C6',
         },
       },
+      keyframes: {
+        open: {
+          '0%': {
+            opacity: '1',
+            transform: 'translateX(100%)',
+          },
+        },
+        close: {
+          to: {
+            opacity: '0',
+            transform: 'translateX(100%)',
+          },
+        },
+      },
+      animation: {
+        'drawer-open': 'open 0.3s ease-in-out',
+        'drawer-close': 'close 0.3s ease-in-out',
+      },
     },
   },
   plugins: [],

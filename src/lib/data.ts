@@ -29,6 +29,21 @@ import IllustrationMokoboko from '/public/images/illustration-mokoboko.svg';
 import AvatarNoren from '/public/images/avatar-noren.png';
 import AvatarEugen from '/public/images/avatar-eugen.png';
 
+import Photo1 from '/public/images/photo1.png';
+import Photo2 from '/public/images/photo2.png';
+import Photo3 from '/public/images/photo3.png';
+import Photo4 from '/public/images/photo4.png';
+import Photo5 from '/public/images/photo5.png';
+import Photo6 from '/public/images/photo6.png';
+import Photo7 from '/public/images/photo7.png';
+import Photo8 from '/public/images/photo8.png';
+import Photo9 from '/public/images/photo9.png';
+import Photo10 from '/public/images/photo10.png';
+import Photo11 from '/public/images/photo11.png';
+import Photo12 from '/public/images/photo12.png';
+import Photo13 from '/public/images/photo13.png';
+import Photo14 from '/public/images/photo14.png';
+
 export const NAV_LINKS = [
   {
     label: 'Work',
@@ -254,5 +269,84 @@ export const FOOTERLINKS = [
   {
     label: 'CV',
     href: '',
+  },
+];
+
+export const BIT_OF_ME = [
+  { emoji: '🎨', text: 'I like to draw and paint whenever I get the chance.' },
+  {
+    emoji: '💎',
+    text: 'Antique items and diamonds have my heart. Guess I’m into rare things – just like me😜!',
+  },
+  {
+    emoji: '🌌',
+    text: 'I find peace and a sense of something bigger and dreamier when I gaze at the night sky.',
+  },
+  {
+    emoji: '😂',
+    text: 'I’m all about funny videos – I can never stop laughing, even on the second watch.',
+  },
+  {
+    emoji: '📸',
+    text: "I take great joy in photography – whether it's capturing the beauty of the world around me, candid moments with loved ones, or simply a portrait of myself. 💖 Every photo holds a memory, preserving the essence of life’s most meaningful moments.",
+  },
+];
+
+export const PHOTOS = [
+  {
+    photo: Photo1,
+    alt: 'London eye',
+  },
+  {
+    photo: Photo2,
+    alt: 'Isle of sky way',
+  },
+  {
+    photo: Photo3,
+    alt: 'Paul Cathedral',
+  },
+  {
+    photo: Photo4,
+    alt: 'Regent Street',
+  },
+  {
+    photo: Photo5,
+    alt: 'Scott Monument',
+  },
+  {
+    photo: Photo6,
+    alt: 'Big ben',
+  },
+  {
+    photo: Photo7,
+    alt: 'Isle of Skye on way',
+  },
+  {
+    photo: Photo8,
+    alt: 'Durdle door',
+  },
+  {
+    photo: Photo9,
+    alt: 'Isle of Skye on the go',
+  },
+  {
+    photo: Photo10,
+    alt: 'Isle of Skye Pod',
+  },
+  {
+    photo: Photo11,
+    alt: 'Bath Spa Bed',
+  },
+  {
+    photo: Photo12,
+    alt: 'Bath Spa',
+  },
+  {
+    photo: Photo13,
+    alt: 'Shards',
+  },
+  {
+    photo: Photo14,
+    alt: 'Big ben at night',
   },
 ];

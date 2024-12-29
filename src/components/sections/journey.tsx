@@ -4,7 +4,7 @@ import { SKILLS } from '@/lib/data';
 
 const Journey = () => {
   return (
-    <div className="bg-zinc-50 w-full flex justify-center">
+    <section className="bg-zinc-50 w-full flex justify-center">
       <div className="flex max-w-2xl py-24 px-4 flex-col gap-12 justify-center items-center max-md:py-16">
         <Typography
           variant="h2"
@@ -53,7 +53,7 @@ const Journey = () => {
           </Typography>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -126,32 +126,6 @@ const ProjectDetails = ({
         </div>
       </div>
     </div>
-    // <div className="flex justify-between w-full items-center">
-    //   <div
-    //     className={`${twMerge(
-    //       color,
-    //       'flex justify-center rounded-[50px] max-w-[700px] px-20 py-16',
-    //       isDescriptionOnLeft ? 'order-1' : 'order-0',
-    //       isDescriptionOnLeft ? 'rounded-bl-none' : 'rounded-br-none'
-    //     )}`}>
-    //     <Image src={image} alt="" />
-    //   </div>
-    //   <div
-    //     className={twMerge(
-    //       isDescriptionOnLeft ? 'order-0 justify-end' : 'order-1',
-    //       'flex flex-col gap-8 max-w-md'
-    //     )}>
-    //     <Typography variant="h3">{name}</Typography>
-    //     <div className="flex flex-col gap-6">
-    //       <Typography variant="body1">{description}</Typography>
-    //       <div className="flex gap-2 flex-wrap">
-    //         {filteredTechs.map((tech: any) => (
-    //           <Skill label={tech.label} icon={tech.icon} />
-    //         ))}
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 
