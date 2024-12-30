@@ -17,6 +17,7 @@ const DrawerOverlay = React.forwardRef<
     ref={ref}
   />
 ));
+DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
 
 interface DrawerContentProps
   extends React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content> {}
@@ -37,5 +38,6 @@ const DrawerContent = React.forwardRef<
     </DrawerPrimitive.Content>
   </DrawerPrimitive.Portal>
 ));
+DrawerContent.displayName = DrawerPrimitive.Content.displayName;
 
 export { Drawer, DrawerTrigger, DrawerClose, DrawerContent };

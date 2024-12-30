@@ -8,7 +8,7 @@ const AboutMe = () => {
         <Typography variant="h1">Heyyo!</Typography>
         <div className="flex flex-col gap-6">
           <Typography variant="body1">
-            It's Riddhi - bringing the good vibes! ✌️
+            It&apos;s Riddhi - bringing the good vibes! ✌️
             <br />
             <br />
             A short intro for me would be: I value quality in everything I do,
@@ -17,9 +17,9 @@ const AboutMe = () => {
             makes me a pretty awesome frontend developer too!
             <br />
             <br />
-            Although I studied Electronics & Communications, life decided I'd be
-            more at home in the IT world, and honestly, I couldn't be happier
-            building cool things every day! 💻
+            Although I studied Electronics & Communications, life decided
+            I&apos;d be more at home in the IT world, and honestly, I couldn't
+            be happier building cool things every day! 💻
           </Typography>
           <div className="flex flex-col gap-3">
             <Typography variant="body1" className="font-semibold">
@@ -39,10 +39,10 @@ const AboutMe = () => {
               🧠 Life belief:&nbsp;
             </Typography>
             <Typography variant="body1">
-              "Genius is knowing when to stop." - Don't waste your energy on
-              things or people that stir confusion and uncertainty. Channel it
-              into what brings clarity, joy, and growth – your energy is too
-              precious to be spent elsewhere. 🍁
+              &quot;Genius is knowing when to stop.&quot; - Don&apos;t waste
+              your energy on things or people that stir confusion and
+              uncertainty. Channel it into what brings clarity, joy, and growth
+              - your energy is too precious to be spent elsewhere. 🍁
             </Typography>
           </div>
         </div>

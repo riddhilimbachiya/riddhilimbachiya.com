@@ -10,6 +10,7 @@ import { ArrowUpRight } from 'iconoir-react';
 import { SKILLS } from '@/lib/data';
 import Typography from '@/components/general/typography';
 import Skill from '@/components/general/skill';
+import React from 'react';
 
 interface PropertyColors {
   borderColor: string;
@@ -117,7 +118,9 @@ const ProjectDetails = ({
         </div>
         <div className="flex gap-2 flex-wrap">
           {filteredTechs.map((tech: any) => (
-            <Skill label={tech.label} icon={tech.icon} variant="sm" />
+            <React.Fragment key={tech.label}>
+              <Skill label={tech.label} icon={tech.icon} variant="sm" />
+            </React.Fragment>
           ))}
         </div>
       </div>

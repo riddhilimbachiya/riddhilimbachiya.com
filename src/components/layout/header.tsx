@@ -42,7 +42,9 @@ const Header = () => {
           )}
           <div className="flex gap-8">
             {!isHomePage && (
-              <Link children={'Home'} href={'/'} className="max-md:hidden" />
+              <Link href={'/'} className="max-md:hidden">
+                Home
+              </Link>
             )}
             <Link href={'beyond-bio'} className="max-md:hidden">
               Beyond the Bio
