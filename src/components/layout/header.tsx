@@ -1,15 +1,18 @@
 'use client';
-import { NAV_LINKS } from '@/lib/data';
-import Link, { LinkProps } from '../navigation/link';
+
+import { useState } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+
 import { Menu, Xmark } from 'iconoir-react';
+
+import Link, { LinkProps } from '@/components/general/link';
 import {
   Drawer,
   DrawerClose,
   DrawerContent,
   DrawerTrigger,
-} from '../navigation/drawer';
-import { useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+} from '@/components/general/drawer';
+import { NAV_LINKS } from '@/lib/data';
 
 const Header = () => {
   const router = useRouter();

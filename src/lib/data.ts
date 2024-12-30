@@ -1,3 +1,5 @@
+import { Figma, Github, Medium, X } from 'iconoir-react';
+
 import LogoJavaScript from '/public/icons/icon-javascript.svg';
 import LogoTypeScript from '/public/icons/icon-typescript.svg';
 import LogoReact from '/public/icons/icon-react.svg';
@@ -43,8 +45,6 @@ import Photo11 from '/public/images/photo11.png';
 import Photo12 from '/public/images/photo12.png';
 import Photo13 from '/public/images/photo13.png';
 import Photo14 from '/public/images/photo14.png';
-
-import { Figma, Github, Medium, X } from 'iconoir-react';
 
 export const NAV_LINKS = [
   {

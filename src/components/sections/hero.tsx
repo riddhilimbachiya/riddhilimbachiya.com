@@ -1,8 +1,10 @@
 import Image from 'next/image';
+
+import Typography from '@/components/general/typography';
+import Social from '@/components/general/social';
+
 import Riddhi from '/public/images/riddhi.png';
 import RiddhiMobile from '/public/images/riddhi-mobile.png';
-import Typography from '@/components/general/typography';
-import Social from '../general/social';
 
 const Hero = () => {
   return (

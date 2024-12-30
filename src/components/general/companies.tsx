@@ -1,11 +1,12 @@
 import Image from 'next/image';
 
-import { COMPANIESANDCLIENTS } from '@/lib/data';
 import { twMerge } from 'tailwind-merge';
-import Typography from './typography';
+
+import Typography from '@/components/general/typography';
+import Link from '@/components/general/link';
+import { COMPANIESANDCLIENTS } from '@/lib/data';
+
 import LogoSign from '/public/icons/logo-sign.svg';
-import { Copy, Mail } from 'iconoir-react';
-import Link from '../navigation/link';
 
 const Companies = () => {
   return (
@@ -21,7 +22,8 @@ const Companies = () => {
                   ? 'border-r'
                   : 'max-xl:border-r max-xl:border-b-0',
                 'w-48 h-48 border-zinc-800 border-l border-y flex justify-center items-center'
-              )}>
+              )}
+              key={company.name}>
               <Image src={company.logo} alt={company.name} />
             </div>
           ))}
@@ -31,9 +33,6 @@ const Companies = () => {
             Lets build beautiful, <br />
             meaningful things together.!
           </Typography>
-          {/* <Typography
-            variant="body1"
-            className="text-white uppercase text-center"> */}
           <Link
             href="mailto:riddhiilimbachiya@gmail.com"
             className="text-white uppercase text-center hover:no-underline"
@@ -41,7 +40,6 @@ const Companies = () => {
             {' '}
             riddhiilimbachiya@gmail.com
           </Link>
-          {/* </Typography> */}
           <Image src={LogoSign} alt={"Riddhi's sign"} />
         </div>
       </div>

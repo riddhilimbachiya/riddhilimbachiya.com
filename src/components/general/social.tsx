@@ -2,9 +2,10 @@
 
 import React from 'react';
 
-import { SOCIAL_LINKS } from '@/lib/data';
 import { twMerge } from 'tailwind-merge';
-import Link from '../navigation/link';
+
+import Link from '@/components/general/link';
+import { SOCIAL_LINKS } from '@/lib/data';
 
 const Social = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
   return (

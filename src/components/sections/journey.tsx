@@ -1,5 +1,5 @@
 import Typography from '@/components/general/typography';
-import Skill from '../general/skill';
+import Skill from '@/components/general/skill';
 import { SKILLS } from '@/lib/data';
 
 const Journey = () => {

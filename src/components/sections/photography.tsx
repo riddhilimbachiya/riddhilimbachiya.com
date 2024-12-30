@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import { PHOTOS } from '@/lib/data';
-import Typography from '../general/typography';
+import Typography from '@/components/general/typography';
 
 const Photography = () => {
   return (

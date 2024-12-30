@@ -3,12 +3,27 @@ import { Montserrat } from 'next/font/google';
 
 import './globals.css';
 import Header from '@/components/layout/header';
-import Footer from '@/components/sections/footer';
 
-const raleway = Montserrat({ subsets: ['latin'] });
+const montserrat = Montserrat({ subsets: ['latin'] });
+
+const title = 'Riddhi Limbachiya | Frontend Developer From Ahmedabad, India.';
+const description =
+  'A curiosity driven frontend developer with design chops, from Ahmedabad, India.';
+const url = 'https://google.com';
 
 export const metadata: Metadata = {
-  title: 'Riddhi Limbachiya',
+  metadataBase: new URL(url),
+  title,
+  description,
+  keywords: ['Frontend Developer', 'React Developer', 'Next.js Developer'],
+  creator: 'Riddhi Limbachiya',
+  openGraph: {
+    type: 'website',
+    url,
+    title,
+    description,
+    siteName: title,
+  },
 };
 
 export default function RootLayout({
@@ -19,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${raleway.className} flex justify-center w-full flex-col`}>
+        className={`${montserrat.className} flex justify-center w-full flex-col`}>
         <Header />
         <main>{children}</main>
       </body>

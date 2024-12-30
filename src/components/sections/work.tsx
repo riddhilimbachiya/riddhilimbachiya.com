@@ -1,6 +1,6 @@
 import { PROJECTS } from '@/lib/data';
 import ProjectDetails from '@/components/general/project-details';
-import Typography from '../general/typography';
+import Typography from '@/components/general/typography';
 
 const Work = () => {
   return (

@@ -1,8 +1,8 @@
 import { twMerge } from 'tailwind-merge';
 
 import Typography from '@/components/general/typography';
-import Link from '@/components/navigation/link';
-import Social from '../general/social';
+import Link from '@/components/general/link';
+import Social from '@/components/general/social';
 
 const Footer = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
   const isDark = variant === 'dark';

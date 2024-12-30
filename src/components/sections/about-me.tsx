@@ -1,5 +1,5 @@
+import Typography from '@/components/general/typography';
 import { BIT_OF_ME } from '@/lib/data';
-import Typography from '../general/typography';
 
 const AboutMe = () => {
   return (

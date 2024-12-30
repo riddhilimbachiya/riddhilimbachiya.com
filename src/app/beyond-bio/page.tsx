@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import Riddhi from '/public/images/riddhi-beyond-bio.png';
-import Footer from '@/components/sections/footer';
+import Footer from '@/components/layout/footer';
 import AboutMe from '@/components/sections/about-me';
 import Photography from '@/components/sections/photography';
 
