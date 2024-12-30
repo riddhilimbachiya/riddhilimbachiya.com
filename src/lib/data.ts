@@ -24,9 +24,9 @@ import LogoLantern from '/public/icons/logo-lantern.svg';
 import LogoGreenApex from '/public/icons/logo-greenapex.svg';
 
 import IllustrationFiskil from '/public/images/illustration-fiskil.svg';
-import IllustrationScraye from '/public/images/illustration-scraye.svg';
 import IllustrationLantern from '/public/images/illustration-lantern.svg';
 import IllustrationMokoboko from '/public/images/illustration-mokoboko.svg';
+import IllustrationScraye from '/public/images/illustration-scraye.svg';
 
 import AvatarNoren from '/public/images/avatar-noren.png';
 import AvatarEugen from '/public/images/avatar-eugen.png';
