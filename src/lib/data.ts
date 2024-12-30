@@ -207,7 +207,7 @@ export const PROJECTS = [
       'Storybook',
       'Cypress',
     ],
-    previewImage: IllustrationMokoboko,
+    previewImage: IllustrationScraye,
     color: {
       bgColor: '#E2EAEE',
       borderColor: '#B6C1C6',
