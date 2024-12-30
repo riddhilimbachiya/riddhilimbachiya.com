@@ -16,7 +16,7 @@ const Hero = () => {
               </Typography>
               <Typography
                 variant="h1"
-                className="uppercase bg-gradient-to-r from-pink-100 to-sky-100 bg-[length:100%_14px] bg-no-repeat bg-bottom w-fit">
+                className="uppercase bg-gradient-to-r from-yellow-50 to-rose-100 bg-[length:100%_14px] bg-no-repeat bg-bottom w-fit">
                 Riddhi Limbachiya
               </Typography>
             </div>

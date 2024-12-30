@@ -4,7 +4,9 @@ import Typography from '../general/typography';
 
 const Work = () => {
   return (
-    <section className="py-24 w-full flex justify-center max-md:py-16">
+    <section
+      className="py-24 w-full flex justify-center max-md:py-16"
+      id="work">
       <div className="flex flex-col gap-24 max-w-[952px] px-4 w-full">
         <div className="flex flex-col gap-2 max-lg:items-center">
           <Typography variant="h2" component="h2">
@@ -26,6 +28,7 @@ const Work = () => {
               techs={project.techs}
               color={project.color}
               colorClass={project.colorClass}
+              href={project.href}
             />
           ))}
         </div>

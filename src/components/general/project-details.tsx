@@ -1,39 +1,32 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-
 import Image from 'next/image';
 import type { StaticImageData } from 'next/image';
+
 import { twMerge } from 'tailwind-merge';
+import { ArrowUpRight } from 'iconoir-react';
 
 import { SKILLS } from '@/lib/data';
 import Typography from '@/components/general/typography';
 import Skill from '@/components/general/skill';
-import { ArrowUpRight } from 'iconoir-react';
 
-type ProjectDetailsProps = {
+interface PropertyColors {
+  borderColor: string;
+  bgColor: string;
+}
+interface ProjectDetailsProps {
   name: string;
   description: string;
   techs?: string[];
   isDescriptionOnLeft: boolean;
   image: StaticImageData;
-  color: {
-    borderColor: string;
-    bgColor: string;
-  };
-  colorClass: {
-    borderColor: string;
-    bgColor: string;
-  };
-};
+  color: PropertyColors;
+  colorClass: PropertyColors;
+  href: string;
+}
 
-const Shape = ({
-  bgColor,
-  borderColor,
-}: {
-  bgColor: string;
-  borderColor: string;
-}) => {
+const Shape = ({ bgColor, borderColor }: PropertyColors) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -69,6 +62,7 @@ const ProjectDetails = ({
   image,
   color,
   colorClass,
+  href,
 }: ProjectDetailsProps) => {
   const [filteredTechs, setFilteredTechs] = useState([]);
 
@@ -83,7 +77,9 @@ const ProjectDetails = ({
   }, []);
 
   return (
-    <div className="flex flex-col gap-6 max-w-[420px] max-lg:max-w-xl w-full">
+    <div
+      className="flex flex-col gap-6 max-w-[420px] max-lg:max-w-xl w-full cursor-pointer group"
+      onClick={() => window.open(href, '_blank')}>
       <div className="w-full h-[298px] rounded-lg relative flex justify-center max-lg:hidden">
         <Shape borderColor={color.borderColor} bgColor={color.bgColor} />
         <Image src={image} alt="" className="absolute bottom-0" />
@@ -93,7 +89,7 @@ const ProjectDetails = ({
             colorClass.bgColor,
             colorClass.borderColor
           )}>
-          <div>
+          <div className="group-hover:rotate-12 transform transition">
             <ArrowUpRight
               height={20}
               width={20}

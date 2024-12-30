@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .clip-shape {
-    /* clip-path: polygon(50% 0%, 100% 100%, 0% 100%); */
-    clip-path: ellipse(70px 70px at 10% 20%);
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global scroll-margin-top for all anchor links */
+[id] {
+  scroll-margin-top: 92px; /* Ensures that when the page scrolls to a section, it doesn't get hidden behind the fixed header or navbar as my header is sticky*/
 }

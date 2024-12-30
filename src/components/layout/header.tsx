@@ -9,30 +9,42 @@ import {
   DrawerTrigger,
 } from '../navigation/drawer';
 import { useState } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 
 const Header = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
     <>
-      <header className="flex p-8 justify-center max-lg:px-4">
+      <header className="flex p-8 justify-center max-lg:px-4 sticky top-0 bg-white z-50">
         <div className="flex max-w-7xl w-full justify-between">
-          <p className="text-xl font-medium uppercase text-zinc-900 tracking-[1px]">
+          <p
+            className="text-xl font-medium uppercase text-zinc-900 tracking-[1px] cursor-pointer"
+            onClick={() => router.push('/')}>
             Riddhi Limbachiya
           </p>
 
-          <ul className="flex gap-8 max-md:hidden max-lg:gap-4">
-            {NAV_LINKS.map((link: LinkProps) => (
-              <li key={link.label}>
-                <Link label={link.label} href={link.href} />
-              </li>
-            ))}
-          </ul>
-          <Link
-            label={'Beyond the Bio'}
-            href={'beyond-bio'}
-            className="max-md:hidden"
-          />
-
+          {isHomePage && (
+            <ul className="flex gap-8 max-md:hidden max-lg:gap-4">
+              {NAV_LINKS.map((link: LinkProps) => (
+                <li key={link.children?.toLocaleString()}>
+                  <Link href={link.href}>{link.children}</Link>
+                </li>
+              ))}
+            </ul>
+          )}
+          <div className="flex gap-8">
+            {!isHomePage && (
+              <Link children={'Home'} href={'/'} className="max-md:hidden" />
+            )}
+            <Link href={'beyond-bio'} className="max-md:hidden">
+              Beyond the Bio
+            </Link>
+          </div>
           <Drawer open={isOpen} onOpenChange={setIsOpen}>
             <DrawerTrigger asChild className="flex md:hidden">
               <Menu />
@@ -49,8 +61,8 @@ const Header = () => {
               <div className="border-b border-zinc-100 p-4 bg-white h-screen">
                 <ul className="flex flex-col gap-2 max-lg:gap-4">
                   {NAV_LINKS.map((link: LinkProps) => (
-                    <li key={link.label} className="py-2">
-                      <Link label={link.label} href={link.href} />
+                    <li key={link.children?.toLocaleString()} className="py-2">
+                      <Link href={link.href}>{link.children} </Link>
                     </li>
                   ))}
                 </ul>

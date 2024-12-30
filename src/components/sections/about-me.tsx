@@ -3,7 +3,7 @@ import Typography from '../general/typography';
 
 const AboutMe = () => {
   return (
-    <section className="w-full py-24 border-b border-zinc-200 flex justify-center px-4 max-md:py-10">
+    <section className="w-full pb-24 pt-16 border-b border-zinc-200 flex justify-center px-4 max-md:py-10">
       <div className="flex flex-col gap-8 max-w-[928px]">
         <Typography variant="h1">Heyyo!</Typography>
         <div className="flex flex-col gap-6">
@@ -11,15 +11,15 @@ const AboutMe = () => {
             It's Riddhi - bringing the good vibes! ✌️
             <br />
             <br />
-            A short intro for me would be: I value quality over quantity, in
-            everything from people to experiences. 🌟 I like to think of myself
-            as a creative human with a keen eye for detail - which, lucky for
-            me, makes me a pretty awesome frontend developer too!
+            A short intro for me would be: I value quality in everything I do,
+            from relationships to experiences 🌟. I like to think of myself as a
+            creative human with a keen eye for detail - which, lucky for me,
+            makes me a pretty awesome frontend developer too!
             <br />
             <br />
-            Although I studied Electronics, life decided I'd be more at home in
-            the IT world, and honestly, I couldn't be happier building cool
-            things every day! 💻
+            Although I studied Electronics & Communications, life decided I'd be
+            more at home in the IT world, and honestly, I couldn't be happier
+            building cool things every day! 💻
           </Typography>
           <div className="flex flex-col gap-3">
             <Typography variant="body1" className="font-semibold">

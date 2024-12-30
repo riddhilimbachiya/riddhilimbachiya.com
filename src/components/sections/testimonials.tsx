@@ -4,7 +4,9 @@ import { TESTIMONIALS } from '@/lib/data';
 
 const Testimonials = () => {
   return (
-    <section className="w-full flex justify-center items-center flex-col py-24 px-4 gap-24 bg-zinc-50 max-md:py-16">
+    <section
+      className="w-full flex justify-center items-center flex-col py-24 px-4 gap-24 bg-zinc-50 max-md:py-16"
+      id="testimonials">
       <Typography variant="h2" className="uppercase w-full flex justify-center">
         Client's love
       </Typography>

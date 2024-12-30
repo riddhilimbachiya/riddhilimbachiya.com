@@ -44,21 +44,23 @@ import Photo12 from '/public/images/photo12.png';
 import Photo13 from '/public/images/photo13.png';
 import Photo14 from '/public/images/photo14.png';
 
+import { Figma, Github, Medium, X } from 'iconoir-react';
+
 export const NAV_LINKS = [
   {
-    label: 'Work',
-    href: '#about',
-  },
-  {
-    label: 'Journey',
+    children: 'Work',
     href: '#work',
   },
   {
-    label: 'Testimonials',
+    children: 'Journey',
+    href: '#journey',
+  },
+  {
+    children: 'Testimonials',
     href: '#testimonials',
   },
   {
-    label: 'Contact',
+    children: 'Contact',
     href: '#contact',
   },
 ];
@@ -156,6 +158,7 @@ export const PROJECTS = [
       borderColor: 'border-indigo-700',
     },
     isDescriptionOnLeft: false,
+    href: 'https://www.fiskil.com/',
   },
   {
     name: 'Lantern',
@@ -172,6 +175,7 @@ export const PROJECTS = [
       borderColor: 'border-purple-700',
     },
     isDescriptionOnLeft: false,
+    href: 'https://www.withlantern.com/',
   },
   {
     name: 'Mokoboko',
@@ -188,6 +192,7 @@ export const PROJECTS = [
       borderColor: 'border-green-700',
     },
     isDescriptionOnLeft: true,
+    href: 'https://mokoboko.xyz/',
   },
   {
     name: 'Scraye',
@@ -212,6 +217,7 @@ export const PROJECTS = [
       borderColor: 'border-sky-700',
     },
     isDescriptionOnLeft: true,
+    href: 'https://www.scraye.com/',
   },
 ];
 
@@ -348,5 +354,28 @@ export const PHOTOS = [
   {
     photo: Photo14,
     alt: 'Big ben at night',
+  },
+];
+
+export const SOCIAL_LINKS = [
+  {
+    label: 'Github',
+    icon: Github,
+    href: 'https://github.com/riddhilimbachiya',
+  },
+  {
+    label: 'Figma',
+    icon: Figma,
+    href: 'https://www.figma.com/@riddhilimbachiy',
+  },
+  {
+    label: 'X',
+    icon: X,
+    href: 'https://x.com/limbachiyariddh',
+  },
+  {
+    label: 'Medium',
+    icon: Medium,
+    href: 'https://medium.com/@riddhiilimbachiya',
   },
 ];

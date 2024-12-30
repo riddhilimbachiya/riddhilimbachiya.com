@@ -17,7 +17,7 @@ const Footer = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
           'w-full flex justify-center border-t',
           isDark ? ' border-zinc-800' : ' border-zinc-200'
         )}>
-        <div className="w-full max-w-7xl flex justify-between px-8 py-4 max-md:flex-col max-md:gap-4 max-md:items-center">
+        <div className="w-full max-w-7xl flex justify-between px-4 py-4 max-md:flex-col max-md:gap-4 max-md:items-center">
           <Typography
             variant="body1"
             className={twMerge(
@@ -32,8 +32,22 @@ const Footer = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
               'max-md:order-0',
               isDark ? 'text-white' : 'text-zinc-900'
             )}>
-            <Link label="Designed" href="/" variant={variant} withUnderline />{' '}
-            and <Link label="Coded" href="/" variant={variant} withUnderline />{' '}
+            <Link
+              href="https://www.figma.com/@riddhilimbachiy"
+              variant={variant}
+              withUnderline
+              externalLink>
+              {' '}
+              Designed
+            </Link>{' '}
+            and{' '}
+            <Link
+              href="https://github.com/riddhilimbachiya/riddhilimbachiya.com"
+              variant={variant}
+              withUnderline
+              externalLink>
+              Coded
+            </Link>{' '}
             with ❤️ by Riddhi Limbachiya
           </Typography>
           <div className="flex gap-6 max-md:order-1">

@@ -1,21 +1,10 @@
-import { Figma, Github, Medium, X } from 'iconoir-react';
-import { twMerge } from 'tailwind-merge';
+'use client';
 
-const SocialIcon = ({
-  icon,
-  title,
-}: {
-  icon: React.ReactNode;
-  title: string;
-}) => {
-  return (
-    <div
-      className="transform transition-transform hover:rotate-12 cursor-pointer"
-      title={title}>
-      {icon}
-    </div>
-  );
-};
+import React from 'react';
+
+import { SOCIAL_LINKS } from '@/lib/data';
+import { twMerge } from 'tailwind-merge';
+import Link from '../navigation/link';
 
 const Social = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
   return (
@@ -24,10 +13,17 @@ const Social = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
         'flex gap-5 text-md',
         variant === 'dark' ? 'text-zinc-200' : 'text-zinc-900'
       )}>
-      <SocialIcon icon={<Github />} title="Github" />
-      <SocialIcon icon={<Figma />} title="Figma" />
-      <SocialIcon icon={<X />} title="X" />
-      <SocialIcon icon={<Medium />} title="Medium" />
+      {SOCIAL_LINKS.map((link) => (
+        <React.Fragment key={link.href}>
+          <Link
+            className="transform transition-transform hover:rotate-12 cursor-pointer"
+            variant={variant}
+            href={link.href}
+            externalLink>
+            <link.icon />
+          </Link>
+        </React.Fragment>
+      ))}
     </div>
   );
 };
