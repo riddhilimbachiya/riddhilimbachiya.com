@@ -1,7 +1,8 @@
+import React from 'react';
+
+import { TESTIMONIALS } from '@/lib/data';
 import Client from '@/components/general/client';
 import Typography from '@/components/general/typography';
-import { TESTIMONIALS } from '@/lib/data';
-import React from 'react';
 
 const Testimonials = () => {
   return (

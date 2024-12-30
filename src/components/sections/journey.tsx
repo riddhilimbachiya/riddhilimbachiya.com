@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Typography from '@/components/general/typography';
 import Skill from '@/components/general/skill';
 import { SKILLS } from '@/lib/data';
@@ -20,8 +22,8 @@ const Journey = () => {
             using Angular, and then switched to React, where I had the
             opportunity to work on projects from scratch that really shaped my
             skills in JS and UI development. I don&apos;t dive into the back-end
-            too often, but in case you're wondering, I know Node.js, Express &
-            MongoDB. Just a peek behind the curtain!
+            too often, but in case you&apos;re wondering, I know Node.js,
+            Express & MongoDB. Just a peek behind the curtain!
             <br />
             <br /> I&apos;ve always been passionate about working on projects
             that push me to grow, learn new things, and collaborate with great
@@ -34,7 +36,9 @@ const Journey = () => {
             Here&apos;s some tech and frameworks I love and work with:
             <div className="flex gap-3 flex-wrap">
               {SKILLS.map((skill) => (
-                <Skill icon={skill.icon} label={skill.label} variant="md" />
+                <React.Fragment key={skill.label}>
+                  <Skill icon={skill.icon} label={skill.label} variant="md" />
+                </React.Fragment>
               ))}
             </div>
           </div>

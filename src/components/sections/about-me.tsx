@@ -18,8 +18,8 @@ const AboutMe = () => {
             <br />
             <br />
             Although I studied Electronics & Communications, life decided
-            I&apos;d be more at home in the IT world, and honestly, I couldn't
-            be happier building cool things every day! 💻
+            I&apos;d be more at home in the IT world, and honestly, I
+            couldn&apos;t be happier building cool things every day! 💻
           </Typography>
           <div className="flex flex-col gap-3">
             <Typography variant="body1" className="font-semibold">

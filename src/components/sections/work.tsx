@@ -1,7 +1,8 @@
+import React from 'react';
+
 import { PROJECTS } from '@/lib/data';
 import ProjectDetails from '@/components/general/project-details';
 import Typography from '@/components/general/typography';
-import React from 'react';
 
 const Work = () => {
   return (

@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import type { StaticImageData } from 'next/image';
@@ -10,7 +11,6 @@ import { ArrowUpRight } from 'iconoir-react';
 import { SKILLS } from '@/lib/data';
 import Typography from '@/components/general/typography';
 import Skill from '@/components/general/skill';
-import React from 'react';
 
 interface PropertyColors {
   borderColor: string;
