@@ -5,6 +5,8 @@ import Skill from '@/components/general/skill';
 import { SKILLS } from '@/lib/data';
 
 const Journey = () => {
+  const skills = SKILLS.filter((skill) => skill.label !== 'Redux');
+
   return (
     <section className="bg-zinc-50 w-full flex justify-center" id="journey">
       <div className="flex max-w-3xl py-24 px-4 flex-col gap-12 justify-center items-center max-md:py-16">
@@ -26,7 +28,7 @@ const Journey = () => {
             Express & MongoDB. Just a peek behind the curtain!
             <br />
             <br /> I&apos;ve always been passionate about working on projects
-            that push me to grow, learn new things, and collaborate with great
+            that push me to grow, learn new things, and collaborate with amazing
             people. This led me to take the leap into freelancing, where
             I&apos;ve had the chance to work with awesome clients. Right now,
             I&apos;m working with a cool startup, building sleek UIs with
@@ -35,7 +37,7 @@ const Journey = () => {
           <div className="flex flex-col gap-4">
             Here&apos;s some tech and frameworks I love and work with:
             <div className="flex gap-3 flex-wrap">
-              {SKILLS.map((skill) => (
+              {skills.map((skill) => (
                 <React.Fragment key={skill.label}>
                   <Skill icon={skill.icon} label={skill.label} variant="md" />
                 </React.Fragment>

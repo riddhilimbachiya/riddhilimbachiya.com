@@ -31,7 +31,7 @@ const Companies = () => {
         <div className="flex flex-col gap-8 justify-center items-center">
           <Typography variant="h2" className="text-white text-center">
             Lets build beautiful, <br />
-            meaningful things together.!
+            meaningful things together!
           </Typography>
           <Link
             href="mailto:riddhiilimbachiya@gmail.com"

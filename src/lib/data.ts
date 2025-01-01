@@ -279,7 +279,10 @@ export const FOOTERLINKS = [
 ];
 
 export const BIT_OF_ME = [
-  { emoji: '🎨', text: 'I like to draw and paint whenever I get the chance.' },
+  {
+    emoji: '🎨',
+    text: 'I like to draw, paint or read whenever I get the chance.',
+  },
   {
     emoji: '💎',
     text: 'Antique items and diamonds have my heart. Guess I’m into rare things – just like me😜!',

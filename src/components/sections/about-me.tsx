@@ -11,10 +11,11 @@ const AboutMe = () => {
             It&apos;s Riddhi - bringing the good vibes! ✌️
             <br />
             <br />
-            A short intro for me would be: I value quality in everything I do,
-            from relationships to experiences 🌟. I like to think of myself as a
-            creative human with a keen eye for detail - which, lucky for me,
-            makes me a pretty awesome frontend developer too!
+            A short intro for me would be: I believe in bringing quality to
+            every part of life—relationships, experiences, and the work I do 💫.
+            I like to think of myself as a creative human that cares about
+            details - which, lucky for me, makes me a pretty awesome frontend
+            developer too!
             <br />
             <br />
             Although I studied Electronics & Communications, life decided
