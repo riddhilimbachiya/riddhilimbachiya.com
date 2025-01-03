@@ -13,7 +13,8 @@ const Photography = () => {
         <Typography variant="body1" className="text-center">
           Explore a mix of moments that catch my eye – from candid shots to
           peaceful landscapes. It’s all about seeing things from a fresh
-          perspective. Dive in and enjoy!
+          perspective. <br />
+          Dive in and enjoy!
         </Typography>
       </div>
       <div className="flex flex-wrap gap-5 justify-center">
