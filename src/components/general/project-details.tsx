@@ -90,13 +90,8 @@ const ProjectDetails = ({
             colorClass.bgColor,
             colorClass.borderColor
           )}>
-          <div className="group-hover:rotate-12 transform transition">
-            <ArrowUpRight
-              height={20}
-              width={20}
-              color={color.borderColor}
-              strokeWidth={2.5}
-            />
+          <div className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-sm group-hover:text-base transform transition">
+            <ArrowUpRight color={color.borderColor} strokeWidth={2.5} />
           </div>
         </div>
       </div>
