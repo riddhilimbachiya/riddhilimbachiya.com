@@ -41,8 +41,10 @@ const Header = () => {
             </ul>
           )}
           <div className="flex gap-8">
-            <Link href={'beyond-bio'} className="max-md:hidden">
-              Beyond the Bio
+            <Link
+              href={isHomePage ? '/beyond-bio' : '/'}
+              className="max-md:hidden">
+              {isHomePage ? 'Beyond the bio' : 'Home'}
             </Link>
           </div>
           <Drawer open={isOpen} onOpenChange={setIsOpen}>
