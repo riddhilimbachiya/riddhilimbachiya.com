@@ -41,11 +41,6 @@ const Header = () => {
             </ul>
           )}
           <div className="flex gap-8">
-            {!isHomePage && (
-              <Link href={'/'} className="max-md:hidden">
-                Home
-              </Link>
-            )}
             <Link href={'beyond-bio'} className="max-md:hidden">
               Beyond the Bio
             </Link>
