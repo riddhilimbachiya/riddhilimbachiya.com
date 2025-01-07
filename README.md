@@ -1,9 +1,10 @@
 
-# riddhilimbachiya.com  
+                          # riddhilimbachiya.com  
 My portfolio website built with Next.js, Tailwind CSS, and deployed on Vercel. 🚀  
 
 ## Preview  
-[Visit riddhilimbachiya.com](https://riddhilimbachiya.com)  
+![Images (1)](https://github.com/user-attachments/assets/e0003afc-9bf9-46ef-afb2-aa5c0f2211fe)
+
 
 ## Tech Stack  
 - **Next.js**: A React framework for building fast, scalable, and user-friendly web applications.  
@@ -19,6 +20,7 @@ $ git clone https://github.com/riddhilimbachiya/riddhilimbachiya.com
 $ cd riddhilimbachiya.com  
 $ npm install  
 $ npm run dev
+```
 
 ##Figma
 If you are looking for a figma file, you can find it here.
