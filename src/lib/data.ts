@@ -48,12 +48,12 @@ import Photo14 from '/public/images/photo14.png';
 
 export const NAV_LINKS = [
   {
-    children: 'Work',
-    href: '#work',
-  },
-  {
     children: 'Journey',
     href: '#journey',
+  },
+  {
+    children: 'Work',
+    href: '#work',
   },
   {
     children: 'Testimonials',
@@ -231,7 +231,7 @@ export const TESTIMONIALS = [
   {
     name: 'Noren Machelart',
     company: 'Product Owner, Scraye',
-    testimonial: `“Riddhi has been an incredible asset to our team and a joy to work with. She leads the project with responsibility and initiative, consistently enhancing features and offering thoughtful suggestions. Her ability to explain technical details to non-technical clients and deliver excellent demos on time is remarkable. Always supportive and collaborative, she truly elevates the team's performance. I’m grateful to have her on board!”`,
+    testimonial: `“Riddhi has been an incredible asset to our team and a joy to work with. She leads the project with responsibility and initiative, consistently enhancing features and offering thoughtful suggestions. Her ability to explain technical details to non-technical clients and deliver excellent demos on time is remarkable. Always supportive and collaborative, she truly elevates the team's performance. She creates a happy environment around her, and the fun thing is, each team member loves to work with her. I'm grateful to have her on board!”`,
     avatar: AvatarNoren,
   },
 ];

@@ -6,7 +6,7 @@ import Header from '@/components/layout/header';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
-const title = 'Riddhi Limbachiya | Frontend Developer From Ahmedabad, India.';
+const title = 'Riddhi Limbachiya | Frontend Developer From India.';
 const description =
   'A curiosity driven frontend developer with design chops, from Ahmedabad, India.';
 const url = 'https://google.com';
@@ -23,6 +23,12 @@ export const metadata: Metadata = {
     title,
     description,
     siteName: title,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+    images: '/images/open-graph-riddhi.png',
   },
 };
 

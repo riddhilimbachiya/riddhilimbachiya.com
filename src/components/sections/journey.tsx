@@ -31,8 +31,8 @@ const Journey = () => {
             that push me to grow, learn new things, and collaborate with amazing
             people. This led me to take the leap into freelancing, where
             I&apos;ve had the chance to work with awesome clients. Right now,
-            I&apos;m working with a cool startup, building sleek UIs with
-            Next.js, Typescript, Tailwind and more.
+            I&apos;m working with a startup, building sleek UIs with Next.js,
+            Typescript, Tailwind and more.
           </Typography>
           <div className="flex flex-col gap-4">
             Here&apos;s some tech and frameworks I love and work with:
@@ -51,7 +51,7 @@ const Journey = () => {
             great way to boost my creativity and help me design UIs more
             intuitively. One day, I thought, what better way to apply my Figma
             knowledge than by designing my own portfolio? And here it is - my
-            very first Figma project! 🧨
+            very first Figma project!🧨
             <br />
             <br />
             Learning advanced TypeScript is something I&apos;m working on, and I

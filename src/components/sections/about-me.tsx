@@ -8,7 +8,7 @@ const AboutMe = () => {
         <Typography variant="h1">Heyyo!</Typography>
         <div className="flex flex-col gap-6">
           <Typography variant="body1">
-            It&apos;s Riddhi - bringing the good vibes! ✌️
+            It&apos;s Riddhi - bringing the good vibes!🦁
             <br />
             <br />
             A short intro for me would be: I believe in bringing quality to
@@ -37,7 +37,7 @@ const AboutMe = () => {
           </div>
           <div className="flex flex-col gap-3">
             <Typography variant="body1" className="font-semibold">
-              🧠 Life belief:&nbsp;
+              🧠 Life belief
             </Typography>
             <Typography variant="body1">
               &quot;Genius is knowing when to stop.&quot; - Don&apos;t waste

@@ -33,7 +33,7 @@ const Footer = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
               isDark ? 'text-white' : 'text-zinc-900'
             )}>
             <Link
-              href="https://www.figma.com/@riddhilimbachiy"
+              href="https://www.figma.com/community/file/1458512251907556084"
               variant={variant}
               withUnderline
               externalLink>
@@ -46,7 +46,7 @@ const Footer = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
               variant={variant}
               withUnderline
               externalLink>
-              Coded
+              Developed
             </Link>{' '}
             with ❤️ by Riddhi Limbachiya
           </Typography>
