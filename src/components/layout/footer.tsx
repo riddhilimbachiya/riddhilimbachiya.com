@@ -29,7 +29,7 @@ const Footer = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
           <Typography
             variant="body1"
             className={twMerge(
-              'max-md:order-0',
+              'max-md:order-0 text-center',
               isDark ? 'text-white' : 'text-zinc-900'
             )}>
             <Link

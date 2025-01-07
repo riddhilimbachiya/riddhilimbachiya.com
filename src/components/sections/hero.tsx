@@ -32,8 +32,8 @@ const Hero = () => {
           </div>
           <Social variant="light" />
         </div>
-        <div className="max-w-[400px] max-h-[450px] overflow-hidden rounded-[168px] rounded-bl max-lg:order-0 max-lg:rounded-[40px] max-lg:rounded-bl w-full max-lg:max-w-[502px] max-lg:max-h-none">
-          <Image src={Riddhi} alt="Riddhi's photo" />
+        <div className="overflow-hidden rounded-[168px] rounded-bl max-lg:order-0 max-lg:rounded-[40px] max-lg:rounded-bl max-h-[450px] max-md:max-h-auto">
+          <Image src={Riddhi} alt="Riddhi's photo" width={400} />
         </div>
       </div>
     </section>

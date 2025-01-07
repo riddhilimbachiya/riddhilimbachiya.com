@@ -1,17 +1,18 @@
 'use client';
 
-import { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 import { Menu, Xmark } from 'iconoir-react';
+import { twMerge } from 'tailwind-merge';
 
-import Link, { LinkProps } from '@/components/general/link';
 import {
   Drawer,
   DrawerClose,
   DrawerContent,
   DrawerTrigger,
 } from '@/components/general/drawer';
+import Link, { LinkProps } from '@/components/general/link';
 import { NAV_LINKS } from '@/lib/data';
 
 const Header = () => {
@@ -20,6 +21,18 @@ const Header = () => {
   const isHomePage = pathname === '/';
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const renderHomePageSectionNavLinks = () => {
+    return NAV_LINKS.map((link: LinkProps) => (
+      <li key={link.children?.toLocaleString()}>
+        <Link href={link.href}>{link.children}</Link>
+      </li>
+    ));
+  };
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
     <>
@@ -33,22 +46,20 @@ const Header = () => {
 
           {isHomePage && (
             <ul className="flex gap-8 max-md:hidden max-lg:gap-4">
-              {NAV_LINKS.map((link: LinkProps) => (
-                <li key={link.children?.toLocaleString()}>
-                  <Link href={link.href}>{link.children}</Link>
-                </li>
-              ))}
+              {renderHomePageSectionNavLinks()}
             </ul>
           )}
           <div className="flex gap-8">
             <Link
               href={isHomePage ? '/beyond-bio' : '/'}
-              className="max-md:hidden">
+              className={isHomePage ? 'max-md:hidden' : 'max-sm:hidden'}>
               {isHomePage ? 'Beyond the bio' : 'Home'}
             </Link>
           </div>
           <Drawer open={isOpen} onOpenChange={setIsOpen}>
-            <DrawerTrigger asChild className="flex md:hidden">
+            <DrawerTrigger
+              asChild
+              className={twMerge(isHomePage ? 'flex md:hidden' : 'sm:hidden')}>
               <Menu />
             </DrawerTrigger>
             <DrawerContent>
@@ -62,11 +73,11 @@ const Header = () => {
               </div>
               <div className="border-b border-zinc-100 p-4 bg-white h-screen">
                 <ul className="flex flex-col gap-2 max-lg:gap-4">
-                  {NAV_LINKS.map((link: LinkProps) => (
-                    <li key={link.children?.toLocaleString()} className="py-2">
-                      <Link href={link.href}>{link.children} </Link>
-                    </li>
-                  ))}
+                  <li className="py-4">
+                    <Link href={isHomePage ? '/beyond-bio' : '/'}>
+                      {isHomePage ? 'Beyond the bio' : 'Home'}
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </DrawerContent>
