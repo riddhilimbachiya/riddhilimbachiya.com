@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: title,
     images: [
       {
-        url: 'https://www.riddhilimbachiya.com/images/open-graph-riddhi.png',
+        url: '/images/open-graph-riddhi.png',
       },
     ],
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title,
     description,
-    images: 'https://www.riddhilimbachiya.com/images/open-graph-riddhi.png',
+    images: ['/images/open-graph-riddhi.png'],
   },
 };
 
