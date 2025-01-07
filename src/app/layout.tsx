@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     title,
     description,
     siteName: title,
+    images: [
+      {
+        url: '/images/open-graph-riddhi.png',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
