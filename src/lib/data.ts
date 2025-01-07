@@ -369,7 +369,7 @@ export const SOCIAL_LINKS = [
   {
     label: 'Figma',
     icon: Figma,
-    href: 'https://www.figma.com/@riddhilimbachiy',
+    href: 'https://www.figma.com/community/file/1458512251907556084',
   },
   {
     label: 'X',
