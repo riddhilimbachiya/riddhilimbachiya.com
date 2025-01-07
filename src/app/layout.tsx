@@ -9,7 +9,7 @@ const montserrat = Montserrat({ subsets: ['latin'] });
 const title = 'Riddhi Limbachiya | Frontend Developer From India.';
 const description =
   'A curiosity driven frontend developer with design chops, from Ahmedabad, India.';
-const url = 'https://google.com';
+const url = 'https://riddhilimbachiya.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: title,
     images: [
       {
-        url: '/images/open-graph-riddhi.png',
+        url: 'https://www.riddhilimbachiya.com/images/open-graph-riddhi.png',
       },
     ],
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title,
     description,
-    images: '/images/open-graph-riddhi.png',
+    images: 'https://www.riddhilimbachiya.com/images/open-graph-riddhi.png',
   },
 };
 
