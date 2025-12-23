@@ -302,7 +302,7 @@ export const PROJECTS = [
               </li>
               <li>
                 One of the most component-dense and visually complex platforms
-                I've worked on
+                I&apos;ve worked on
               </li>
             </ul>
           </div>
@@ -346,8 +346,8 @@ export const PROJECTS = [
             <h4 className="font-bold text-base mb-1">Marketing</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Built Lantern's initial marketing website, establishing their
-                public-facing presence
+                Built Lantern&apos;s initial marketing website, establishing
+                their public-facing presence
               </li>
             </ul>
           </div>
@@ -403,9 +403,9 @@ export const PROJECTS = [
                 slots
               </li>
               <li>
-                Integrated Acuity&nbsp;s scheduling APIs via Next.js, and
+                Integrated Acuity&apos;s scheduling APIs via Next.js, and
                 designed custom payment flows with fallback logic to handle
-                cases Acuity&nbsp;s beta APIs didn&nbsp;t support, ensuring
+                cases Acuity&apos;s beta APIs didn&apos;t support, ensuring
                 bookings and payments still worked reliably
               </li>
               <li>
@@ -529,7 +529,7 @@ export const PERSONAL_PROJECTS = [
                 components quickly without needing a designer
               </li>
               <li>
-                It simplifies app development, enables devs who don't know
+                It simplifies app development, enables devs who don&apos;t know
                 design systems, and helps solo founders create beautiful,
                 consistent UI in minutes
               </li>
@@ -595,11 +595,11 @@ export const PERSONAL_PROJECTS = [
               </li>
               <li>
                 The goal is to standardize the most common AI chat patterns so
-                developers don&nbsp;t have to rebuild streaming UI, message
+                developers don&apos;t have to rebuild streaming UI, message
                 states, and interactions for every project
               </li>
               <li>
-                I&nbsp;m focusing on clean visuals, sensible defaults, and easy
+                I&apos;m focusing on clean visuals, sensible defaults, and easy
                 theming so the chat interface can be plugged into any app with
                 minimal setup
               </li>

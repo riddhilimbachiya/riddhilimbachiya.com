@@ -71,8 +71,8 @@ const Journey = () => {
             too)!🧨
             <br />
             <br />
-            If you have an idea or you&nbsp;re already building a product,
-            you&nbsp;re in the right place✨.
+            If you have an idea or you&apos;re already building a product,
+            you&apos;re in the right place✨.
           </Typography>
         </div>
       </div>

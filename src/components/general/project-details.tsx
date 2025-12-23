@@ -148,7 +148,7 @@ const ProjectDetails = ({
               e.stopPropagation();
               setOpen(true);
             }}>
-            Here's what I did at {link} 👉
+            Here&apos;s what I did at {link} 👉
           </Typography>
         </div>
       </div>
