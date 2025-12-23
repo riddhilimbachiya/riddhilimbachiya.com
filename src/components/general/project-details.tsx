@@ -182,7 +182,7 @@ const ProjectDetails = ({
               </ModalDescription>
             </div>
           </ModalHeader>
-          <div className="flex flex-col gap-6 px-8 py-6">
+          <div className="flex flex-col gap-6 px-8 py-6 overflow-y-auto max-h-[calc(90vh-200px)] [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-zinc-300 [&::-webkit-scrollbar-thumb]:rounded-full">
             <div className="flex flex-col gap-6 text-base text-zinc-900">
               {modalContent.responsibilities}
             </div>
