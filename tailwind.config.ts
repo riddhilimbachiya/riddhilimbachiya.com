@@ -26,6 +26,10 @@ const config: Config = {
           100: '#E2EAEE',
           700: '#B6C1C6',
         },
+        rose: {
+          100: '#f4e4ea',
+          700: '#e4b2c6',
+        },
       },
       keyframes: {
         open: {

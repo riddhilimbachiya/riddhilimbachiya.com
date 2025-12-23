@@ -5,6 +5,7 @@ import Footer from '@/components/layout/footer';
 import Hero from '@/components/sections/hero';
 import Testimonials from '@/components/sections/testimonials';
 import Work from '@/components/sections/work';
+import PersonalProjects from '@/components/sections/personal-projects';
 import Companies from '@/components/general/companies';
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <Work />
+      <PersonalProjects />
       <Testimonials />
       <Companies />
       <Footer />

@@ -11,11 +11,24 @@ import { ArrowUpRight } from 'iconoir-react';
 import { SKILLS } from '@/lib/data';
 import Typography from '@/components/general/typography';
 import Skill from '@/components/general/skill';
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalTitle,
+  ModalDescription,
+} from '@/components/general/modal';
 
 interface PropertyColors {
   borderColor: string;
   bgColor: string;
 }
+
+interface ModalContent {
+  role: string;
+  responsibilities: React.ReactNode;
+}
+
 interface ProjectDetailsProps {
   name: string;
   description: string;
@@ -25,6 +38,8 @@ interface ProjectDetailsProps {
   color: PropertyColors;
   colorClass: PropertyColors;
   href: string;
+  modalContent?: ModalContent;
+  link: string;
 }
 
 const Shape = ({ bgColor, borderColor }: PropertyColors) => {
@@ -64,8 +79,11 @@ const ProjectDetails = ({
   color,
   colorClass,
   href,
+  modalContent,
+  link,
 }: ProjectDetailsProps) => {
   const [filteredTechs, setFilteredTechs] = useState([]);
+  const [open, setOpen] = useState(false);
 
   const renderTechs = () => {
     let filteredTechsLocal = [] as any;
@@ -77,13 +95,13 @@ const ProjectDetails = ({
     renderTechs();
   }, []);
 
-  return (
-    <div
-      className="flex flex-col gap-6 max-w-[420px] max-lg:max-w-xl w-full cursor-pointer group"
-      onClick={() => window.open(href, '_blank')}>
-      <div className="w-full h-[298px] rounded-lg relative flex justify-center max-lg:hidden">
+  const ProjectCard = () => (
+    <>
+      <div
+        className="w-full h-[298px] rounded-lg relative flex justify-center max-lg:hidden cursor-pointer"
+        onClick={() => window.open(href, '_blank')}>
         <Shape borderColor={color.borderColor} bgColor={color.bgColor} />
-        <Image src={image} alt="" className="absolute bottom-0" />
+        <Image src={image} alt={name} className="absolute bottom-0" />
         <div
           className={twMerge(
             'w-[70px] h-[70px] rounded-full flex items-center justify-center absolute -top-2.5 right-0.5 border-2',
@@ -98,17 +116,20 @@ const ProjectDetails = ({
 
       <div
         className={twMerge(
-          'w-full h-[298px] rounded-lg border justify-center hidden max-lg:flex',
+          'w-full h-[298px] rounded-lg border justify-center hidden max-lg:flex cursor-pointer',
           colorClass.borderColor,
           colorClass.bgColor
-        )}>
-        <Image src={image} alt="" />
+        )}
+        onClick={() => window.open(href, '_blank')}>
+        <Image src={image} alt={name} />
       </div>
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-1">
-          <Typography variant="h3" component="h3">
-            {name}
-          </Typography>
+          <div className="w-full flex justify-between mb-4">
+            <Typography variant="h3" component="h3">
+              {name}
+            </Typography>
+          </div>
           <Typography variant="body1">{description}</Typography>
         </div>
         <div className="flex gap-2 flex-wrap">
@@ -118,7 +139,62 @@ const ProjectDetails = ({
             </React.Fragment>
           ))}
         </div>
+        <div className={twMerge('flex gap-1 items-center')}>
+          <Typography
+            className="mt-3 underline underline-offset-8 decoration-1 hover:decoration-2 cursor-pointer"
+            style={{ textDecorationColor: color.borderColor }}
+            variant="body1"
+            onClick={(e) => {
+              e.stopPropagation();
+              setOpen(true);
+            }}>
+            Here's what I did at {link} 👉
+          </Typography>
+        </div>
       </div>
+    </>
+  );
+
+  if (modalContent) {
+    return (
+      <Modal open={open} onOpenChange={setOpen}>
+        <div className="flex flex-col gap-6 max-w-[420px] max-lg:max-w-xl w-full group">
+          <ProjectCard />
+        </div>
+        <ModalContent className="max-w-4xl">
+          <ModalHeader className="px-8 py-6 border-b border-zinc-200 relative overflow-hidden">
+            {/* Diagonal check pattern at top right - fades from right to left */}
+            <div
+              className="absolute top-0 right-0 w-[450px] h-40 opacity-80"
+              style={{
+                backgroundImage: `radial-gradient(${color.bgColor} 1.5px, transparent 0)`,
+                backgroundSize: '16px 16px',
+                maskImage:
+                  'linear-gradient(to left, black 26%, black 15%, transparent 90%)',
+                WebkitMaskImage:
+                  'linear-gradient(to left, black 26%, black 15%, transparent 90%)',
+              }}
+            />
+            <div className="relative z-10">
+              <ModalTitle className="text-2xl font-bold">{name}</ModalTitle>
+              <ModalDescription className="text-sm">
+                {modalContent.role}
+              </ModalDescription>
+            </div>
+          </ModalHeader>
+          <div className="flex flex-col gap-6 px-8 py-6">
+            <div className="flex flex-col gap-6 text-base text-zinc-900">
+              {modalContent.responsibilities}
+            </div>
+          </div>
+        </ModalContent>
+      </Modal>
+    );
+  }
+
+  return (
+    <div className="flex flex-col gap-6 max-w-[420px] max-lg:max-w-xl w-full cursor-pointer group">
+      <ProjectCard />
     </div>
   );
 };
