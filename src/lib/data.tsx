@@ -1,4 +1,4 @@
-import { Figma, Github, Medium, X } from 'iconoir-react';
+import { Figma, Github, Linkedin, Medium, X } from 'iconoir-react';
 
 import LogoJavaScript from '/public/icons/icon-javascript.svg';
 import LogoTypeScript from '/public/icons/icon-typescript.svg';
@@ -185,24 +185,20 @@ export const PROJECTS = [
         <React.Fragment>
           <div className="flex flex-col gap-1">
             <h4 className="font-bold text-base mb-1">
-              Multi-Product and Multi-Team Dashboard Platform
+              Multi-Product and Multi-Team Fintech Platform
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Developed a central dashboard console unifying multiple Fiskil
-                products and teams under one cohesive platform
+                Led frontend and UX of the Fiskil Console - unifying two products (each with multiple teams) - into a single dashboard that streamlined workflows, centralized data, and improved feature accessibility.
               </li>
               <li>
-                Implemented RBAC (Role-Based Access Control) to control feature
-                access across different user roles
+                Built complex central state management using React Context + React Query, optimizing API calls, caching, and load performance across multiple products and teams.
               </li>
               <li>
-                Defined complex multi-product/multi-team state management using{' '}
-                React Context + React Query, achieving optimized API calls,
-                caching, and load performance
+                Implemented RBAC (Role-Based Access Control) to give each user role access to the right features without friction across multiple products and teams.
               </li>
               <li>
-                Implemented Firebase authentication with MFA and onboarding flow
+                Built Firebase authentication with MFA and onboarding flows, ensuring secure and seamless access for all users.
               </li>
             </ul>
           </div>
@@ -313,13 +309,12 @@ export const PROJECTS = [
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
+                Built AI chat interface for the platform, integrating AI-powered features via the OpenAI API to enhance key workflows.
+              </li>
+              <li>
                 Built a highly customizable, UI-dense core table system for
                 large datasets, featuring rich cell layouts and interactions,
                 optimized with TanStack Table + React Query and virtualization.
-              </li>
-              <li>
-                Integrated AI-powered features using the ChatGPT API and prompt
-                engineering to enhance key workflows
               </li>
               <li>
                 Built data visualizations using Recharts(D3 charts wrapper) to
@@ -559,10 +554,10 @@ export const PERSONAL_PROJECTS = [
     },
   },
   {
-    name: 'DSy v2 - Chat Interfaces',
+    name: 'yap - AI Chat Interfaces',
     link: 'Chat Interfaces',
     description:
-      'A plug-and-play beautiful customisable AI chat interfaces built on Vercel AI Elements,so developers can ship chat experiences fast.',
+      'A plug-and-play AI Chat templates built on the Vercel AI SDK.Streaming, errors, loading states - all handled. So you can ship AI products fast.',
     techs: [
       'TypeScript',
       'Next.js',
@@ -580,32 +575,44 @@ export const PERSONAL_PROJECTS = [
       borderColor: 'border-rose-700',
     },
     isDescriptionOnLeft: false,
-    href: 'https://dsystudio.xyz',
+    href: 'https://aichats.dsystudio.xyz',
     modalContent: {
       role: 'Founder',
       duration: '2024',
       responsibilities: (
         <React.Fragment>
           <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">In Progress - Vision</h4>
+            <h4 className="font-bold text-base mb-1">Motivation & Problem</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Currently building DSy v2 - a reusable, visually customisable,
-                production-ready AI chat interface based on Vercel AI Elements
+                An AI product is only as good as its chat experience. If the chat feels jerky, confusing, or unreliable, users lose trust and leave - even if the rest of the product is well built.
               </li>
               <li>
-                The goal is to standardize the most common AI chat patterns so
-                developers don&apos;t have to rebuild streaming UI, message
-                states, and interactions for every project
+                While building AI chat interfaces, I realised the hardest part isn&apos;t the model or the API, but getting the chat UX right.
               </li>
               <li>
-                I&apos;m focusing on clean visuals, sensible defaults, and easy
-                theming so the chat interface can be plugged into any app with
-                minimal setup
+                Smooth streaming with mixed content (text, code, tables), clear loading → streaming transitions, reliable auto-scroll, and proper error states are small details that make or break the experience.
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <h4 className="font-bold text-base mb-1">Solution & Product</h4>
+            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
+              <li>
+                After testing real-world AI chat patterns, I am working on building chat templates that solve what most AI apps need, built with Next.js and the Vercel AI SDK using modern best practices.
+              </li>
+              <li>
+                These templates handle streaming, loading transitions, error states, retries, and auto-scroll out of the box, so users never feel stuck or confused.
+              </li>
+              <li>
+                Plug in your model&apos;s API key and get a production-ready AI chat interface in minutes - without re-solving the same UX problems again.
               </li>
             </ul>
           </div>
         </React.Fragment>
+
+
       ),
     },
   },
@@ -752,6 +759,11 @@ export const PHOTOS = [
 
 export const SOCIAL_LINKS = [
   {
+    label: 'Linkedin',
+    icon: Linkedin,
+    href: 'https://www.linkedin.com/in/riddhi-limbachiya/',
+  },
+  {
     label: 'Github',
     icon: Github,
     href: 'https://github.com/riddhilimbachiya',
@@ -766,9 +778,9 @@ export const SOCIAL_LINKS = [
     icon: X,
     href: 'https://x.com/limbachiyariddh',
   },
-  {
-    label: 'Medium',
-    icon: Medium,
-    href: 'https://medium.com/@riddhiilimbachiya',
-  },
+  // {
+  //   label: 'Medium',
+  //   icon: Medium,
+  //   href: 'https://medium.com/@riddhiilimbachiya',
+  // },
 ];
