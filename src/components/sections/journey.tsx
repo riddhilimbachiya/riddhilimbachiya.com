@@ -20,9 +20,7 @@ const Journey = () => {
           {/* Intro */}
           <div className="flex flex-col gap-3">
             <Typography variant="body1">
-              I&apos;m a creative frontend developer with ~7 years of experience,
-              working primarily with Next.js, React, TypeScript, and Tailwind, with a
-              solid understanding of UI/UX (and just enough backend when needed), product thinking & experience with building AI chat interfaces.
+              Over the past 7+ years, I&apos;ve helped take multiple products from 0→1, combining UX, UI, and frontend expertise with product thinking, and I&apos;m now building AI chat interfaces.
             </Typography>
           </div>
 

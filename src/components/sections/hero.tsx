@@ -23,7 +23,7 @@ const Hero = () => {
             </div>
             <div className="flex gap-1 flex-col">
               <Typography variant="body1" className="font-medium">
-                A curiosity driven frontend developer with design chops.🎨
+                Helping startups ship products end-to-end - UX, frontend & AI systems.
               </Typography>
               <Typography variant="body1" className="font-medium">
                 I believe its OK to be you, You is dope.!😉
