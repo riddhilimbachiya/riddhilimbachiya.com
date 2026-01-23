@@ -6,16 +6,16 @@ import Header from '@/components/layout/header';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
-const title = 'Riddhi Limbachiya | Frontend Developer From India.';
+const title = 'Riddhi Limbachiya | Product Engineer helping startups ship 0→1 products';
 const description =
-  'A curiosity driven frontend developer with design chops, from Ahmedabad, India.';
+  'I help startups ship products end-to-end, from UX, frontend to AI-powered interfaces';
 const url = 'https://riddhilimbachiya.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
   title,
   description,
-  keywords: ['Frontend Developer', 'React Developer', 'Next.js Developer'],
+  keywords: ['Frontend Developer', 'Product Engineer', 'UX Designer', 'AI Engineer', 'React Developer', 'Next.js Developer'],
   creator: 'Riddhi Limbachiya',
   openGraph: {
     type: 'website',
