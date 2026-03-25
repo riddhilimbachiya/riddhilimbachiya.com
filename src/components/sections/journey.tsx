@@ -20,7 +20,7 @@ const Journey = () => {
           {/* Intro */}
           <div className="flex flex-col gap-3">
             <Typography variant="body1">
-              I've spent 7+ years taking products from 0→1 - UX, frontend, growth, and AI.
+              I&apos;ve spent 7+ years taking products from 0→1 - UX, frontend, growth, and AI.
             </Typography>
           </div>
 
