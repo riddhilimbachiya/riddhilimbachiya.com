@@ -2,11 +2,11 @@ import React from 'react';
 
 import Typography from '@/components/general/typography';
 import Skill from '@/components/general/skill';
-import { SKILLS } from '@/lib/data';
+import { JOURNEY_SKILLS } from '@/lib/data';
 import Link from 'next/link';
 
 const Journey = () => {
-  const skills = SKILLS.filter((skill) => skill.label !== 'Redux');
+  const skills = JOURNEY_SKILLS;
 
   return (
     <section className="bg-zinc-50 w-full flex justify-center" id="what-i-do">
@@ -14,100 +14,77 @@ const Journey = () => {
         <Typography
           variant="h2"
           className="uppercase w-full flex justify-center">
-          A BIT ABOUT ME AND WHAT I DO
+          WHAT I BRING TO THE TABLE
         </Typography>
         <div className="flex flex-col gap-10">
           {/* Intro */}
           <div className="flex flex-col gap-3">
             <Typography variant="body1">
-              Over the past 7+ years, I&apos;ve helped take multiple products from 0→1, combining UX, UI, and frontend expertise with product thinking, and I&apos;m now building AI chat interfaces.
+              I've spent 7+ years taking products from 0→1 - UX, frontend, growth, and AI.
             </Typography>
           </div>
 
-          {/* How you work */}
+          {/* What that looks like */}
           <div className="flex flex-col gap-3">
             <Typography variant="body1" className="font-semibold text-zinc-900">
-              What I do 🪄
+              What that looks like
             </Typography>
 
-            <ul className="list-disc list-inside space-y-1 ml-3 text-base">
+            <ul className="list-disc list-inside space-y-2 ml-3 text-base">
               <li>
-                I help founders, CEOs, and product teams turn rough ideas into clear,
-                smooth, and usable product flows.
+                You describe the vision. I design the user experience and figure out how it should work.
               </li>
               <li>
-                When requirements are vague or incomplete, I shape them into something
-                that makes sense for both users and engineers.
+                I build it in Next.js, React, TypeScript. Production-ready, not a prototype.
               </li>
               <li>
-                Tools like Cursor, Figma, and Figma MCP help me prototype quickly, test
-                ideas early, and guide teams toward confident decisions.
+                If AI makes the product better, I integrate it properly - chat interfaces, search, automation. Not a chatbot slapped on the side.
+              </li>
+              <li>
+                I set up analytics so you know what&apos;s working and what to fix next.
+              </li>
+              <li>
+                I bring users in through SEO and optimize the product to keep them.
               </li>
             </ul>
           </div>
 
-          {/* Side projects */}
+          {/* Things I've built */}
           <div className="flex flex-col gap-3">
             <Typography variant="body1" className="font-semibold text-zinc-900">
-              What I&apos;m building independently 💻
+              Things I&apos;ve built
             </Typography>
 
-            <Typography variant="body1">
-              I&apos;m currently building{' '}
-              <Link
-                href="https://aichats.dsystudio.xyz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 decoration-zinc-200  font-semibold"
-              >
-                yap! - AI Chat Interfaces
-              </Link>
-              , a set of AI chat templates built with Next.js,
-              Vercel AI SDK, and Vercel AI Elements. These templates focus on smooth
-              streaming, loading transitions, error handling, and auto-scroll - the
-              details most AI apps struggle with.
-            </Typography>
-
-            <Typography variant="body1">
-              Earlier, I built{' '}
-              <Link
-                href="https://dsystudio.xyz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 decoration-zinc-200 font-semibold"
-              >
-                DSy - Design System Made Easy
-              </Link>
-              , which taught me how important it is to think beyond &quot;just code &quot; and
-              understand how a product works end to end - from UX and design to
-              engineering, SEO, and product strategy.
-            </Typography>
-          </div>
-
-          {/* Strength */}
-          <div className="flex flex-col gap-3">
-            <Typography variant="body1" className="font-semibold text-zinc-900">
-              My real edge 🤠
-            </Typography>
-
-            <Typography variant="body1">
-              My real strength is bridging product, design, and engineering. I
-              understand UX deeply enough to challenge bad flows, frontend well enough
-              to build clean and intentional interfaces, and I&apos;m good at turning
-              messy inputs into something teams can actually ship.
-            </Typography>
-
-            <Typography variant="body1">
-              In a world where &quot;AI can code anything,&quot; this mix of UX instinct,
-              simplification, and real problem-solving is what makes AI a real
-              superpower for me - it makes building products genuinely fun again.
-            </Typography>
+            <ul className="list-disc list-inside space-y-2 ml-3 text-base">
+              <li>
+                <Link
+                  href="https://aichats.dsystudio.xyz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-4 decoration-zinc-200 font-semibold"
+                >
+                  yap!
+                </Link>
+                {' '}- AI chat interfaces, ready to use.
+              </li>
+              <li>
+                <Link
+                  href="https://dsystudio.xyz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-4 decoration-zinc-200 font-semibold"
+                >
+                  DSy
+                </Link>
+                {' '}- Design system builder for products.
+              </li>
+            </ul>
           </div>
 
           {/* Skills */}
           <div className="flex flex-col gap-4">
             <Typography variant="body1">
-              Here are some of the tech, frameworks, and tools I love working with:
+              Tech, frameworks, and tools I work with:
             </Typography>
 
             <div className="flex gap-3 flex-wrap">
@@ -119,13 +96,7 @@ const Journey = () => {
 
           {/* Footer */}
           <Typography variant="body1">
-            <span className="font-semibold text-zinc-900">Fun fact:&nbsp;</span>
-            This portfolio was my very first Figma project - flexing my UX skills too 🧨
-            <br />
-            <br />
-            If you have an idea or you&apos;re already building a product, you&apos;re in
-            the right place ✨
-          </Typography>
+            Building something? Let&apos;s talk.</Typography>
         </div>
 
       </div>

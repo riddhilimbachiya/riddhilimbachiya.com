@@ -26,6 +26,7 @@ import LogoVercel from '/public/icons/icon-vercel.svg';
 import LogoVercelAIElements from '/public/icons/icon-vercel-ai-elements.svg';
 import LogoCursor from '/public/icons/icon-cursor.svg';
 import LogoShadcn from '/public/icons/icon-shadcn.svg';
+import LogoRAG from '/public/icons/icon-rag.svg';
 
 import IllustrationFiskil from '/public/images/illustration-fiskil.svg';
 import IllustrationLantern from '/public/images/illustration-lantern.svg';
@@ -102,8 +103,16 @@ export const SKILLS = [
     icon: LogoVercel,
   },
   {
+    label: 'Vercel AI SDK',
+    icon: LogoVercelAIElements,
+  },
+  {
     label: 'Vercel AI Elements',
     icon: LogoVercelAIElements,
+  },
+  {
+    label: 'RAG',
+    icon: LogoRAG,
   },
   {
     label: 'Scss',
@@ -114,7 +123,7 @@ export const SKILLS = [
     icon: LogoMUI,
   },
   {
-    label: 'Figma / Figma Make / Figma MCP',
+    label: 'Figma',
     icon: LogoFigma,
   },
   {
@@ -146,8 +155,63 @@ export const SKILLS = [
     icon: LogoFirebase,
   },
   {
+    label: 'Redux',
+    icon: LogoRedux,
+  },
+  {
     label: 'Cursor',
     icon: LogoCursor,
+  },
+];
+
+export const JOURNEY_SKILLS = [
+  {
+    label: 'Next.js',
+    icon: LogoNextjs,
+  },
+  {
+    label: 'React',
+    icon: LogoReact,
+  },
+  {
+    label: 'Tailwind Css',
+    icon: LogoTailwindCss,
+  },
+  {
+    label: 'Shadcn',
+    icon: LogoShadcn,
+  },
+  {
+    label: 'Vercel AI SDK',
+    icon: LogoVercelAIElements,
+  },
+  {
+    label: 'RAG',
+    icon: LogoRAG,
+  },
+  {
+    label: 'Node.js',
+    icon: LogoNodejs,
+  },
+  {
+    label: 'Firebase',
+    icon: LogoFirebase,
+  },
+  {
+    label: 'Figma',
+    icon: LogoFigma,
+  },
+  {
+    label: 'Cursor',
+    icon: LogoCursor,
+  },
+  {
+    label: 'Vercel',
+    icon: LogoVercel,
+  },
+  {
+    label: 'Storybook',
+    icon: LogoStorybook,
   },
 ];
 
@@ -163,6 +227,7 @@ export const PROJECTS = [
       'Next.js',
       'Tailwind Css',
       'Storybook',
+      'Vercel AI SDK',
       'Cypress',
       'Storybook',
       'Jest',
@@ -180,84 +245,82 @@ export const PROJECTS = [
     isDescriptionOnLeft: false,
     href: 'https://www.fiskil.com/',
     modalContent: {
-      role: 'Senior Frontend Developer & UX Engineer',
+      role: 'Senior Product Engineer - UX, Frontend, Growth & AI',
       responsibilities: (
         <React.Fragment>
           <div className="flex flex-col gap-1">
             <h4 className="font-bold text-base mb-1">
-              Multi-Product and Multi-Team Fintech Platform
+              AI - Docs &amp; Support
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Led frontend and UX of the Fiskil Console - unifying two products (each with multiple teams) - into a single dashboard that streamlined workflows, centralized data, and improved feature accessibility.
+                Building a RAG-powered AI assistant for Fiskil&apos;s documentation - it reads across all product docs, API guides, and knowledge bases so developers can ask questions in plain language and get accurate, context-aware answers instead of digging through pages.
               </li>
               <li>
-                Built complex central state management using React Context + React Query, optimizing API calls, caching, and load performance across multiple products and teams.
-              </li>
-              <li>
-                Implemented RBAC (Role-Based Access Control) to give each user role access to the right features without friction across multiple products and teams.
-              </li>
-              <li>
-                Built Firebase authentication with MFA and onboarding flows, ensuring secure and seamless access for all users.
+                Extended the same AI to handle support - users get instant help without filing tickets, reducing support volume and freeing up the team to focus on the product instead of answering repeated questions.
               </li>
             </ul>
           </div>
           <div className="flex flex-col gap-1">
             <h4 className="font-bold text-base mb-1">
-              UX Leadership & Problem-Solving
+              UX &amp; Product Decisions
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Took high-level requirements and turned them into fully designed
-                features, making critical UX decisions that balanced user needs,
-                technical constraints, and business goals
+                Took rough requirements and turned them into fully designed features - balancing what users need, what&apos;s technically feasible, and what the business wants.
               </li>
               <li>
-                Leveraged AI tools (Cursor, Figma Make) to prototype and
-                validate UX decisions quickly, helping team move fast and
-                ensuring informed product choices before engineering investment
+                Drove UX, UI, and frontend decisions across all products, working directly with the CEO, product, design, and engineering teams.
               </li>
             </ul>
           </div>
           <div className="flex flex-col gap-1">
             <h4 className="font-bold text-base mb-1">
-              Design System & Scalable Infrastructure
+              Product &amp; Dashboard
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Built and owned a company-wide design system / component library{' '}
-                used across all products and teams, establishing UI consistency
-                and reducing development time by ~30%
+                Built the main B2B dashboard - multiple products, multiple teams, one clean interface. Handled caching, state, and performance so everything feels fast.
+              </li>
+              <li>
+                Set up authentication, role-based access, and onboarding so the right people see the right things without friction.
               </li>
             </ul>
           </div>
           <div className="flex flex-col gap-1">
             <h4 className="font-bold text-base mb-1">
-              Documentation, Blog & Marketing
+              Website, Blog &amp; Growth
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Designed and implemented the blog using a CMS and created
-                comprehensive multi-product documentation - not just as a
-                developer, but owning the complete experience from UX design to
-                implementation
+                Built the multi-region website serving US, UK, AU, and LATAM - with full language support so each region gets content in their language and context.
               </li>
               <li>
-                Built the marketing website with region-specific rendering (US,
-                UK, AU), internationalization (i18n), and advanced SEO
-                optimizations for both search engines and LLMs
+                Designed and integrated the blog with a CMS so the team can publish content without needing a developer.
+              </li>
+              <li>
+                Optimized for both traditional search engines and AI tools - so the product ranks whether someone searches on Google or asks ChatGPT.
               </li>
             </ul>
           </div>
           <div className="flex flex-col gap-1">
             <h4 className="font-bold text-base mb-1">
-              Leadership & Strategic Execution
+              Analytics &amp; Product Decisions
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Led UX, UI, and frontend engineering decisions company-wide,
-                collaborating directly with the CEO, product managers,
-                designers, and backend engineers to shape product direction
+                Set up analytics and ran experiments to track real user behaviour - what&apos;s working, where people drop off, and why they leave. Used the data to reduce churn and drive product decisions.
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <h4 className="font-bold text-base mb-1">
+              Design System
+            </h4>
+            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
+              <li>
+                Built a company-wide design system and shipped it as a standalone library - cut development time by 30% and made the UI consistent across every product.
               </li>
             </ul>
           </div>
@@ -533,11 +596,6 @@ export const PERSONAL_PROJECTS = [
           <div className="flex flex-col gap-1">
             <h4 className="font-bold text-base mb-1">Learning & Growth</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
-              <li>
-                Executing my first product from 0 - 1 taught me lessons beyond
-                coding: product strategy, UX thinking, marketing, SEO for AI
-                tools, copywriting, and designing tools for real-world usability
-              </li>
               <li>
                 Executing my first product from 0 - 1 taught me lessons beyond
                 coding: product strategy, UX thinking, marketing, SEO for AI

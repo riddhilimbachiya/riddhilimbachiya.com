@@ -12,10 +12,10 @@ const AboutMe = () => {
             <br />
             <br />
             A short intro for me would be: I believe in bringing quality to
-            every part of life—relationships, experiences, and the work I do 💫.
+            every part of life - relationships, experiences, and the work I do 💫.
             I like to think of myself as a creative human that cares about
-            details - which, lucky for me, makes me a pretty awesome frontend
-            developer too!
+            details - which, lucky for me, makes me a pretty solid product
+            engineer too!
             <br />
             <br />
             Although I studied Electronics & Communications, life decided
