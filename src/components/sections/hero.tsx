@@ -23,10 +23,10 @@ const Hero = () => {
             </div>
             <div className="flex gap-1 flex-col">
               <Typography variant="body1" className="font-medium">
-                Helping startups ship products end-to-end - UX, frontend & AI systems.
+                Product Engineer - UX, Frontend, AI & Growth.
               </Typography>
               <Typography variant="body1" className="font-medium">
-                I believe its OK to be you, You is dope.!😉
+                I believe it&apos;s OK to be you, You is dope.!😉
               </Typography>
             </div>
           </div>
