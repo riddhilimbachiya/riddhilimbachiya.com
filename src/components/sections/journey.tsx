@@ -96,7 +96,7 @@ const Journey = () => {
 
           {/* Footer */}
           <Typography variant="body1">
-            Building something? Let&apos;s talk.</Typography>
+            Building something? Tell me the problem/vision. I&apos;ll figure out the rest.</Typography>
         </div>
 
       </div>
