@@ -45,13 +45,13 @@ const Journey = () => {
                 You describe the vision. I design the user experience and figure out how it should work.
               </li>
               <li>
-                I build it in Next.js, React, TypeScript. Production-ready, not a prototype.
+                I build it in Next.js, React, TypeScript - modern UI with animations and micro-interactions that make product feel effortless.
               </li>
               <li>
-                If AI makes the product better, I integrate it properly - chat interfaces, search, automation. Not a chatbot slapped on the side.
+              I integrate AI to genuinely improve products - shaping how humans and AI collaborate through smart interfaces, search, automation, not just slapping a chatbot on the side.
               </li>
               <li>
-                I set up analytics so you know what&apos;s working and what to fix next.
+              I set up analytics so you know where users drop off, what&apos;s converting, and what to fix first
               </li>
               <li>
                 I bring users in through SEO and optimize the product to keep them.
