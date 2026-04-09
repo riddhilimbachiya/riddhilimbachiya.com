@@ -1,15 +1,25 @@
+'use client';
+
 import React from 'react';
+
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 import Typography from '@/components/general/typography';
 import Skill from '@/components/general/skill';
 import { JOURNEY_SKILLS } from '@/lib/data';
-import Link from 'next/link';
 
 const Journey = () => {
   const skills = JOURNEY_SKILLS;
 
   return (
-    <section className="bg-zinc-50 w-full flex justify-center" id="what-i-do">
+    <motion.section
+      className="bg-zinc-50 w-full flex justify-center"
+      id="what-i-do"
+      initial={{ opacity: 0, y: 4 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.4, ease: 'easeOut' }}>
       <div className="flex max-w-3xl py-24 px-4 flex-col gap-12 justify-center items-center max-md:py-16">
         <Typography
           variant="h2"
@@ -61,8 +71,7 @@ const Journey = () => {
                   href="https://aichats.dsystudio.xyz"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline underline-offset-4 decoration-zinc-200 font-semibold"
-                >
+                  className="underline underline-offset-4 decoration-zinc-200 font-semibold">
                   yap!
                 </Link>
                 {' '}- AI chat interfaces, ready to use.
@@ -72,8 +81,7 @@ const Journey = () => {
                   href="https://dsystudio.xyz"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline underline-offset-4 decoration-zinc-200 font-semibold"
-                >
+                  className="underline underline-offset-4 decoration-zinc-200 font-semibold">
                   DSy
                 </Link>
                 {' '}- Design system builder for products.
@@ -96,11 +104,11 @@ const Journey = () => {
 
           {/* Footer */}
           <Typography variant="body1">
-            Building something? Tell me the problem/vision. I&apos;ll figure out the rest.</Typography>
+            Building something? Tell me the problem/vision. I&apos;ll figure out the rest.
+          </Typography>
         </div>
-
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -4,6 +4,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 import { Menu, Xmark } from 'iconoir-react';
+import { motion } from 'framer-motion';
 import { twMerge } from 'tailwind-merge';
 
 import {
@@ -36,7 +37,11 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex p-8 justify-center max-lg:px-4 sticky top-0 bg-white z-50">
+      <motion.header
+        className="flex p-8 justify-center max-lg:px-4 sticky top-0 bg-white z-50"
+        initial={{ opacity: 0, y: -4 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, ease: 'easeOut' }}>
         <div className="flex max-w-7xl w-full justify-between">
           <p
             className="text-xl font-medium uppercase text-zinc-900 tracking-[1px] cursor-pointer"
@@ -83,7 +88,7 @@ const Header = () => {
             </DrawerContent>
           </Drawer>
         </div>
-      </header>
+      </motion.header>
     </>
   );
 };
