@@ -23,11 +23,71 @@ const Hero = () => {
               <Typography variant="body1" className="font-medium">
                 Heyyo👋, I&apos;m
               </Typography>
-              <Typography
-                variant="h1"
-                className="uppercase bg-gradient-to-r from-yellow-50 to-rose-100 bg-[length:100%_14px] bg-no-repeat bg-bottom w-fit">
-                Riddhi Limbachiya
-              </Typography>
+              <div className="relative w-fit">
+                <Typography variant="h1" className="uppercase relative z-10">
+                  Riddhi Limbachiya
+                </Typography>
+                <motion.div
+                  className="absolute bottom-0 left-0 right-0 h-[60%] overflow-hidden"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 0.9 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}>
+                  <svg
+                    className="absolute bottom-0 w-full h-full"
+                    viewBox="0 0 600 40"
+                    preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient id="wave1" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0">
+                        <stop offset="0%" stopColor="#ffedd5" />
+                        <stop offset="12%" stopColor="#fce7f3" />
+                        <stop offset="25%" stopColor="#e0e7ff" />
+                        <stop offset="37%" stopColor="#ede9fe" />
+                        <stop offset="50%" stopColor="#ffedd5" />
+                        <stop offset="62%" stopColor="#fce7f3" />
+                        <stop offset="75%" stopColor="#e0e7ff" />
+                        <stop offset="87%" stopColor="#ede9fe" />
+                        <stop offset="100%" stopColor="#ffedd5" />
+                      </linearGradient>
+                      <linearGradient id="wave2" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0">
+                        <stop offset="0%" stopColor="#ffedd5" />
+                        <stop offset="12%" stopColor="#fce7f3" />
+                        <stop offset="25%" stopColor="#e0e7ff" />
+                        <stop offset="37%" stopColor="#ede9fe" />
+                        <stop offset="50%" stopColor="#ffedd5" />
+                        <stop offset="62%" stopColor="#fce7f3" />
+                        <stop offset="75%" stopColor="#e0e7ff" />
+                        <stop offset="87%" stopColor="#ede9fe" />
+                        <stop offset="100%" stopColor="#ffedd5" />
+                      </linearGradient>
+                      <filter id="glow">
+                        <feGaussianBlur stdDeviation="2" result="blur" />
+                        <feMerge>
+                          <feMergeNode in="blur" />
+                          <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                      </filter>
+                    </defs>
+                    <motion.g
+                      animate={{ x: [-600, 0] }}
+                      transition={{ duration: 7, repeat: Infinity, ease: 'linear' }}>
+                      <path
+                        d="M0,24 Q100,14 200,26 Q300,34 400,20 Q500,10 600,24 Q700,14 800,26 Q900,34 1000,20 Q1100,10 1200,24 L1200,40 L0,40 Z"
+                        fill="url(#wave2)"
+                        opacity={0.4}
+                      />
+                    </motion.g>
+                    <motion.g
+                      filter="url(#glow)"
+                      animate={{ x: [-600, 0] }}
+                      transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}>
+                      <path
+                        d="M0,22 Q70,6 160,24 Q230,34 300,14 Q380,2 480,28 Q550,36 620,22 Q690,6 780,24 Q850,34 920,14 Q1000,2 1100,28 Q1150,36 1200,22 L1200,40 L0,40 Z"
+                        fill="url(#wave1)"
+                      />
+                    </motion.g>
+                  </svg>
+                </motion.div>
+              </div>
             </div>
             <div className="flex gap-1 flex-col">
               <Typography variant="body1" className="font-medium">
