@@ -30,34 +30,34 @@ const Hero = () => {
                 <motion.div
                   className="absolute bottom-0 left-0 right-0 h-[60%] overflow-hidden"
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: 0.9 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}>
+                  animate={{ opacity: 0.85 }}
+                  transition={{ duration: 0.5, delay: 0.6 }}>
                   <svg
                     className="absolute bottom-0 w-full h-full"
                     viewBox="0 0 600 40"
                     preserveAspectRatio="none">
                     <defs>
                       <linearGradient id="wave1" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0">
-                        <stop offset="0%" stopColor="#ffedd5" />
-                        <stop offset="12%" stopColor="#fce7f3" />
-                        <stop offset="25%" stopColor="#e0e7ff" />
-                        <stop offset="37%" stopColor="#ede9fe" />
-                        <stop offset="50%" stopColor="#ffedd5" />
-                        <stop offset="62%" stopColor="#fce7f3" />
-                        <stop offset="75%" stopColor="#e0e7ff" />
-                        <stop offset="87%" stopColor="#ede9fe" />
-                        <stop offset="100%" stopColor="#ffedd5" />
+                        <stop offset="0%" stopColor="#ffe2c0" />
+                        <stop offset="12%" stopColor="#fcdbee" />
+                        <stop offset="25%" stopColor="#d4ddff" />
+                        <stop offset="37%" stopColor="#e5e0fe" />
+                        <stop offset="50%" stopColor="#ffe2c0" />
+                        <stop offset="62%" stopColor="#fcdbee" />
+                        <stop offset="75%" stopColor="#d4ddff" />
+                        <stop offset="87%" stopColor="#e5e0fe" />
+                        <stop offset="100%" stopColor="#ffe2c0" />
                       </linearGradient>
                       <linearGradient id="wave2" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0">
-                        <stop offset="0%" stopColor="#ffedd5" />
-                        <stop offset="12%" stopColor="#fce7f3" />
-                        <stop offset="25%" stopColor="#e0e7ff" />
-                        <stop offset="37%" stopColor="#ede9fe" />
-                        <stop offset="50%" stopColor="#ffedd5" />
-                        <stop offset="62%" stopColor="#fce7f3" />
-                        <stop offset="75%" stopColor="#e0e7ff" />
-                        <stop offset="87%" stopColor="#ede9fe" />
-                        <stop offset="100%" stopColor="#ffedd5" />
+                        <stop offset="0%" stopColor="#ffe2c0" />
+                        <stop offset="12%" stopColor="#fcdbee" />
+                        <stop offset="25%" stopColor="#d4ddff" />
+                        <stop offset="37%" stopColor="#e5e0fe" />
+                        <stop offset="50%" stopColor="#ffe2c0" />
+                        <stop offset="62%" stopColor="#fcdbee" />
+                        <stop offset="75%" stopColor="#d4ddff" />
+                        <stop offset="87%" stopColor="#e5e0fe" />
+                        <stop offset="100%" stopColor="#ffe2c0" />
                       </linearGradient>
                       <filter id="glow">
                         <feGaussianBlur stdDeviation="2" result="blur" />
@@ -83,6 +83,7 @@ const Hero = () => {
                       <path
                         d="M0,22 Q70,6 160,24 Q230,34 300,14 Q380,2 480,28 Q550,36 620,22 Q690,6 780,24 Q850,34 920,14 Q1000,2 1100,28 Q1150,36 1200,22 L1200,40 L0,40 Z"
                         fill="url(#wave1)"
+                        opacity={0.9}
                       />
                     </motion.g>
                   </svg>
@@ -91,7 +92,7 @@ const Hero = () => {
             </div>
             <div className="flex gap-1 flex-col">
               <Typography variant="body1" className="font-medium">
-                Product Engineer - UX, Frontend, AI &amp; Growth.
+                Product Engineer - UX, Frontend & AI
               </Typography>
               <Typography variant="body1" className="font-medium">
                 I believe it&apos;s OK to be you, You is dope.!😉
