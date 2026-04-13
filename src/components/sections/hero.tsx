@@ -92,7 +92,7 @@ const Hero = () => {
             </div>
             <div className="flex gap-1 flex-col">
               <Typography variant="body1" className="font-medium">
-                Product Engineer - UX, Frontend & AI
+                Product Engineer - UX and Frontend
               </Typography>
               <Typography variant="body1" className="font-medium">
                 I believe it&apos;s OK to be you, You is dope.!😉
