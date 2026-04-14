@@ -1,11 +1,10 @@
 import { notFound } from 'next/navigation';
-import { MDXRemote } from 'next-mdx-remote/rsc';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { NavArrowLeft } from 'iconoir-react';
 
 import { getAllBlogSlugs, getBlogBySlug } from '@/lib/blog';
-import { mdxComponents } from '@/components/blog/mdx-components';
+import BlogContent from '@/components/blog/blog-content';
 import Typography from '@/components/general/typography';
 import Badge from '@/components/general/badge';
 import Footer from '@/components/layout/footer';
@@ -145,7 +144,7 @@ export default function BlogPostPage({ params }: PageProps) {
           </header>
 
           <div className={proseClasses}>
-            <MDXRemote source={post.content} components={mdxComponents} />
+            <BlogContent content={post.content} />
           </div>
         </article>
       </div>
