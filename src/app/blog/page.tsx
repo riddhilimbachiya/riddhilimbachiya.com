@@ -90,9 +90,9 @@ export default function BlogPage() {
                     <span>{post.readingTime}</span>
                   </div>
 
-                  <h2 className="text-xl font-semibold text-zinc-900">
+                  {/* <h2 className="text-xl font-semibold text-zinc-900">
                     {post.frontmatter.title}
-                  </h2>
+                  </h2> */}
 
                   <p className="text-zinc-500 text-sm leading-relaxed line-clamp-2">
                     {post.frontmatter.description}
