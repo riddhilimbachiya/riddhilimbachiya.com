@@ -1,4 +1,4 @@
-import { getAllBlogs } from '@/lib/blog';
+import { getAllBlogs, BlogPost } from '@/lib/blog';
 import Typography from '@/components/general/typography';
 import Badge from '@/components/general/badge';
 import Footer from '@/components/layout/footer';
@@ -18,12 +18,42 @@ function formatDate(dateString: string): string {
   });
 }
 
+const coverColors: Record<string, { bg: string; text: string; accent: string }> = {
+  'Design Systems': { bg: 'bg-zinc-900', text: 'text-white', accent: 'text-zinc-500' },
+  AI: { bg: 'bg-indigo-900/80', text: 'text-white', accent: 'text-indigo-100' },
+  Frontend: { bg: 'bg-zinc-900', text: 'text-white', accent: 'text-zinc-500' },
+  RAG: { bg: 'bg-zinc-100', text: 'text-zinc-900', accent: 'text-zinc-400' },
+  LLMs: { bg: 'bg-zinc-100', text: 'text-zinc-900', accent: 'text-zinc-400' },
+};
+
+function getCoverStyle(tags: string[]) {
+  for (const tag of tags) {
+    if (coverColors[tag]) return coverColors[tag];
+  }
+  return { bg: 'bg-zinc-900', text: 'text-white', accent: 'text-zinc-500' };
+}
+
+function BlogCover({ post }: { post: BlogPost }) {
+  const style = getCoverStyle(post.frontmatter.tags);
+
+  return (
+    <div className={`aspect-[16/9] ${style.bg} rounded-lg overflow-hidden flex flex-col justify-end p-6`}>
+      <p className={`text-[11px] uppercase tracking-[0.15em] font-medium ${style.accent} mb-2`}>
+        {post.frontmatter.tags[0]}
+      </p>
+      <h3 className={`text-lg font-semibold ${style.text} leading-snug`}>
+        {post.frontmatter.title}
+      </h3>
+    </div>
+  );
+}
+
 export default function BlogPage() {
   const posts = getAllBlogs();
 
   return (
     <div className="flex flex-col items-center w-full">
-      <section className="w-full max-w-7xl px-8 max-lg:px-4 pt-16 pb-24">
+      <section className="w-full max-w-7xl max-lg:px-4 pt-16 pb-24">
         <div className="mb-16">
           <Typography variant="h1" className="mb-4">
             Blog
@@ -43,26 +73,15 @@ export default function BlogPage() {
             </Typography>
           </div>
         ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12">
             {posts.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group flex flex-col rounded-2xl border border-zinc-200 overflow-hidden hover:border-zinc-300 hover:scale-[1.02] transition-[border-color,transform] duration-300 ease-out">
-                <div className="aspect-[16/9] bg-zinc-100 overflow-hidden">
-                  {post.frontmatter.coverImage ? (
-                    <div
-                      className="w-full h-full bg-cover bg-center"
-                      style={{
-                        backgroundImage: `url(${post.frontmatter.coverImage})`,
-                      }}
-                    />
-                  ) : (
-                    <div className="w-full h-full shimmer-line" />
-                  )}
-                </div>
+                className="group flex flex-col gap-6 overflow-hidden hover:border-zinc-300 hover:scale-[1.02] transition-[border-color,transform] duration-300 ease-out">
+                <BlogCover post={post} />
 
-                <div className="flex flex-col gap-3 p-6">
+                <div className="flex flex-col gap-3">
                   <div className="flex items-center gap-3 text-sm text-zinc-400">
                     <time dateTime={post.frontmatter.date}>
                       {formatDate(post.frontmatter.date)}
