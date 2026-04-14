@@ -94,7 +94,7 @@ export default function BlogPage() {
                     {post.frontmatter.title}
                   </h2> */}
 
-                  <p className="text-zinc-500 text-sm leading-relaxed line-clamp-2">
+                  <p className="text-zinc-600 text-sm leading-relaxed line-clamp-2">
                     {post.frontmatter.description}
                   </p>
 
