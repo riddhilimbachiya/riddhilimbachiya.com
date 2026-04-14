@@ -42,7 +42,7 @@ export default function BlogContent({ content }: { content: string }) {
         h4: HeadingRenderer(4),
         h5: HeadingRenderer(5),
         h6: HeadingRenderer(6),
-        a: ({ href, children, ...rest }) => {
+        a: ({ href, children, ref: _ref, ...rest }) => {
           const isExternal = href?.startsWith('http');
           if (isExternal) {
             return (
