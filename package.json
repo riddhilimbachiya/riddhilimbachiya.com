@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.4",
+    "@tailwindcss/typography": "^0.5.19",
     "@types/node": "20.5.7",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
@@ -19,6 +20,7 @@
     "framer-motion": "^12.38.0",
     "iconoir-react": "^7.10.1",
     "next": "13.4.19",
+    "next-mdx-remote": "^4.4.1",
     "postcss": "8.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",

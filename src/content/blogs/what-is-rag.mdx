@@ -1,0 +1,169 @@
+---
+title: What is RAG? A Simple Explanation That Actually Makes Sense
+description: RAG explained in plain English - what it is, how it works step by step, and why it matters if you're building with AI.
+date: '2026-03-14'
+tags: ['AI', 'RAG', 'LLMs']
+readingTime: 5 min read
+coverImage: '/blog-cover-what-is-rag.png'
+published: true
+---
+
+I've been building an AI assistant for our company docs and support center. The whole system runs on RAG (Retrieval-Augmented Generation) - and once you understand it, it's surprisingly simple.
+
+## What is RAG - and why does it exist
+
+**RAG = Give the AI your real content to look up first, then let it answer from that.**
+
+That's the whole idea. AI models like Claude or ChatGPT know a lot - but they don't know _your_ company, your docs, or your product. Ask one _"how do I reset my API key?"_ and it guesses. Sometimes confidently wrong.
+
+RAG fixes this. Instead of letting the AI make things up, you point it to your actual content _before_ it answers. Everything else is just the mechanics of how you do that reliably.
+
+## How RAG works
+
+Six steps. Each one builds on the last.
+
+### 1. Pull your content into one place
+
+Product docs, support articles, API guides - all of it goes into one place.
+
+Think of it like building a library. Every article, every guide - on the shelf. The AI will only answer from what's here.
+
+### 2. Cut it into small focused chunks
+
+Imagine you stored an entire help article as one big block. Now someone asks _"How do I reset my password?"_ - your system sends the whole page to the AI, even if only 2 lines matter. That creates problems:
+
+- Too much unnecessary information
+- Harder for the AI to focus on what's relevant
+- Less accurate answers
+- Slower and more expensive responses
+
+So instead, you split the content. A page with sections on _Reset password_, _Change email_, and _Enable 2FA_ becomes 3 separate chunks - not one big block.
+
+Now when someone asks _"how do I reset my password?"_ - you send **just that chunk**, not the entire page. Not because AI can't read long text - but because you want to send **only what's useful, nothing extra**. It keeps the input smaller, which makes responses faster, cheaper, and easier for the AI to focus on.
+
+### 3. Turn those chunks into something you can search
+
+You now have all these small chunks. But you can't send all of them to the AI every time - that would be too much, too noisy, and expensive.
+
+You need a way to find only the relevant ones. And simple text search isn't enough. A user might say:
+
+> "I can't log in"
+
+But your content says:
+
+> "Authentication failed"
+
+Same meaning. Different words. A simple text search would miss that.
+
+So how do you search by _meaning_ instead of exact words? You convert each chunk into a **list of numbers** called an **embedding**, using an embedding model (for example, OpenAI's `text-embedding-3-small`). These numbers capture the _meaning_ of the chunk - not just the words.
+
+```text
+"If you can't log in..." → [0.24, -0.81, 0.56, 0.09 ...]
+```
+
+These numbers **capture the meaning** of the chunk. Here's why that matters:
+
+- Chunks with **similar meaning** get **similar numbers**
+- Chunks with **different meaning** get **very different numbers**
+
+So _"I can't log in"_ and _"Authentication failed"_ end up with almost identical numbers - even though the words are nothing alike. That's what makes this work.
+
+You store both the original chunk text and its embedding together. Your whole content library becomes a list like this:
+
+```json
+[
+  {
+    "text": "If you can't log in, first check your username...",
+    "embedding": [0.24, -0.81, 0.56, 0.09]
+  },
+  {
+    "text": "Authentication failed error appears after...",
+    "embedding": [0.25, -0.8, 0.55, 0.1]
+  }
+]
+```
+
+That's what your chunks look like now - each one has the original text and a set of numbers that represent its meaning.
+
+### 4. Save the chunks in one place so you can search them later 
+
+Now you need to put all of these chunks somewhere you can search them later.
+
+If your content is small - a few dozen pages - you can store them in a simple file or a regular database. But as your content grows, you'll want a **vector database** - a database built specifically to search by these number-based embeddings. It's faster and made for this kind of search.
+
+Either way, the goal is the same: when a question comes in, you can find the right chunks fast.
+
+### 5. Find the relevant chunks when a question comes in
+
+A user asks a question. Now you need to find which chunks have the answer. Here's how:
+
+First, you take the user's question and run it through the **same embedding model** you used for your chunks. The question gets converted into a list of numbers too - just like your chunks were. Now the question and all your chunks are in the same format. That means you can compare them.
+
+You search for matching chunks two ways:
+
+#### a) Meaning-based search (vector search)
+
+Compare the question's numbers against all chunk numbers. Find the chunks that are closest in meaning - even if the exact words are different.
+
+- Question: _"I can't log in"_
+- Chunk: _"Authentication failed"_ → matched, because the meaning is similar
+
+This is done with simple math - comparing how close two lists of numbers are to each other (called cosine similarity).
+
+#### b) Exact-word search (keyword search)
+
+Check chunks for exact words or phrases from the question. Useful when users paste specific terms, error codes, or product names.
+
+- Question: _"Error 403 on login"_
+- Chunk contains _"Error 403"_ → matched exactly
+
+This is plain string matching - no AI involved, just code logic.
+
+> Running both at the same time is called **hybrid search**. You don't have to do both - one works. But hybrid catches both plain-language questions _and_ exact-term questions. It's just more reliable.
+
+Once both searches are done, you merge the results, remove duplicates, and pick the top 5–6 chunks most relevant to the question.
+
+Now you send the original **text** of those chunks to the AI - not the numbers. The numbers were only used to _find_ the right chunks. The AI reads the actual content.
+
+> **Key point:** searching is just logic and math. The AI only comes in _after_ you've already picked the most relevant content.
+
+### 6. Hand it to the AI - with guardrails
+
+You send the selected chunks _and_ the user's question to the AI (Claude, GPT, etc.) with one clear instruction:
+
+> "Answer **only from these chunks**. Don't guess. Don't make anything up. If the answer isn't here, say so."
+
+The user gets a real answer - from real content. Not a hallucination.
+
+But that instruction alone isn't enough. You also need a few guardrails:
+
+- If the search doesn't find anything close enough - don't force an answer. Just say _"I don't have information on that."_
+- If the question is off-topic or doesn't relate to your content - skip it. A product support bot shouldn't answer questions about the weather.
+- If someone tries to trick the system with weird inputs - catch it early and don't pass it to the AI.
+
+Simple checks like these make the difference between a demo and something people actually trust.
+
+---
+
+## Why understanding this matters
+
+You can vibe-code a RAG system in a weekend. Get a demo working, looks cool. But when it starts giving wrong answers in production - and it will - what do you fix?
+
+If you don't understand how the system works, you ask AI to fix it. It changes something. You test it. Still broken. It changes something else. You're stuck in a loop - guessing, not debugging.
+
+But when you understand each step - how content gets chunked, how embeddings work, how search finds matches - you know exactly where to look. Bad answers? Check what chunks the search returned. Irrelevant results? Your chunks are probably too big or your search isn't filtering well. Missing context? Your chunks are too small or there's no overlap.
+
+The AI writing a nice answer is the easy part. Any decent model can do that. The hard part is everything before it - making sure the right content gets found in the first place. That's where the real work lives, and that's what you need to understand to build something solid.
+
+## When to use it
+
+- **Use RAG** when correctness matters - docs, help centers, internal guides, policies. Anywhere a wrong answer has real cost.
+- **Skip it** for general chat, creative tasks, or brainstorming. RAG is built for accuracy, not creativity.
+
+---
+
+**The whole thing in one line:** break content into chunks, turn them into numbers, find the closest match, answer only from that.
+
+That's RAG. Once you understand it, you're not just using AI tools - you're someone who can debug them, improve them, and tell them exactly what to do.
+
+_AI is everywhere. Everyone's talking - but most are just repeating what they've heard. When you understand how it works, the noise stops being impressive. Don't let fancy words make you feel small. Dig deeper - there's usually less there than it seems._

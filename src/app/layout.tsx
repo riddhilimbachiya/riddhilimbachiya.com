@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import { Montserrat } from 'next/font/google';
+import { Montserrat, Inter } from 'next/font/google';
 
 import './globals.css';
 import Header from '@/components/layout/header';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 const title = 'Riddhi Limbachiya | Product Engineer helping startups ship 0→1 products';
 const description =
@@ -45,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} flex justify-center w-full flex-col`}>
+        className={`${montserrat.className} ${inter.variable} flex justify-center w-full flex-col`}>
         <Header />
         <main>{children}</main>
       </body>

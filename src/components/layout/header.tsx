@@ -56,6 +56,11 @@ const Header = () => {
           )}
           <div className="flex gap-8">
             <Link
+              href="/blog"
+              className={isHomePage ? 'max-md:hidden' : 'max-sm:hidden'}>
+              Blog
+            </Link>
+            <Link
               href={isHomePage ? '/beyond-bio' : '/'}
               className={isHomePage ? 'max-md:hidden' : 'max-sm:hidden'}>
               {isHomePage ? 'Beyond the bio' : 'Home'}
@@ -78,6 +83,9 @@ const Header = () => {
               </div>
               <div className="border-b border-zinc-100 p-4 bg-white h-screen">
                 <ul className="flex flex-col gap-2 max-lg:gap-4">
+                  <li className="py-4">
+                    <Link href="/blog">Blog</Link>
+                  </li>
                   <li className="py-4">
                     <Link href={isHomePage ? '/beyond-bio' : '/'}>
                       {isHomePage ? 'Beyond the bio' : 'Home'}

@@ -6,6 +6,21 @@ html {
   scroll-behavior: smooth;
 }
 
+.prose :where(code):not(:where(pre *)) {
+  background-color: rgb(243 244 246 / 0.8);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.875em;
+  font-weight: 500;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  border: 1px solid rgb(229 231 235);
+}
+
+.prose :where(code):not(:where(pre *))::before,
+.prose :where(code):not(:where(pre *))::after {
+  content: none;
+}
+
 /* Global scroll-margin-top for all anchor links */
 [id] {
   scroll-margin-top: 92px; /* Ensures that when the page scrolls to a section, it doesn't get hidden behind the fixed header or navbar as my header is sticky*/

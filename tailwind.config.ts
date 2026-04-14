@@ -6,9 +6,13 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/lib/**',
+    './src/content/**/*.{md,mdx}',
   ],
   theme: {
     extend: {
+      fontFamily: {
+        inter: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+      },
       colors: {
         purple: {
           100: '#EBE5ED',
@@ -51,6 +55,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
 export default config;
