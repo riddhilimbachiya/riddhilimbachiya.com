@@ -1,11 +1,11 @@
 import { notFound } from 'next/navigation';
-import { serialize } from 'next-mdx-remote/serialize';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { NavArrowLeft } from 'iconoir-react';
 
 import { getAllBlogSlugs, getBlogBySlug } from '@/lib/blog';
-import BlogContent from '@/components/blog/blog-content';
+import { mdxComponents } from '@/components/blog/mdx-components';
 import Typography from '@/components/general/typography';
 import Badge from '@/components/general/badge';
 import Footer from '@/components/layout/footer';
@@ -107,11 +107,9 @@ function formatDate(dateString: string): string {
   });
 }
 
-export default async function BlogPostPage({ params }: PageProps) {
+export default function BlogPostPage({ params }: PageProps) {
   const post = getBlogBySlug(params.slug);
   if (!post) notFound();
-
-  const mdxSource = await serialize(post.content);
 
   return (
     <div className="flex flex-col items-center w-full">
@@ -147,7 +145,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </header>
 
           <div className={proseClasses}>
-            <BlogContent source={mdxSource} />
+            <MDXRemote source={post.content} components={mdxComponents} />
           </div>
         </article>
       </div>
