@@ -1,0 +1,102 @@
+---
+title: Ship Consistent UI With AI - Zero Tech Debt
+description: A simple design system + one rules file. Every feature your AI builds ships consistent, clean, and on system.
+date: '2025-11-04'
+tags: ['Design Systems', 'AI', 'Frontend']
+readingTime: 4 min read
+coverImage: '/blog-cover-design-system.png'
+published: true
+---
+
+You build a feature with Cursor. Looks great. Build another one. Also looks great. Put them next to each other and something feels off. The blues don't match. Spacing is different. There are two button styles. Nothing is broken, but it doesn't feel like one product.
+
+This happens because AI doesn't remember your product. It works from training data and whatever you give it right now. Most of the time, this is how you ask AI to build UI:
+
+- **Screenshot** - AI matches pixels, picks colors and spacing that look close but aren't from your system
+- **Figma (MCP)** - AI reads the design file and pulls raw values like `p-[18px]` and `gap-[22px]` straight from it
+- **Describe what you want** - AI writes whatever pattern seems reasonable based on general knowledge
+
+Every prompt is a blank slate. Three features, three different sets of choices. That's where the drift comes from.
+
+The fix is simple: have a design system and hand it to AI. And a design system is much simpler than it sounds.
+
+---
+
+## The Simplest Design System That Works
+
+Whether you already have a design system or not - these are the things that keep a product consistent. Most of them take minutes to set up.
+
+### 1. Colors in one place
+
+All your brand colors - primary, secondary, error, success, grays - go in one file (`globals.css` or your Tailwind config). You give each color a name. Then everywhere in your code, you use that name: `bg-primary`, `text-error`. Never a raw color code like `bg-[#3B82F6]`.
+
+Why? Because when your brand blue is defined once and used everywhere by name, changing it takes one line. Without this, the same blue is hardcoded in fifty places with slightly different hex values. Good luck updating that.
+
+### 2. Use Tailwind's default values - don't reinvent anything
+
+Tailwind already gives you everything you need for spacing, sizing, and layout: `p-4`, `m-6`, `gap-4`, `w-full`, `max-w-xl`, `h-12`. These are standard, even, and battle-tested across thousands of products.
+
+Use them. Never add custom values. No `p-[18px]`, no `gap-[22px]`, no `max-w-[743px]`. Custom values are bad code. They break consistency because every component ends up with its own random spacing that doesn't relate to anything else on the page. Three features in, nothing lines up and the UI feels stitched together.
+
+Even if a design file says `18px` - you use `p-4` (16px) or `p-5` (20px). Always snap to Tailwind's scale. No user will ever notice 2px, but your entire product stays consistent, aligned, and maintainable.
+
+### 3. Keep components small, dumb, and in one folder
+
+Button, Input, Card, Badge, Avatar - all in `/components/ui/`. Each one does one thing. A Button handles clicks and shows a loading state. No API calls, no data fetching, no business logic. The smaller and dumber a component is, the more reusable it is.
+
+### 4. Build big from small
+
+Need a profile card? Compose it from small components you already have:
+
+```tsx
+<Card>
+  <Avatar src={user.photo} /> 
+  <h4>{user.name}</h4>
+  <Button variant="secondary">View Profile</Button>
+</Card>
+```
+
+Pages work the same way - compose them from these bigger pieces. Same building blocks everywhere. That's what makes a product feel unified.
+
+If you have a big product - marketing site, blog, app - all using the same design system, set up Storybook. It's a catalog where anyone on the team can see every component and how to use it.
+
+---
+
+## Hand It to AI
+
+You have a system. Now AI needs to know about it - otherwise every prompt is still a blank slate.
+
+Cursor reads a rules file before writing any code. Create `.cursor/rules/design-system.mdc`:
+
+```markdown
+# Design System Rules
+
+Follow these for every file you create or modify.
+
+## Colors
+- Only use named colors from our theme (bg-primary, text-error, etc.)
+- All colors are defined in globals.css - use those only
+- Never use color codes directly (no bg-[#2563EB])
+
+## Tailwind Values
+- Only use Tailwind's built-in default values for everything
+- Spacing: p-4, m-6, gap-4 (no p-[13px], no gap-[22px])
+- Sizing: w-full, max-w-xl, h-12 (no max-w-[743px], no h-[52px])
+- Border radius: rounded-md, rounded-lg (no rounded-[7px])
+- Font size: text-sm, text-base, text-lg (no text-[15px])
+- No custom values ever
+
+## Components
+- Always check src/components/ui/ before building anything new
+- If a Button exists, use it - don't build a new one
+- Build pages by composing existing components
+- Keep components small - no business logic inside
+```
+
+Claude has the same thing - a `CLAUDE.md` file in your project root with the same rules.
+
+This is the most basic set of rules - and it'll do wonders. You can always add more as your product grows: animation conventions, icon usage, dark mode patterns, whatever your system needs.
+
+Now AI reads your system before writing a single line. Screenshot of a blue button? It uses `bg-primary`. Figma says `18px`? It uses `p-4`. New feature? It reaches for your existing components first.
+
+Five minutes to set up. Every feature after that - yours or AI's - ships on system.
