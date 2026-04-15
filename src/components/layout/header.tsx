@@ -2,6 +2,7 @@
 
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import posthog from 'posthog-js';
 
 import { Menu, Xmark } from 'iconoir-react';
 import { motion } from 'framer-motion';
@@ -26,7 +27,16 @@ const Header = () => {
   const renderHomePageSectionNavLinks = () => {
     return NAV_LINKS.map((link: LinkProps) => (
       <li key={link.children?.toLocaleString()}>
-        <Link href={link.href}>{link.children}</Link>
+        <Link
+          href={link.href}
+          onClick={() =>
+            posthog.capture('header_nav_click', {
+              label: link.children,
+              href: link.href,
+            })
+          }>
+          {link.children}
+        </Link>
       </li>
     ));
   };
@@ -57,12 +67,24 @@ const Header = () => {
           <div className="flex gap-8">
             <Link
               href="/blog"
-              className={isHomePage ? 'max-md:hidden' : 'max-sm:hidden'}>
+              className={isHomePage ? 'max-md:hidden' : 'max-sm:hidden'}
+              onClick={() =>
+                posthog.capture('header_nav_click', {
+                  label: 'Blog',
+                  href: '/blog',
+                })
+              }>
               Blog
             </Link>
             <Link
               href={isHomePage ? '/beyond-bio' : '/'}
-              className={isHomePage ? 'max-md:hidden' : 'max-sm:hidden'}>
+              className={isHomePage ? 'max-md:hidden' : 'max-sm:hidden'}
+              onClick={() =>
+                posthog.capture('header_nav_click', {
+                  label: isHomePage ? 'Beyond the bio' : 'Home',
+                  href: isHomePage ? '/beyond-bio' : '/',
+                })
+              }>
               {isHomePage ? 'Beyond the bio' : 'Home'}
             </Link>
           </div>
@@ -84,10 +106,28 @@ const Header = () => {
               <div className="border-b border-zinc-100 p-4 bg-white h-screen">
                 <ul className="flex flex-col gap-2 max-lg:gap-4">
                   <li className="py-4">
-                    <Link href="/blog">Blog</Link>
+                    <Link
+                      href="/blog"
+                      onClick={() =>
+                        posthog.capture('header_nav_click', {
+                          label: 'Blog',
+                          href: '/blog',
+                          mobile: true,
+                        })
+                      }>
+                      Blog
+                    </Link>
                   </li>
                   <li className="py-4">
-                    <Link href={isHomePage ? '/beyond-bio' : '/'}>
+                    <Link
+                      href={isHomePage ? '/beyond-bio' : '/'}
+                      onClick={() =>
+                        posthog.capture('header_nav_click', {
+                          label: isHomePage ? 'Beyond the bio' : 'Home',
+                          href: isHomePage ? '/beyond-bio' : '/',
+                          mobile: true,
+                        })
+                      }>
                       {isHomePage ? 'Beyond the bio' : 'Home'}
                     </Link>
                   </li>

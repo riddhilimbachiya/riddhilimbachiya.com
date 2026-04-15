@@ -99,7 +99,7 @@ const Hero = () => {
               </Typography>
             </div>
           </div>
-          <Social variant="light" />
+          <Social variant="light" location="hero" />
         </motion.div>
 
         <motion.div

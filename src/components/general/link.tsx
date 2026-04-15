@@ -10,6 +10,7 @@ export interface LinkProps extends NextLinkProps {
   href: string;
   variant?: 'light' | 'dark';
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
 const Link = ({
@@ -19,11 +20,13 @@ const Link = ({
   className,
   withUnderline,
   externalLink,
+  onClick,
 }: LinkProps) => {
   return (
     <NextLink
       href={href}
       target={externalLink ? '_blank' : '_self'}
+      onClick={onClick}
       className={twMerge(
         'w-max text-base',
         variant === 'light'

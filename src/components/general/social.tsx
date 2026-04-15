@@ -1,13 +1,20 @@
 'use client';
 
 import React from 'react';
+import posthog from 'posthog-js';
 
 import { twMerge } from 'tailwind-merge';
 
 import Link from '@/components/general/link';
 import { SOCIAL_LINKS } from '@/lib/data';
 
-const Social = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
+const Social = ({
+  variant = 'dark',
+  location = 'unknown',
+}: {
+  variant?: 'dark' | 'light';
+  location?: 'hero' | 'footer' | string;
+}) => {
   return (
     <div
       className={twMerge(
@@ -20,7 +27,13 @@ const Social = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
             className="transform transition-transform hover:rotate-12 cursor-pointer"
             variant={variant}
             href={link.href}
-            externalLink>
+            externalLink
+            onClick={() =>
+              posthog.capture('social_click', {
+                platform: link.label,
+                location,
+              })
+            }>
             <link.icon />
           </Link>
         </React.Fragment>
