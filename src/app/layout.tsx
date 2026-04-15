@@ -3,6 +3,7 @@ import { Montserrat, Inter } from 'next/font/google';
 
 import './globals.css';
 import Header from '@/components/layout/header';
+import { PostHogProvider } from '@/components/providers/posthog-provider';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -47,8 +48,10 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${montserrat.className} ${inter.variable} flex justify-center w-full flex-col`}>
-        <Header />
-        <main>{children}</main>
+        <PostHogProvider>
+          <Header />
+          <main>{children}</main>
+        </PostHogProvider>
       </body>
     </html>
   );
