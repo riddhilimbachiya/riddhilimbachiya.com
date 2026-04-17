@@ -67,7 +67,7 @@ const Header = () => {
           <div className="flex gap-8">
             <Link
               href="/blog"
-              className={isHomePage ? 'max-md:hidden' : 'max-sm:hidden'}
+              className={'max-sm:hidden'}
               onClick={() =>
                 posthog.capture('header_nav_click', {
                   label: 'Blog',
@@ -77,15 +77,15 @@ const Header = () => {
               Blog
             </Link>
             <Link
-              href={isHomePage ? '/beyond-bio' : '/'}
-              className={isHomePage ? 'max-md:hidden' : 'max-sm:hidden'}
+              href={'/beyond-bio'}
+              className={'max-sm:hidden'}
               onClick={() =>
                 posthog.capture('header_nav_click', {
-                  label: isHomePage ? 'Beyond the bio' : 'Home',
-                  href: isHomePage ? '/beyond-bio' : '/',
+                  label:'Beyond the bio',
+                  href: '/beyond-bio',
                 })
               }>
-              {isHomePage ? 'Beyond the bio' : 'Home'}
+            Beyond the bio
             </Link>
           </div>
           <Drawer open={isOpen} onOpenChange={setIsOpen}>
@@ -107,6 +107,19 @@ const Header = () => {
                 <ul className="flex flex-col gap-2 max-lg:gap-4">
                   <li className="py-4">
                     <Link
+                      href={ '/'}
+                      onClick={() =>
+                        posthog.capture('header_nav_click', {
+                          label: 'Home',
+                          href:  '/',
+                          mobile: true,
+                        })
+                      }>
+                      Home
+                    </Link>
+                    </li>
+                  <li>
+                    <Link
                       href="/blog"
                       onClick={() =>
                         posthog.capture('header_nav_click', {
@@ -120,15 +133,15 @@ const Header = () => {
                   </li>
                   <li className="py-4">
                     <Link
-                      href={isHomePage ? '/beyond-bio' : '/'}
+                      href={ '/beyond-bio'}
                       onClick={() =>
                         posthog.capture('header_nav_click', {
-                          label: isHomePage ? 'Beyond the bio' : 'Home',
-                          href: isHomePage ? '/beyond-bio' : '/',
+                          label: 'Beyond the bio',
+                          href:  '/beyond-bio',
                           mobile: true,
                         })
                       }>
-                      {isHomePage ? 'Beyond the bio' : 'Home'}
+                      Beyond the bio
                     </Link>
                   </li>
                 </ul>
