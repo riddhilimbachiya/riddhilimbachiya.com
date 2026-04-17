@@ -1,0 +1,227 @@
+---
+title: "Building a Multilingual Marketing Website & Blog for Your Product"
+description: "Learn how multilingual websites work - from Google language indexing to implementing i18n in Next.js."
+date: '2026-01-05'
+tags: ["Growth", "SEO", "Nextjs", "i18n"]
+readingTime: 4 min read
+published: true
+---
+
+If your product has users in different countries but your website is only in English, most of the world can't find you. To understand why, you need to understand how Google works.
+
+## How Google Works
+
+Google has a bot that visits every page on your website. It reads the text on the page - headings, paragraphs, descriptions - and saves it in its database. Along with the text, **it notes the language.**
+
+When someone searches, Google doesn't just match the topic - **it matches the language too.**
+
+- English search → Google returns English pages
+- Spanish search → Google returns Spanish pages
+- French search → Google returns French pages
+
+If all your pages are in English, they only exist in English search results. Anyone searching in another language is unlikely to find you.
+
+## What This Actually Looks Like
+
+You have a blog post: **Best Time to Post on Social Media.** It's in English. Google saved it as an English page.
+
+**Maria** is a marketing manager in Spain. Here's what happens:
+
+1. She searches **"mejor hora para publicar en redes sociales"** - same topic, in Spanish
+2. Google looks for **Spanish pages** about this
+3. Your blog post is in English - **Google skips it**
+4. A competitor has a Spanish version - **Google shows that instead**
+5. Maria clicks the competitor's page. **She never sees yours.**
+
+You lost her. Not because your content is worse - because it didn't exist in her language.
+
+This happens across every non-English market, every day. It works the same way with AI search too - ChatGPT, Perplexity, and Google's AI overviews all pull from web pages. Spanish question → Spanish content gets referenced. English-only content gets skipped.
+
+## The Fix
+
+Write that same blog post in Spanish and put it on its own page. A real, separate page - Spanish title, Spanish paragraphs, Spanish description. Google visits it, reads Spanish text, saves it as a Spanish page. Now when Maria searches in Spanish, Google has something from your site to show her.
+
+But this page needs its own URL. A single URL serves one version of content - that's all Google indexes. Two languages at one URL = one of them is invisible.
+
+## Each Language Gets Its Own URL
+
+You add a short code to the URL that represents the language:
+
+- `en` = English
+- `es` = Spanish
+- `fr` = French
+
+These are a universal standard (ISO 639-1) that every browser, search engine, and website already uses. Browsers use these same codes to tell websites what language the user speaks.
+
+Your blog post, which used to live at one address:
+
+```
+yoursite.com/blog/best-time-to-post
+```
+
+Now lives at a separate address for each language:
+
+```
+yoursite.com/en/blog/best-time-to-post  → English text
+yoursite.com/es/blog/best-time-to-post  → Spanish text
+yoursite.com/fr/blog/best-time-to-post  → French text
+```
+
+The language code goes right after the domain. The rest of the URL stays the same - it's just an address. **What makes one page English and the other Spanish is the text on it.** Google reads the text, determines the language, and indexes each page separately.
+
+This pattern is called **path prefix.** It's the standard because:
+
+- **One domain** - all your SEO authority stays in one place
+- **No extra infrastructure** - no DNS changes, no extra hosting
+- **Framework support** - Next.js, Nuxt, Remix all support it natively
+
+
+Now you know what the URLs look like. But how do you actually build this?
+
+## How Next.js Handles This
+
+*This section uses the Next.js App Router (Next.js 13+) with Next.js 15 conventions.*
+
+Next.js gives you the **routing foundation.** Every page is a file, and the URL maps to the file path. To support multiple languages, you wrap all your pages inside a `[locale]` folder:
+
+```
+app/
+├── [locale]/
+│   ├── page.tsx         → yoursite.com/en  or  yoursite.com/es
+│   ├── pricing/
+│   │   └── page.tsx     → yoursite.com/en/pricing  or  yoursite.com/es/pricing
+│   └── blog/
+│       └── [slug]/
+│           └── page.tsx → yoursite.com/en/blog/best-time-to-post
+```
+
+`[locale]` is a dynamic segment - a placeholder that Next.js fills in from the URL. Visit `/en/pricing` → `locale` is `"en"`. Visit `/es/pricing` → `locale` is `"es"`. The same `pricing/page.tsx` runs in both cases - the only difference is which text it renders.
+
+Next.js gives you everything you need to build the rest yourself - dynamic routes, middleware, Server Components. No external library required.
+
+**Translation files** - you create one JSON file per language, same keys, different text:
+
+`dictionaries/en.json`
+```json
+{
+  "pricing": {
+    "title": "Simple Pricing",
+    "subtitle": "Start free, upgrade when you're ready"
+  }
+}
+```
+
+`dictionaries/es.json`
+```json
+{
+  "pricing": {
+    "title": "Precios Simples",
+    "subtitle": "Comienza gratis, actualiza cuando estés listo"
+  }
+}
+```
+
+**Loading them** - a small function that imports the right file based on the locale:
+
+```typescript
+// app/[locale]/dictionaries.ts
+import 'server-only'
+
+const dictionaries = {
+  en: () => import('./dictionaries/en.json').then((m) => m.default),
+  es: () => import('./dictionaries/es.json').then((m) => m.default),
+}
+
+export const getDictionary = async (locale: string) =>
+  dictionaries[locale as keyof typeof dictionaries]()
+```
+
+`import 'server-only'` ensures this code only runs on the server - translation files never end up in the browser's JavaScript bundle.
+
+**Using translations in a component** - you call `getDictionary` with the locale and use the object directly:
+
+```tsx
+import { getDictionary } from './dictionaries'
+
+export default async function PricingPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  const dict = await getDictionary(locale)
+
+  return (
+    <section>
+      <h1>{dict.pricing.title}</h1>
+      <p>{dict.pricing.subtitle}</p>
+    </section>
+  )
+}
+```
+
+`/en/pricing` renders "Simple Pricing." `/es/pricing` renders "Precios Simples." Same component, no hardcoded text. Each version is **server-rendered** - the translated text is baked into the HTML before it reaches the browser. Google's bot visits `/es/pricing`, reads real Spanish in the page source, saves it as a Spanish page.
+
+**Middleware** - handles language detection. When someone visits `yoursite.com` for the first time, a middleware reads the browser's `Accept-Language` header - every browser sends this automatically - picks the best matching locale, and redirects:
+
+```typescript
+// middleware.ts
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
+
+const locales = ['en', 'es', 'fr']
+const defaultLocale = 'en'
+
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl
+
+  const hasLocale = locales.some(
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  )
+  if (hasLocale) return
+
+  const acceptLanguage = request.headers.get('accept-language') || ''
+  const preferred = acceptLanguage.split(',')[0]?.split('-')[0] || defaultLocale
+  const locale = locales.includes(preferred) ? preferred : defaultLocale
+
+  request.nextUrl.pathname = `/${locale}${pathname}`
+  return NextResponse.redirect(request.nextUrl)
+}
+
+export const config = {
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+}
+```
+
+The browser says "I speak Spanish" → middleware redirects to `/es/`. Next visit, you can save the choice in a cookie so it skips detection.
+
+**That's the full setup - all built into Next.js:**
+
+- **`[locale]` folder** - gives each language its own route
+- **`getDictionary`** - loads the right translation file
+- **Server Components** - translations render on the server, baked into the HTML
+- **Middleware** - detects browser language and redirects
+
+You write each component once, provide one JSON file per language, and Next.js generates real, server-rendered pages - each with its own URL, each with translated text that Google can crawl. Libraries like `next-intl` exist that do some of this work for you - but the core pattern works with Next.js alone.
+
+Maria searches in Spanish. Google finds your `/es/` page. She clicks it. She's on your website.
+
+## How This Improves Your SEO
+
+Every page on your website can rank on Google. When a page only exists in English, it only ranks in English results. **Add a Spanish version and that's a new page - new URL, Spanish text - ranking in Spanish results.** You've doubled your indexed pages without creating new content from scratch.
+
+Scale this up:
+
+- **200 blog posts** in English → 200 pages in Google's index
+- **Add Spanish and French** → 600 pages in Google's index
+- **3x the search coverage** from content you already have - you just need quality translations
+
+Each page competes in its own language's results. English pages in English searches, Spanish pages in Spanish searches, French pages in French searches.
+
+This works for everything - blog posts, landing pages, pricing pages, docs. And because all pages live on one domain (path prefix), they all build the same domain's authority. Google sees one strong website with lots of content - not three separate weak ones.
+
+**For products that rely on content to drive signups, this is one of the biggest growth levers most companies never use.**
+
+---
+
+Your content already exists. Internationalization makes it visible to the rest of the world. Every language you add is a new market you show up in. When it's done right, the user never notices - the site just speaks their language.

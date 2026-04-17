@@ -122,7 +122,7 @@ export default function BlogPostPage({ params }: PageProps) {
           </Typography>
         </Link>
 
-        <article className="flex flex-col gap-8 py-16">
+        <article className="flex flex-col gap-8 py-16 group">
           <div className="flex gap-3 items-center">
             {post.frontmatter.tags.map((tag) => (
               <Badge key={tag}>{tag}</Badge>
