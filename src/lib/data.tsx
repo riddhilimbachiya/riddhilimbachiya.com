@@ -220,7 +220,7 @@ export const PROJECTS = [
     name: 'Fiskil',
     link: 'Fiskil',
     description:
-      'Fiskil is an enterprise data-sharing platform serving finance and energy institutions across multiple markets (US, UK, AU).',
+      'Fiskil is a B2B data-sharing platform serving finance and energy institutions across multiple markets (US, UK, AU,LATAM & EU).',
     techs: [
       'TypeScript',
       'React',
@@ -245,82 +245,101 @@ export const PROJECTS = [
     isDescriptionOnLeft: false,
     href: 'https://www.fiskil.com/',
     modalContent: {
-      role: 'Senior Product Engineer - UX, Frontend, Growth & AI',
+      role: 'Senior Product Engineer - UX, Frontend & AI integrations',
       responsibilities: (
         <React.Fragment>
+
           <div className="flex flex-col gap-1">
             <h4 className="font-bold text-base mb-1">
-              AI - Docs &amp; Support
+              AI Assistant
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Building a RAG-powered AI assistant for Fiskil&apos;s documentation - it reads across all product docs, API guides, and knowledge bases so developers can ask questions in plain language and get accurate, context-aware answers instead of digging through pages.
+                <span className="font-semibold">Designed and building</span> a RAG-powered AI assistant for docs and support - end to end - chat UX, conversational flows, frontend, and RAG pipeline.
               </li>
               <li>
-                Extended the same AI to handle support - users get instant help without filing tickets, reducing support volume and freeing up the team to focus on the product instead of answering repeated questions.
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">
-              UX &amp; Product Decisions
-            </h4>
-            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
-              <li>
-                Took rough requirements and turned them into fully designed features - balancing what users need, what&apos;s technically feasible, and what the business wants.
+                <span className="font-semibold">Docs</span> - developers ask questions in plain language, get answers from product docs, API guides, and knowledge bases.
               </li>
               <li>
-                Drove UX, UI, and frontend decisions across all products, working directly with the CEO, product, design, and engineering teams.
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">
-              Product &amp; Dashboard
-            </h4>
-            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
-              <li>
-                Built the main B2B dashboard - multiple products, multiple teams, one clean interface. Handled caching, state, and performance so everything feels fast.
+                <span className="font-semibold">Support</span> - answers common questions instantly and auto-creates tickets when needed.
               </li>
               <li>
-                Set up authentication, role-based access, and onboarding so the right people see the right things without friction.
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">
-              Website, Blog &amp; Growth
-            </h4>
-            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
-              <li>
-                Built the multi-region website serving US, UK, AU, and LATAM - with full language support so each region gets content in their language and context.
-              </li>
-              <li>
-                Designed and integrated the blog with a CMS so the team can publish content without needing a developer.
-              </li>
-              <li>
-                Optimized for both traditional search engines and AI tools - so the product ranks whether someone searches on Google or asks ChatGPT.
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">
-              Analytics &amp; Product Decisions
-            </h4>
-            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
-              <li>
-                Set up analytics and ran experiments to track real user behaviour - what&apos;s working, where people drop off, and why they leave. Used the data to reduce churn and drive product decisions.
+                Currently in internal use, not yet live for users.
+                {' '}<a
+                  href="https://drive.google.com/file/d/1DQo5eV1_fEOunCQ9wUkgUb95vaJqr1pV/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-4 decoration-zinc-300 hover:decoration-zinc-500"
+                >
+                  Watch the demo →
+                </a>
               </li>
             </ul>
           </div>
 
           <div className="flex flex-col gap-1">
             <h4 className="font-bold text-base mb-1">
-              Design System
+              UX &amp; Design
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Built a company-wide design system and shipped it as a standalone library - cut development time by 30% and made the UI consistent across every product.
+                <span className="font-semibold">Design process</span> - took rough requirements, researched similar products, figured out edge cases, and designed the screens, flows, and interactions.
+              </li>
+              <li>
+                <span className="font-semibold">Craft</span> - designed and built animations, micro-interactions, and smooth transitions across the platform.
+              </li>
+              <li>
+                <span className="font-semibold">Led decisions</span> - drove UX, UI, and frontend decisions across all products, working directly with the CEO.
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <h4 className="font-bold text-base mb-1">
+              B2B Platform
+            </h4>
+            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
+              <li>
+                Built a large-scale multi-product console - two products, each with multiple teams, three roles per team, Firebase auth with MFA, multi-level onboarding flows, role-based access, payment integrations, and end-product customisation.
+              </li>
+              <li>
+                <span className="font-semibold">Frontend architecture</span> - designed and built the core app foundation. Central app context that orchestrates login, parallel API calls for users, teams, products, and subscriptions, and manages state across the entire platform. API layer with caching, error handling, lazy loading, code splitting, and performance optimisation across dozens of screens.
+              </li>
+              <li>
+                <span className="font-semibold">Monorepo</span> - each product in the console also has its own separate customer-facing app with multi-step flows. Built all of them in a monorepo with a shared component library across every project.
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <h4 className="font-bold text-base mb-1">
+              Website, Blog &amp; Growth
+            </h4>
+            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
+              <li>
+                <span className="font-semibold">Website</span> - built the multi-region site serving US, UK, AU, and LATAM with full language support.
+                {' '}<a href="https://www.fiskil.com/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-zinc-300 hover:decoration-zinc-500">See website →</a>
+              </li>
+              <li>
+                <span className="font-semibold">Blog</span> - designed and integrated with a CMS so the team publishes without a developer.
+                {' '}<a href="https://blog.fiskil.com/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-zinc-300 hover:decoration-zinc-500">See blog →</a>
+              </li>
+              <li>
+                <span className="font-semibold">SEO</span> - optimized for both Google and AI tools.
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <h4 className="font-bold text-base mb-1">
+              Design System &amp; Analytics
+            </h4>
+            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
+              <li>
+                <span className="font-semibold">Design system</span> - built a company-wide system - components, patterns, and tokens - shipped as a standalone library used across every product. 30% faster dev time.
+              </li>
+              <li>
+                <span className="font-semibold">Analytics</span> - set up tracking and experiments to see where users drop off and what to fix. Used data to reduce churn and drive product decisions.
               </li>
             </ul>
           </div>
@@ -355,13 +374,10 @@ export const PROJECTS = [
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Built a visually complex data-heavy B2B dashboard supporting
-                three distinct user roles, each with tailored views,
-                permissions, and workflows
+                <span className="font-semibold">Dashboard</span> - built a visually complex data-heavy B2B dashboard supporting three distinct user roles, each with tailored views, permissions, and workflows.
               </li>
               <li>
-                One of the most component-dense and visually complex platforms
-                I&apos;ve worked on
+                <span className="font-semibold">Density</span> - one of the most component-dense and visually complex platforms I&apos;ve worked on.
               </li>
             </ul>
           </div>
@@ -372,16 +388,13 @@ export const PROJECTS = [
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Built AI chat interface for the platform, integrating AI-powered features via the OpenAI API to enhance key workflows.
+                <span className="font-semibold">AI chat</span> - built AI chat interface for the platform, integrating AI-powered features via OpenAI API to enhance key workflows.
               </li>
               <li>
-                Built a highly customizable, UI-dense core table system for
-                large datasets, featuring rich cell layouts and interactions,
-                optimized with TanStack Table + React Query and virtualization.
+                <span className="font-semibold">Core table system</span> - highly customizable, UI-dense table for large datasets with rich cell layouts, optimized with TanStack Table + React Query and virtualization.
               </li>
               <li>
-                Built data visualizations using Recharts(D3 charts wrapper) to
-                make complex data actionable
+                <span className="font-semibold">Data visualizations</span> - built charts using Recharts (D3 wrapper) to make complex data actionable.
               </li>
             </ul>
           </div>
@@ -391,12 +404,10 @@ export const PROJECTS = [
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Built a scalable design system with multiple component variants
-                tailored for a data-heavy platform
+                <span className="font-semibold">Design system</span> - built a scalable system with multiple component variants tailored for a data-heavy platform.
               </li>
               <li>
-                Led 3 junior developers as UI lead while remaining hands-on with
-                architecture and core components
+                <span className="font-semibold">Team lead</span> - led 3 junior developers as UI lead while remaining hands-on with architecture and core components.
               </li>
             </ul>
           </div>
@@ -404,8 +415,7 @@ export const PROJECTS = [
             <h4 className="font-bold text-base mb-1">Marketing</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Built Lantern&apos;s initial marketing website, establishing
-                their public-facing presence
+                <span className="font-semibold">Website</span> - built Lantern&apos;s initial marketing website, establishing their public-facing presence.
               </li>
             </ul>
           </div>
@@ -444,9 +454,7 @@ export const PROJECTS = [
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Built a multi-tenant admin portal enabling multiple businesses
-                to use the same booking app with their own branding, settings,
-                and configurations
+                <span className="font-semibold">Multi-tenant</span> - built an admin portal enabling multiple businesses to use the same booking app with their own branding, settings, and configurations.
               </li>
             </ul>
           </div>
@@ -456,19 +464,13 @@ export const PROJECTS = [
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Developed a full-stack Pilates booking app using Next.js with a
-                custom Calendly-style calendar for selecting and booking time
-                slots
+                <span className="font-semibold">Booking app</span> - full-stack Pilates booking app using Next.js with a custom Calendly-style calendar for selecting and booking time slots.
               </li>
               <li>
-                Integrated Acuity&apos;s scheduling APIs via Next.js, and
-                designed custom payment flows with fallback logic to handle
-                cases Acuity&apos;s beta APIs didn&apos;t support, ensuring
-                bookings and payments still worked reliably
+                <span className="font-semibold">Payment flows</span> - integrated Acuity&apos;s scheduling APIs and designed custom payment flows with fallback logic for cases their beta APIs didn&apos;t support.
               </li>
               <li>
-                Owned the complete flow end-to-end - from booking UX and
-                frontend logic to backend integrations and data handling
+                <span className="font-semibold">End to end</span> - owned the complete flow from booking UX and frontend logic to backend integrations and data handling.
               </li>
             </ul>
           </div>
@@ -509,17 +511,13 @@ export const PROJECTS = [
             <h4 className="font-bold text-base mb-1">Product & Features</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Led the development of an end-to-end application using React and
-                MUI, owning the product from initial implementation to delivery
+                <span className="font-semibold">Product ownership</span> - led end-to-end development using React and MUI, from initial implementation to delivery.
               </li>
               <li>
-                Implemented rich, interactive features including 3D house
-                viewing, custom calendar integration, and media support (photos
-                and videos)
+                <span className="font-semibold">Interactive features</span> - 3D house viewing, custom calendar integration, and media support (photos and videos).
               </li>
               <li>
-                Set up and maintained Storybook to document UI components and
-                ensure consistency across the project
+                <span className="font-semibold">Storybook</span> - set up and maintained component documentation to ensure UI consistency across the project.
               </li>
             </ul>
           </div>
@@ -529,9 +527,7 @@ export const PROJECTS = [
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Worked directly with a non-technical client for the first time,
-                translating business requirements in UK property renting and
-                lending into practical product features and UX decisions
+                <span className="font-semibold">Non-technical client</span> - worked directly with the client, translating UK property renting and lending requirements into practical product features and UX decisions.
               </li>
             </ul>
           </div>
@@ -643,13 +639,13 @@ export const PERSONAL_PROJECTS = [
             <h4 className="font-bold text-base mb-1">Motivation & Problem</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                An AI product is only as good as its chat experience. If the chat feels jerky, confusing, or unreliable, users lose trust and leave - even if the rest of the product is well built.
+                <span className="font-semibold">UX makes or breaks AI</span> - if the chat feels jerky, confusing, or unreliable, users lose trust and leave - even if the product is well built.
               </li>
               <li>
-                While building AI chat interfaces, I realised the hardest part isn&apos;t the model or the API, but getting the chat UX right.
+                <span className="font-semibold">The hard part</span> - the hardest part isn&apos;t the model or API, it&apos;s getting the chat UX right.
               </li>
               <li>
-                Smooth streaming with mixed content (text, code, tables), clear loading → streaming transitions, reliable auto-scroll, and proper error states are small details that make or break the experience.
+                <span className="font-semibold">Details matter</span> - smooth streaming with mixed content, clear loading transitions, reliable auto-scroll, and proper error states make or break the experience.
               </li>
             </ul>
           </div>
@@ -658,13 +654,13 @@ export const PERSONAL_PROJECTS = [
             <h4 className="font-bold text-base mb-1">Solution & Product</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                After testing real-world AI chat patterns, I am working on building chat templates that solve what most AI apps need, built with Next.js and the Vercel AI SDK using modern best practices.
+                <span className="font-semibold">Chat templates</span> - building production-ready templates with Next.js and Vercel AI SDK that solve what most AI apps need.
               </li>
               <li>
-                These templates handle streaming, loading transitions, error states, retries, and auto-scroll out of the box, so users never feel stuck or confused.
+                <span className="font-semibold">Out of the box</span> - streaming, loading transitions, error states, retries, and auto-scroll handled so users never feel stuck.
               </li>
               <li>
-                Plug in your model&apos;s API key and get a production-ready AI chat interface in minutes - without re-solving the same UX problems again.
+                <span className="font-semibold">Plug and play</span> - add your model&apos;s API key and get a production-ready AI chat interface in minutes.
               </li>
             </ul>
           </div>

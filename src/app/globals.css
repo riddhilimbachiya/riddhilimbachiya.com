@@ -25,3 +25,4 @@ html {
 [id] {
   scroll-margin-top: 92px; /* Ensures that when the page scrolls to a section, it doesn't get hidden behind the fixed header or navbar as my header is sticky*/
 }
+
