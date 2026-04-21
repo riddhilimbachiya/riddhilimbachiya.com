@@ -51,10 +51,10 @@ const Journey = () => {
               I integrate AI to genuinely improve products - shaping how humans and AI collaborate through smart interfaces, search, automation, not just slapping a chatbot on the side.
               </li>
               <li>
-              I set up analytics so you know where users drop off, what&apos;s converting, and what to fix first
+              Create design systems - reusable components and patterns that improve consistency and speed up development
               </li>
               <li>
-                I bring users in through SEO and optimize the product to keep them.
+              Own how users discover and use the product - build/improve website, blog, and product through analytics, SEO, and continuous iteration
               </li>
             </ul>
           </div>
