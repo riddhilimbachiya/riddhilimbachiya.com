@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import Link from "next/link";
 
-import Typography from '@/components/general/typography';
-import Skill from '@/components/general/skill';
-import { JOURNEY_SKILLS } from '@/lib/data';
+import Typography from "@/components/general/typography";
+import Skill from "@/components/general/skill";
+import { JOURNEY_SKILLS } from "@/lib/data";
 
 const Journey = () => {
   const skills = JOURNEY_SKILLS;
@@ -19,48 +19,71 @@ const Journey = () => {
       initial={{ opacity: 0, y: 4 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.4, ease: 'easeOut' }}>
+      transition={{ duration: 0.4, ease: "easeOut" }}
+    >
       <div className="flex max-w-3xl py-24 px-4 flex-col gap-12 justify-center items-center max-md:py-16">
         <Typography
           variant="h2"
-          className="uppercase w-full flex justify-center">
+          className="uppercase w-full flex justify-center"
+        >
           WHAT I BRING TO THE TABLE
         </Typography>
         <div className="flex flex-col gap-10">
           {/* Intro */}
           <div className="flex flex-col gap-3">
             <Typography variant="body1">
-              I&apos;ve spent 7+ years taking products from 0→1 - UX, frontend, with recent work on AI integrations.
+              I design and build products. 7+ years in startups,
+              mostly B2B SaaS, working across UX and frontend on complex products.<br/><br/>
+               I sit at the intersection of design and engineering - building
+              scalable frontend systems with a refined design eye. <br/><br/> As a dev who designs, I care
+              about both sides equally. I&apos;ll notice a 4px off padding and also side-eye illogical function names or code that&apos;s doing too much for no reason.
             </Typography>
           </div>
 
           {/* What that looks like */}
-          <div className="flex flex-col gap-3">
+          {/* <div className="flex flex-col gap-3">
             <Typography variant="body1" className="font-semibold text-zinc-900">
               What that looks like
             </Typography>
 
             <ul className="list-disc list-inside space-y-2 ml-3 text-base">
               <li>
-                You describe the vision. I design the user experience and figure out how it should work.
+                You describe the vision. I design the user experience and figure
+                out how it should work.
               </li>
               <li>
-                I build it in Next.js, React, TypeScript - modern UI with animations and micro-interactions that make product feel effortless.
+                I build it in Next.js, React, TypeScript - modern UI with
+                animations and micro-interactions that make product feel
+                effortless.
               </li>
               <li>
-              I integrate AI to genuinely improve products - shaping how humans and AI collaborate through smart interfaces, search, automation, not just slapping a chatbot on the side.
+                I integrate AI to genuinely improve products - shaping how
+                humans and AI collaborate through smart interfaces, search,
+                automation, not just slapping a chatbot on the side.
               </li>
               <li>
-              Create design systems - reusable components and patterns that improve consistency and speed up development
+                Create design systems - reusable components and patterns that
+                improve consistency and speed up development
               </li>
               <li>
-              Own how users discover and use the product - build/improve website, blog, and product through analytics, SEO, and continuous iteration
+                Own how users discover and use the product - build/improve
+                website, blog, and product through analytics, SEO, and
+                continuous iteration
               </li>
             </ul>
-          </div>
+          </div> */}
+
+          <Link
+            href="work"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-8 decoration-1 hover:decoration-2 cursor-pointer decoration-zinc-200"
+          >
+           You can peek at my work here<span className="text-2xl">👩🏼‍💻</span>
+          </Link>
 
           {/* Things I've built */}
-          <div className="flex flex-col gap-3">
+          {/* <div className="flex flex-col gap-3">
             <Typography variant="body1" className="font-semibold text-zinc-900">
               Things I&apos;ve built
             </Typography>
@@ -87,7 +110,7 @@ const Journey = () => {
                 {' '}- Design system builder for products.
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Skills */}
           <div className="flex flex-col gap-4">
@@ -97,14 +120,20 @@ const Journey = () => {
 
             <div className="flex gap-3 flex-wrap">
               {skills.map((skill) => (
-                <Skill key={skill.label} icon={skill.icon} label={skill.label} variant="md" />
+                <Skill
+                  key={skill.label}
+                  icon={skill.icon}
+                  label={skill.label}
+                  variant="md"
+                />
               ))}
             </div>
           </div>
 
           {/* Footer */}
           <Typography variant="body1">
-            Building something? Tell me the problem/vision. I&apos;ll figure out the rest.
+            Building something? Tell me the problem/vision. I&apos;ll figure out
+            the rest.
           </Typography>
         </div>
       </div>
