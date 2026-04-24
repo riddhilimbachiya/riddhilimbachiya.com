@@ -92,10 +92,10 @@ const Hero = () => {
             </div>
             <div className="flex gap-1 flex-col">
               <Typography variant="body1" className="font-medium">
-                Product Engineer - UX and Frontend
+              Product Engineer who designs🦋!
               </Typography>
               <Typography variant="body1" className="font-medium">
-                I believe it&apos;s OK to be you, You is dope.!😉
+                I believe it&apos;s OK to be you, You is dope!
               </Typography>
             </div>
           </div>
