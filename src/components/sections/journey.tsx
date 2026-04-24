@@ -75,8 +75,6 @@ const Journey = () => {
 
           <Link
             href="#work"
-            target="_blank"
-            rel="noopener noreferrer"
             className="underline underline-offset-8 decoration-1 hover:decoration-2 cursor-pointer decoration-zinc-200"
           >
            You can peek at my work here<span className="text-2xl">👩🏼‍💻</span>
