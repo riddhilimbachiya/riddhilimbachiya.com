@@ -275,7 +275,7 @@ export const PROJECTS = [
                   href="https://drive.google.com/file/d/1DQo5eV1_fEOunCQ9wUkgUb95vaJqr1pV/view"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline underline-offset-8 4ecoration-1 hover:decoration-2 cursor-pointer decoration-zinc-200"
+                  className="underline underline-offset-4 4ecoration-1 hover:decoration-2 cursor-pointer decoration-zinc-200"
                 >
                   Watch the demo →
                 </Link>
