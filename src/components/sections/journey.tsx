@@ -28,14 +28,12 @@ const Journey = () => {
         >
           WHAT I BRING TO THE TABLE
         </Typography>
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-6">
           {/* Intro */}
           <div className="flex flex-col gap-3">
             <Typography variant="body1">
               I design and build products. 7+ years in startups,
-              mostly B2B SaaS, working across UX and frontend on complex products.<br/><br/>
-               I sit at the intersection of design and engineering - building
-              scalable frontend systems with a refined design eye. <br/><br/> As a dev who designs, I care
+              mostly B2B SaaS, working across UX, frontend and recently building AI Assistants.<br/><br/> As a dev who designs, I care
               about both sides equally. I&apos;ll notice a 4px off padding and also side-eye illogical function names or code that&apos;s doing too much for no reason.
             </Typography>
           </div>
@@ -75,7 +73,7 @@ const Journey = () => {
 
           <Link
             href="#work"
-            className="underline underline-offset-8 decoration-1 hover:decoration-2 cursor-pointer decoration-zinc-200"
+            className="underline underline-offset-8 decoration-1 hover:decoration-2 cursor-pointer decoration-zinc-200 mb-2"
           >
            You can peek at my work here<span className="text-2xl">👩🏼‍💻</span>
           </Link>
