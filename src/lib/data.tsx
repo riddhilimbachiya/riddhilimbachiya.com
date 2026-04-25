@@ -54,6 +54,7 @@ import Photo13 from "/public/images/photo13.png";
 import Photo14 from "/public/images/photo14.png";
 import React from "react";
 import Typography from "@/components/general/typography";
+import Link from "next/link";
 
 export const NAV_LINKS = [
   {
@@ -250,90 +251,93 @@ export const PROJECTS = [
       responsibilities: (
         <React.Fragment>
           <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">
-              RAG-powered Docs & Support AI Assistant
-            </h4>
-            <Typography className="text-sm" variant="body1">
-              Designed and built it end-to-end - from a real-time conversational
-              UI (streaming responses, states, animations) to a RAG pipeline and
-              agent that automates support ticket creation.
-              <br />
-              <br />A single system powering two use cases:
-            </Typography>
+            <h4 className="font-bold text-base mb-1">AI Integration</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
+                <span className="font-semibold">RAG-powered assistant</span> -
+                Design & built end-to-end: real-time conversational UI with
+                streaming responses, states, and animations on top of a full RAG
+                pipeline and agent.
+              </li>
+              <li>
                 <span className="font-semibold">Docs Assistant</span> -
-                developers ask questions in plain language, get answers from
-                product docs, API guides, and knowledge bases.
+                Developers query product docs, API guides, and knowledge bases
+                in plain language and get instant answers.
               </li>
               <li>
                 <span className="font-semibold">Support Assistant</span> -
-                answers common questions instantly and auto-creates tickets when
-                needed.
+                Answers common questions instantly and auto-creates support
+                tickets when needed.
               </li>
               <li>
-                Currently in internal use, not yet live for users.{" "}
-                <a
+                Currently in internal use.{" "}
+                <Link
                   href="https://drive.google.com/file/d/1DQo5eV1_fEOunCQ9wUkgUb95vaJqr1pV/view"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline underline-offset-4 decoration-zinc-300 hover:decoration-zinc-500"
+                  className="underline underline-offset-8 4ecoration-1 hover:decoration-2 cursor-pointer decoration-zinc-200"
                 >
                   Watch the demo →
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
           <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">UX &amp; Design</h4>
+            <h4 className="font-bold text-base mb-1">
+              UX Design, UI &amp; Animations
+            </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">Design process</span> - Turned
-                rough requirements into clear, intuitive flows - defining user
-                journeys, interactions, and overall product experience.
+                <span className="font-semibold">UX design</span> - Turned rough
+                requirements into clear, intuitive flows - defining user
+                journeys, interactions, and overall product experience, working
+                closely with the CEO.
               </li>
               <li>
-                <span className="font-semibold">Build UI</span> - Built
-                responsive, pixel-perfect interfaces with scalable components
-                and a consistent design system.
+                <span className="font-semibold">UI build</span> - Built
+                responsive, pixel-perfect interfaces with Tailwind and scalable
+                components across every product.
               </li>
               <li>
-                <span className="font-semibold">Animations & interactions</span>{" "}
-                - designed and built animations, micro-interactions, and smooth
-                transitions across the platform that makes product feel alive
-                and effortless.
-              </li>
-              <li>
-                <span className="font-semibold">Led decisions</span> - Led UX,
-                UI, and frontend decisions across products, working closely with
-                the CEO.
+                <span className="font-semibold">
+                  Animations &amp; interactions
+                </span>{" "}
+                - Designed and built micro-interactions, smooth transitions, and
+                animations that makes the product feel alive and effortless.
               </li>
             </ul>
           </div>
-          <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">B2B Fintech Platform</h4>
 
+          <div className="flex flex-col gap-1">
+            <h4 className="font-bold text-base mb-1">
+              Frontend &amp; Platform Engineering
+            </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">Multi-product dashboard</span> -
-                Designed and built a platform with two products, multi-team
+                <span className="font-semibold">B2B Fintech platform</span> -
+                Multi-product dashboard with two products, multi-team
                 architecture, three-tier role-based access, Firebase auth with
                 MFA, role-adaptive onboarding, and Stripe payments.
               </li>
-
               <li>
-                <span className="font-semibold">Frontend architecture</span> -
-                Built the core application foundation with a central app context handling authentication, global state, and parallel API orchestration across users, teams, products, and subscriptions. Designed a scalable API layer with caching, error handling, lazy loading, code splitting, and performance optimization across dozens of screens.
+                <span className="font-semibold">Core architecture</span> -
+                Central app context handling auth, global state, and parallel
+                API orchestration across users, teams, products, and
+                subscriptions - with caching, error handling, lazy loading, and
+                code splitting across dozens of screens.
               </li>
-
               <li>
-                <span className="font-semibold">
-                  Customer-facing apps
-                </span>{" "}
-                - Each product has its own customer-facing app with multi-step
-                flows, built inside a monorepo using shared logic and a reusable
-                codebase across the entire system.
+                <span className="font-semibold">Customer-facing apps</span> -
+                Each product ships its own customer app with multi-step flows,
+                built inside a monorepo using shared logic and a reusable
+                component library.
+              </li>
+              <li>
+                <span className="font-semibold">Design system</span> -
+                Company-wide component library - tokens, patterns, and
+                components - shipped as a standalone package used across every
+                product. 30% faster dev time.
               </li>
             </ul>
           </div>
@@ -344,53 +348,35 @@ export const PROJECTS = [
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">Website</span> - built the
-                multi-region site (US, UK, AU, LATAM) with Next.js that has region-specific content per market,
-                SSR for fast
-                rendering, accessible responsive UI and animations.{" "}
-                <a
+                <span className="font-semibold">Multi-region website</span> -
+                Built with Next.js for US, UK, AU, and LATAM - region-specific
+                content, SSR, accessible responsive UI, and animations.{" "}
+                <Link
                   href="https://www.fiskil.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline underline-offset-4 decoration-zinc-300 hover:decoration-zinc-500"
+                  className="underline underline-offset-4 decoration-1 hover:decoration-2 cursor-pointer decoration-zinc-200"
                 >
                   See website →
-                </a>
+                </Link>
               </li>
               <li>
-                <span className="font-semibold">Blog</span> - designed and
-                integrated with a CMS so the team publishes without a developer.{" "}
-                <a
+                <span className="font-semibold">Blog &amp; CMS</span> - Designed
+                and integrated so the team publishes without a developer.{" "}
+                <Link
                   href="https://blog.fiskil.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline underline-offset-4 decoration-zinc-300 hover:decoration-zinc-500"
+                  className="underline underline-offset-4 decoration-1 hover:decoration-2 cursor-pointer decoration-zinc-200"
                 >
                   See blog →
-                </a>
+                </Link>
               </li>
               <li>
-                <span className="font-semibold">SEO</span> - optimized for both
-                Google and AI tools.
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">
-              Design System &amp; Analytics
-            </h4>
-            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
-              <li>
-                <span className="font-semibold">Design system</span> - built a
-                company-wide system - components, patterns, and tokens - shipped
-                as a standalone library used across every product. 30% faster
-                dev time.
-              </li>
-              <li>
-                <span className="font-semibold">Analytics</span> - set up
-                tracking and experiments to see where users drop off and what to
-                fix. Used data to reduce churn and drive product decisions.
+                <span className="font-semibold">SEO &amp; analytics</span> -
+                Optimised for Google and AI tools. Tracking and experiments to
+                find drop-off, reduce churn, and drive product decisions with
+                data.
               </li>
             </ul>
           </div>
