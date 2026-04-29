@@ -260,9 +260,8 @@ export const PROJECTS = [
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
                 <span className="font-semibold">RAG-powered assistant</span> -
-                Design & built end-to-end: real-time conversational UI with
-                streaming responses, states, and animations on top of a full RAG
-                pipeline and agent.
+                Design & built real-time AI chat interface with
+                streaming responses, states, and smooth interactions alongside implementing a RAG pipeline for context-aware retrieval and responses.
               </li>
               <li>
                 <span className="font-semibold">Docs Assistant</span> -
