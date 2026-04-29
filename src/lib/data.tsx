@@ -689,14 +689,14 @@ export const PERSONAL_PROJECTS = [
                 a chat interface.
               </li>
               <li>
-                <span className="font-semibold">AI can build it - but that's not enough</span> -
+                <span className="font-semibold">AI can build it - but that&apos;s not enough</span> -
                 a great chat needs more than just responses. Smooth streaming,
                 thoughtful loading states, reliable scroll, proper errors -
                 the UX is what makes users trust it.
               </li>
               <li>
                 <span className="font-semibold">An AI product is only as good as its chat</span> -
-                get that wrong and it doesn't matter how good the model is.
+                get that wrong and it doesn&apos;t matter how good the model is.
                 Users feel it immediately.
               </li>
             </ul>
@@ -719,11 +719,11 @@ export const PERSONAL_PROJECTS = [
           </div>
 
           <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">Where it's at</h4>
+            <h4 className="font-bold text-base mb-1">Where it&apos;s at</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
                 Few interfaces live, website up. Exploring and expanding -
-                not sure exactly where it goes but I'm in it.
+                not sure exactly where it goes but I&apos;m in it.
               </li>
             </ul>
           </div>
@@ -764,7 +764,7 @@ export const PERSONAL_PROJECTS = [
               <li>
                 <span className="font-semibold">Then I saw the same problem everywhere</span> -
                 solo founders and indie makers building products alone had
-                no idea how to set up a design system. They'd either skip
+                no idea how to set up a design system. They&apos;d either skip
                 it and ship messy UI or waste days trying to figure it out.
               </li>
             </ul>
@@ -793,7 +793,7 @@ export const PERSONAL_PROJECTS = [
               <li>
                 <span className="font-semibold">AI bloomed</span> -
                 while I was building, AI changed everything. I could see
-                it coming, knew this wouldn't survive it, and made the
+                it coming, knew this wouldn&apos;t survive it, and made the
                 call to shelve it.
               </li>
               <li>
