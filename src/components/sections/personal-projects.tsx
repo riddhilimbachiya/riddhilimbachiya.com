@@ -22,14 +22,11 @@ const PersonalProjects = () => {
           {PERSONAL_PROJECTS.map((project) => (
             <React.Fragment key={project.name}>
               <ProjectDetails
-                link={project.link}
                 name={project.name}
                 description={project.description}
                 isDescriptionOnLeft={project.isDescriptionOnLeft}
                 image={project.previewImage}
                 techs={project.techs}
-                color={project.color}
-                colorClass={project.colorClass}
                 href={project.href}
                 modalContent={project.modalContent}
               />
