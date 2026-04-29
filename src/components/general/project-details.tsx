@@ -1,23 +1,23 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import type { StaticImageData } from 'next/image';
+import React from "react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import type { StaticImageData } from "next/image";
 
-import { twMerge } from 'tailwind-merge';
-import { ArrowUpRight } from 'iconoir-react';
+import { twMerge } from "tailwind-merge";
+import { ArrowUpRight } from "iconoir-react";
 
-import { SKILLS } from '@/lib/data';
-import Typography from '@/components/general/typography';
-import Skill from '@/components/general/skill';
+import { SKILLS } from "@/lib/data";
+import Typography from "@/components/general/typography";
+import Skill from "@/components/general/skill";
 import {
   Modal,
   ModalContent,
   ModalHeader,
   ModalTitle,
   ModalDescription,
-} from '@/components/general/modal';
+} from "@/components/general/modal";
 
 interface PropertyColors {
   borderColor: string;
@@ -40,6 +40,8 @@ interface ProjectDetailsProps {
   href: string;
   modalContent?: ModalContent;
   link: string;
+  role?: string;
+  roleHTML?: React.ReactNode;
 }
 
 const Shape = ({ bgColor, borderColor }: PropertyColors) => {
@@ -48,7 +50,8 @@ const Shape = ({ bgColor, borderColor }: PropertyColors) => {
       xmlns="http://www.w3.org/2000/svg"
       width={418}
       height={298}
-      fill="none">
+      fill="none"
+    >
       <mask id={bgColor} fill="#fff">
         <path
           fillRule="evenodd"
@@ -81,14 +84,17 @@ const ProjectDetails = ({
   href,
   modalContent,
   link,
+  role,
+  roleHTML,
 }: ProjectDetailsProps) => {
   const [filteredTechs, setFilteredTechs] = useState([]);
   const [open, setOpen] = useState(false);
 
   const renderTechs = () => {
-    let filteredTechsLocal = [] as any;
-    filteredTechsLocal = SKILLS.filter((skill) => techs?.includes(skill.label));
-    setFilteredTechs(filteredTechsLocal);
+    const filteredTechsLocal = techs
+      ?.map((tech) => SKILLS.find((skill) => skill.label === tech))
+      .filter(Boolean);
+    setFilteredTechs(filteredTechsLocal as any);
   };
 
   useEffect(() => {
@@ -99,15 +105,17 @@ const ProjectDetails = ({
     <>
       <div
         className="w-full h-[298px] rounded-lg relative flex justify-center max-lg:hidden cursor-pointer"
-        onClick={() => window.open(href, '_blank')}>
+        onClick={() => window.open(href, "_blank")}
+      >
         <Shape borderColor={color.borderColor} bgColor={color.bgColor} />
         <Image src={image} alt={name} className="absolute bottom-0" />
         <div
           className={twMerge(
-            'w-[70px] h-[70px] rounded-full flex items-center justify-center absolute -top-2.5 right-0.5 border-2',
+            "w-[70px] h-[70px] rounded-full flex items-center justify-center absolute -top-2.5 right-0.5 border-2",
             colorClass.bgColor,
-            colorClass.borderColor
-          )}>
+            colorClass.borderColor,
+          )}
+        >
           <div className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-sm group-hover:text-base transform transition">
             <ArrowUpRight color={color.borderColor} strokeWidth={2.5} />
           </div>
@@ -116,19 +124,21 @@ const ProjectDetails = ({
 
       <div
         className={twMerge(
-          'w-full h-[298px] rounded-lg border justify-center hidden max-lg:flex cursor-pointer',
+          "w-full h-[298px] rounded-lg border justify-center hidden max-lg:flex cursor-pointer",
           colorClass.borderColor,
-          colorClass.bgColor
+          colorClass.bgColor,
         )}
-        onClick={() => window.open(href, '_blank')}>
+        onClick={() => window.open(href, "_blank")}
+      >
         <Image src={image} alt={name} />
       </div>
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-1">
-          <div className="w-full flex justify-between mb-4">
+          <div className="w-full flex mb-4 flex-col">
             <Typography variant="h3" component="h3">
               {name}
             </Typography>
+              {roleHTML}
           </div>
           <Typography variant="body1">{description}</Typography>
         </div>
@@ -139,7 +149,7 @@ const ProjectDetails = ({
             </React.Fragment>
           ))}
         </div>
-        <div className={twMerge('flex gap-1 items-center')}>
+        <div className={twMerge("flex gap-1 items-center")}>
           <Typography
             className="mt-3 underline underline-offset-8 decoration-1 hover:decoration-2 cursor-pointer"
             style={{ textDecorationColor: color.borderColor }}
@@ -147,7 +157,8 @@ const ProjectDetails = ({
             onClick={(e) => {
               e.stopPropagation();
               setOpen(true);
-            }}>
+            }}
+          >
             Here&apos;s what I did at {link} 👉
           </Typography>
         </div>
@@ -168,11 +179,11 @@ const ProjectDetails = ({
               className="absolute top-0 right-0 w-[450px] h-40 opacity-80"
               style={{
                 backgroundImage: `radial-gradient(${color.bgColor} 1.5px, transparent 0)`,
-                backgroundSize: '16px 16px',
+                backgroundSize: "16px 16px",
                 maskImage:
-                  'linear-gradient(to left, black 26%, black 15%, transparent 90%)',
+                  "linear-gradient(to left, black 26%, black 15%, transparent 90%)",
                 WebkitMaskImage:
-                  'linear-gradient(to left, black 26%, black 15%, transparent 90%)',
+                  "linear-gradient(to left, black 26%, black 15%, transparent 90%)",
               }}
             />
             <div className="relative z-10">

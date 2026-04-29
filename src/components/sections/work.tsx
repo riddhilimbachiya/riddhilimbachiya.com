@@ -34,6 +34,8 @@ const Work = () => {
                 colorClass={project.colorClass}
                 href={project.href}
                 modalContent={project.modalContent}
+                role={project.modalContent?.role}
+                roleHTML={project.roleHTML as React.ReactNode}
               />
             </React.Fragment>
           ))}

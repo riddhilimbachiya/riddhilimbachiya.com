@@ -33,7 +33,7 @@ const Journey = () => {
           <div className="flex flex-col gap-3">
             <Typography variant="body1">
               I design and build products. 7+ years in startups,
-              mostly B2B SaaS, working across UX, frontend and recently building AI Assistants.<br/><br/> As a dev who designs, I care
+              mostly B2B SaaS, working across design, frontend and recently building AI Assistants.<br/><br/> As a dev who designs, I care
               about both sides equally. I&apos;ll notice a 4px off padding and also side-eye illogical function names or code that&apos;s doing too much for no reason.
             </Typography>
           </div>
@@ -111,7 +111,7 @@ const Journey = () => {
           {/* Skills */}
           <div className="flex flex-col gap-4">
             <Typography variant="body1">
-              Tech, frameworks, and tools I work with:
+            My Go-To Stack:
             </Typography>
 
             <div className="flex gap-3 flex-wrap">

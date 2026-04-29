@@ -26,6 +26,7 @@ import LogoVercel from "/public/icons/icon-vercel.svg";
 import LogoVercelAIElements from "/public/icons/icon-vercel-ai-elements.svg";
 import LogoCursor from "/public/icons/icon-cursor.svg";
 import LogoShadcn from "/public/icons/icon-shadcn.svg";
+import LogoFramerMotion from "/public/icons/icon-framer-motion.svg";
 import LogoRAG from "/public/icons/icon-rag.svg";
 
 import IllustrationFiskil from "/public/images/illustration-fiskil.svg";
@@ -99,6 +100,10 @@ export const SKILLS = [
   {
     label: "Shadcn",
     icon: LogoShadcn,
+  },
+  {
+    label: "Framer Motion",
+    icon: LogoFramerMotion,
   },
   {
     label: "Vercel",
@@ -184,6 +189,14 @@ export const JOURNEY_SKILLS = [
     icon: LogoShadcn,
   },
   {
+    label: "Framer Motion",
+    icon: LogoFramerMotion,
+  },
+  {
+    label: "Storybook",
+    icon: LogoStorybook,
+  },
+  {
     label: "Vercel AI SDK",
     icon: LogoVercelAIElements,
   },
@@ -192,12 +205,16 @@ export const JOURNEY_SKILLS = [
     icon: LogoRAG,
   },
   {
-    label: "Node.js",
-    icon: LogoNodejs,
+    label: "Vercel",
+    icon: LogoVercel,
   },
   {
     label: "Firebase",
     icon: LogoFirebase,
+  },
+  {
+    label: "Node.js",
+    icon: LogoNodejs,
   },
   {
     label: "Figma",
@@ -207,14 +224,6 @@ export const JOURNEY_SKILLS = [
     label: "Cursor",
     icon: LogoCursor,
   },
-  {
-    label: "Vercel",
-    icon: LogoVercel,
-  },
-  {
-    label: "Storybook",
-    icon: LogoStorybook,
-  },
 ];
 
 export const PROJECTS = [
@@ -222,18 +231,26 @@ export const PROJECTS = [
     name: "Fiskil",
     link: "Fiskil",
     description:
-      "Fiskil is a B2B data-sharing platform serving finance and energy institutions across multiple markets (US, UK, AU,LATAM & EU).",
+      "B2B fintech platform. From UX flows to code - AI assistants, complex multi-product multi-team fintech dashboard, a multi-region marketing site, and a design system.",
+    roleHTML: (
+      <Typography variant="body2" className="text-zinc-500 text-sm">
+        <span>Senior Product Engineer &nbsp;</span>
+        {/* <span>
+    (Design · Frontend · AI integrations)
+    </span> */}
+      </Typography>
+    ),
     techs: [
-      "TypeScript",
-      "React",
+      "Figma",
       "Next.js",
+      "TypeScript",
       "Tailwind Css",
+      "Framer Motion",
       "Storybook",
+      "Firebase",
       "Vercel AI SDK",
       "Cypress",
-      "Storybook",
       "Jest",
-      "Firebase",
     ],
     previewImage: IllustrationFiskil,
     color: {
@@ -247,7 +264,7 @@ export const PROJECTS = [
     isDescriptionOnLeft: false,
     href: "https://www.fiskil.com/",
     modalContent: {
-      role: "Senior Product Engineer - UX, Frontend & AI integrations",
+      role: "Product Engineer (UX, Frontend & AI integrations)",
       responsibilities: (
         <React.Fragment>
           <div className="flex flex-col gap-1">
@@ -388,8 +405,16 @@ export const PROJECTS = [
     name: "Lantern",
     link: "Lantern",
     description:
-      "Lantern is a data-heavy B2B & AI platform that helps sales teams close deals faster by consolidating customer data, prospect information, and intent signals into a unified interface.",
-    techs: ["TypeScript", "React", "Tailwind Css", "Scss"],
+      "Data-heavy B2B sales platform. Built dashboard with complex tables with rich cell layouts and charts for large sales datasets, and an AI email composer to help sales teams personalise outreach.",
+    techs: ["TypeScript", "React", "Tailwind Css", "Framer Motion"],
+    roleHTML: (
+      <Typography variant="body2" className="text-zinc-500 text-sm">
+        <span>Frontend Developer & UI Lead &nbsp;</span>
+        {/* <span>  
+  (Frontend · AI)
+  </span> */}
+      </Typography>
+    ),
     previewImage: IllustrationLantern,
     color: {
       bgColor: "#EBE5ED",
@@ -486,8 +511,16 @@ export const PROJECTS = [
     name: "Mokoboko",
     link: "Mokoboko",
     description:
-      "A Pilates booking platform for users to book classes and manage appointments, paired with a multi-tenant admin portal that lets businesses customize branding, availability, and settings across clients.",
+      "Pilates booking app with multi-tenant admin portal. Owned everything - booking UX, custom calendar, payment flows, backend integrations, and multi-business configuration.",
     techs: ["TypeScript", "Next.js", "Tailwind Css"],
+    roleHTML: (
+      <Typography variant="body2" className="text-zinc-500 text-sm">
+        <span>Full Stack Developer &nbsp;</span>
+        {/* <span>  
+  (UI · Frontend · Backend)
+  </span> */}
+      </Typography>
+    ),
     previewImage: IllustrationMokoboko,
     color: {
       bgColor: "#D1D7CE",
@@ -547,7 +580,15 @@ export const PROJECTS = [
     name: "Scraye",
     link: "Scraye",
     description:
-      "Scraye is a housing platform that makes life easier across the UK, seamlessly connecting buyers, renters, owners, and agents. It simplifies selling, renting, and managing properties, all in one place.",
+      "UK property renting and lending platform. Built 3D house viewing, custom calendar, and media support - leading a team of 8 to translate non-technical client requirements into product decisions.",
+    roleHTML: (
+      <Typography variant="body2" className="text-zinc-500 text-sm">
+        <span>Frontend Developer & Project Lead &nbsp;</span>
+        {/* <span>  
+    (UI · Frontend)
+    </span> */}
+      </Typography>
+    ),
     techs: [
       "TypeScript",
       "React",
