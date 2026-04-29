@@ -231,7 +231,7 @@ export const PROJECTS = [
     name: "Fiskil",
     link: "Fiskil",
     description:
-      "B2B fintech platform. From UX flows to code - AI assistants, complex multi-product multi-team fintech dashboard, a multi-region marketing site, and a design system.",
+      "B2B fintech platform. From UX flows to code - RAG powered AI assistant, complex multi-product multi-team fintech dashboard, a multi-region marketing site, and a design system.",
     roleHTML: (
       <Typography variant="body2" className="text-zinc-500 text-sm">
         <span>Senior Product Engineer &nbsp;</span>
