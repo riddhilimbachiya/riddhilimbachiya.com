@@ -15,9 +15,7 @@ const Work = () => {
             Work
           </Typography>
           <Typography variant="body1" className="max-lg:text-center">
-            Check out some of my recent work - cool products I&apos;ve been part
-            of, built using the latest tech and libraries to create something
-            awesome!
+          Peek at some of my recent work - interesting products I&apos;ve been part of, where I went deep across design, frontend and AI.
           </Typography>
         </div>
         <div className="flex gap-20 flex-wrap max-lg:justify-center">

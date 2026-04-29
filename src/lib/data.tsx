@@ -654,67 +654,76 @@ export const PROJECTS = [
 
 export const PERSONAL_PROJECTS = [
   {
-    name: "DSy - Design System made Easy",
-    link: "DSy",
+    name: "yap - AI Chat Interfaces",
+    link: "Chat Interfaces",
     description:
-      "A visual design system builder that lets developers and indie makers define colors, themes, and build components quickly without needing a designer.",
-    techs: ["TypeScript", "Next.js", "React", "Tailwind Css", "Vercel"],
-    previewImage: IllustrationDSy, // You can replace with actual image
+      "Production-ready AI chat templates - plug in your API key and ship in minutes.",
+    techs: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind Css",
+      "Vercel AI Elements",
+      "Vercel",
+    ],
+    previewImage: IllustrationChatInterfaces,
     color: {
-      bgColor: "#e5e5e5",
-      borderColor: "#a3a3a3",
+      bgColor: "#EBE5ED",
+      borderColor: "#C6B3CF",
     },
     colorClass: {
-      bgColor: "bg-neutral-200",
-      borderColor: "border-neutral-400",
+      bgColor: "bg-purple-100",
+      borderColor: "border-purple-700",
     },
     isDescriptionOnLeft: false,
-    href: "https://dsystudio.xyz",
+    href: "https://aichats.dsystudio.xyz",
     modalContent: {
-      role: "Founder",
+      role: "Founder · 2024",
       responsibilities: (
         <React.Fragment>
           <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">Motivation & Problem</h4>
+            <h4 className="font-bold text-base mb-1">How I got here</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Frustrated with repetitive UI work on client projects - building
-                buttons was easy, but dropdowns, checkboxes, and other
-                interactive components often slowed me down
+                <span className="font-semibold">I believe AI is the future</span> -
+                every product will have AI in it. And every AI product needs
+                a chat interface.
               </li>
               <li>
-                On one project, no design system or color palette existed, and
-                as a UI lover, I realized how critical a well-structured design
-                system is for efficiency and consistency
+                <span className="font-semibold">AI can build it - but that's not enough</span> -
+                a great chat needs more than just responses. Smooth streaming,
+                thoughtful loading states, reliable scroll, proper errors -
+                the UX is what makes users trust it.
+              </li>
+              <li>
+                <span className="font-semibold">An AI product is only as good as its chat</span> -
+                get that wrong and it doesn't matter how good the model is.
+                Users feel it immediately.
               </li>
             </ul>
           </div>
+
           <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">Solution & Product</h4>
+            <h4 className="font-bold text-base mb-1">So I built this</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Built Love Dsy, a visual design system builder that lets
-                developers and indie makers define colors, themes, and build
-                components quickly without needing a designer
+                <span className="font-semibold">Plug and play templates</span> -
+                production-ready chat interfaces built on Next.js and Vercel
+                AI SDK. Add your API key, ship in minutes.
               </li>
               <li>
-                It simplifies app development, enables devs who don&apos;t know
-                design systems, and helps solo founders create beautiful,
-                consistent UI in minutes
+                <span className="font-semibold">Everything handled</span> -
+                streaming, loading, errors, retries, auto-scroll. Built with
+                the details that make a chat feel good.
               </li>
             </ul>
           </div>
+
           <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">Learning & Growth</h4>
+            <h4 className="font-bold text-base mb-1">Where it's at</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Executing my first product from 0 - 1 taught me lessons beyond
-                coding: product strategy, UX thinking, marketing, SEO for AI
-                tools, copywriting, and designing tools for real-world usability
-              </li>
-              <li>
-                It showed me the importance of thinking holistically about
-                product, not just features
+                Few interfaces live, website up. Exploring and expanding -
+                not sure exactly where it goes but I'm in it.
               </li>
             </ul>
           </div>
@@ -723,72 +732,74 @@ export const PERSONAL_PROJECTS = [
     },
   },
   {
-    name: "yap - AI Chat Interfaces",
-    link: "Chat Interfaces",
+    name: "DSy - Design System made Easy",
+    link: "DSy",
     description:
-      "A plug-and-play AI Chat templates built on the Vercel AI SDK.Streaming, errors, loading states - all handled. So you can ship AI products fast.",
-    techs: [
-      "TypeScript",
-      "Next.js",
-      "Tailwind Css",
-      "Vercel AI Elements",
-      "Vercel",
-    ],
-    previewImage: IllustrationChatInterfaces, // You can replace with actual image
+      "A visual design system builder - define colours, themes and components in minutes. No designer needed.",
+    techs: ["TypeScript", "Next.js", "Tailwind Css", "Vercel"],
+    previewImage: IllustrationDSy,
     color: {
-      bgColor: "#f4e4ea",
-      borderColor: "#e4b2c6",
+      bgColor: "#DEDFEF",
+      borderColor: "#ADAFD0",
     },
     colorClass: {
-      bgColor: "bg-rose-100",
-      borderColor: "border-rose-700",
+      bgColor: "bg-indigo-100",
+      borderColor: "border-indigo-700",
     },
     isDescriptionOnLeft: false,
-    href: "https://aichats.dsystudio.xyz",
+    href: "https://dsystudio.xyz",
     modalContent: {
       role: "Founder",
-      duration: "2024",
       responsibilities: (
         <React.Fragment>
           <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">Motivation & Problem</h4>
+            <h4 className="font-bold text-base mb-1">How I got here</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">UX makes or breaks AI</span> -
-                if the chat feels jerky, confusing, or unreliable, users lose
-                trust and leave - even if the product is well built.
+                <span className="font-semibold">I was freelancing across multiple projects</span> -
+                some clients had a design system, most had nothing. Every
+                time I joined a new project I rebuilt the same components,
+                the same colour tokens, the same themes from scratch.
               </li>
               <li>
-                <span className="font-semibold">The hard part</span> - the
-                hardest part isn&apos;t the model or API, it&apos;s getting the
-                chat UX right.
-              </li>
-              <li>
-                <span className="font-semibold">Details matter</span> - smooth
-                streaming with mixed content, clear loading transitions,
-                reliable auto-scroll, and proper error states make or break the
-                experience.
+                <span className="font-semibold">Then I saw the same problem everywhere</span> -
+                solo founders and indie makers building products alone had
+                no idea how to set up a design system. They'd either skip
+                it and ship messy UI or waste days trying to figure it out.
               </li>
             </ul>
           </div>
 
           <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">Solution & Product</h4>
+            <h4 className="font-bold text-base mb-1">So I built this</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">Chat templates</span> - building
-                production-ready templates with Next.js and Vercel AI SDK that
-                solve what most AI apps need.
+                <span className="font-semibold">A visual design system builder</span> -
+                define your colours, themes and components in minutes.
+                Consistent, beautiful UI without needing a designer.
               </li>
               <li>
-                <span className="font-semibold">Out of the box</span> -
-                streaming, loading transitions, error states, retries, and
-                auto-scroll handled so users never feel stuck.
+                <span className="font-semibold">Did everything myself</span> -
+                built the app, designed the UX, wrote the content, built
+                the website, sent prototypes to real developers, spoke to
+                people. My first real 0 to 1.
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <h4 className="font-bold text-base mb-1">What happened</h4>
+            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
+              <li>
+                <span className="font-semibold">AI bloomed</span> -
+                while I was building, AI changed everything. I could see
+                it coming, knew this wouldn't survive it, and made the
+                call to shelve it.
               </li>
               <li>
-                <span className="font-semibold">Plug and play</span> - add your
-                model&apos;s API key and get a production-ready AI chat
-                interface in minutes.
+                <span className="font-semibold">Learned more than any client project taught me</span> -
+                product thinking, content, talking to users, making hard
+                calls. No regrets.
               </li>
             </ul>
           </div>

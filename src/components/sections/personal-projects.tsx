@@ -12,13 +12,10 @@ const PersonalProjects = () => {
       <div className="flex flex-col gap-24 max-w-[952px] px-4 w-full">
         <div className="flex flex-col gap-2 max-lg:items-center">
           <Typography variant="h2" component="h2">
-            Personal Projects
+            Side Projects
           </Typography>
           <Typography variant="body1" className="max-lg:text-center">
-            Products I&apos;ve built that helped me understand the bigger
-            picture - why thinking beyond code, designing for users, and
-            planning for a product&apos;s future are crucial to building
-            something people actually use.
+          Building outside work - some shipped, some scrapped, all taught me something code alone never could.
           </Typography>
         </div>
         <div className="flex gap-20 flex-wrap max-lg:justify-center">
