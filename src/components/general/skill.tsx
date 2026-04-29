@@ -2,6 +2,7 @@ import Image from 'next/image';
 import type { StaticImageData } from 'next/image';
 
 import Typography from '@/components/general/typography';
+import { twMerge } from 'tailwind-merge';
 
 type SkillProps = {
   variant?: 'sm' | 'md';
@@ -11,11 +12,9 @@ type SkillProps = {
 
 const Skill = ({ variant = 'sm', label, icon }: SkillProps) => {
   return (
-    <div className={'px-2 flex gap-2 border border-zinc-200 rounded py-1'}>
+    <div className={twMerge('flex gap-2 border border-zinc-200 rounded py-1', variant === 'sm' ? 'text-xs px-2' : 'text-base px-2')}>
       <Image src={icon} alt={label} />
-      <Typography variant={variant === 'sm' ? 'body2' : 'body1'}>
-        {label}
-      </Typography>
+      {label}
     </div>
   );
 };

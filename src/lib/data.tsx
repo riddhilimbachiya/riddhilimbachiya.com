@@ -1,4 +1,4 @@
-import { Figma, Github, Linkedin, Medium, X } from "iconoir-react";
+import { Figma, Github, Linkedin, X } from "iconoir-react";
 
 import LogoJavaScript from "/public/icons/icon-javascript.svg";
 import LogoTypeScript from "/public/icons/icon-typescript.svg";
@@ -29,12 +29,12 @@ import LogoShadcn from "/public/icons/icon-shadcn.svg";
 import LogoFramerMotion from "/public/icons/icon-framer-motion.svg";
 import LogoRAG from "/public/icons/icon-rag.svg";
 
-import IllustrationFiskil from "/public/images/illustration-fiskil.svg";
-import IllustrationLantern from "/public/images/illustration-lantern.svg";
-import IllustrationMokoboko from "/public/images/illustration-mokoboko.svg";
-import IllustrationScraye from "/public/images/illustration-scraye.svg";
-import IllustrationDSy from "/public/images/illustration-dsy.svg";
-import IllustrationChatInterfaces from "/public/images/illustration-chat-interface.svg";
+import IllustrationFiskil from "/public/images/work/fiskil.png";
+import IllustrationLantern from "/public/images/work/lantern.png";
+import IllustrationMokoboko from "/public/images/work/mokoboko.png";
+import IllustrationScraye from "/public/images/work/scraye.png";
+import IllustrationDSy from "/public/images/work/dsy.png";
+import IllustrationChatInterfaces from "/public/images/work/yap.png";
 
 import AvatarNoren from "/public/images/avatar-noren.png";
 import AvatarEugen from "/public/images/avatar-eugen.png";
@@ -230,41 +230,29 @@ export const PROJECTS = [
   {
     name: "Fiskil",
     link: "Fiskil",
-    description:
-      "B2B fintech platform. From UX flows to code - RAG powered AI assistant, complex multi-product multi-team fintech dashboard, a multi-region marketing site, and a design system.",
-    roleHTML: (
-      <Typography variant="body2" className="text-zinc-500 text-sm">
-        <span>Senior Product Engineer &nbsp;</span>
-        {/* <span>
-    (Design · Frontend · AI integrations)
-    </span> */}
-      </Typography>
+    description: (
+      <div className="flex flex-col gap-3">
+        <Typography variant="body1">B2B fintech platform.</Typography>
+        <Typography variant="body1">
+          From UX flows to code - built a RAG-powered AI assistant, complex
+          multi-product multi-team dashboard, a multi-region marketing site, and
+          a design system.
+        </Typography>
+      </div>
     ),
+    role: "Senior Product Engineer",
     techs: [
       "Figma",
       "Next.js",
       "TypeScript",
       "Tailwind Css",
       "Framer Motion",
-      "Storybook",
-      "Firebase",
       "Vercel AI SDK",
-      "Cypress",
-      "Jest",
     ],
     previewImage: IllustrationFiskil,
-    color: {
-      bgColor: "#DEDFEF",
-      borderColor: "#ADAFD0",
-    },
-    colorClass: {
-      bgColor: "bg-indigo-100",
-      borderColor: "border-indigo-700",
-    },
     isDescriptionOnLeft: false,
     href: "https://www.fiskil.com/",
     modalContent: {
-      role: "Product Engineer (UX, Frontend & AI integrations)",
       responsibilities: (
         <React.Fragment>
           <div className="flex flex-col gap-1">
@@ -302,26 +290,20 @@ export const PROJECTS = [
 
           <div className="flex flex-col gap-1">
             <h4 className="font-bold text-base mb-1">
-              UX Design, UI &amp; Animations
+              UX, Design &amp; Animations
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
                 <span className="font-semibold">UX design</span> - Turned rough
                 requirements into clear, intuitive flows - defining user
-                journeys, interactions, and overall product experience, working
+                journeys, features and overall product experience, working
                 closely with the CEO.
               </li>
               <li>
-                <span className="font-semibold">UI build</span> - Built
-                responsive, pixel-perfect interfaces with Tailwind and scalable
-                components across every product.
-              </li>
-              <li>
-                <span className="font-semibold">
-                  Animations &amp; interactions
-                </span>{" "}
-                - Designed and built micro-interactions, smooth transitions, and
-                animations that makes the product feel alive and effortless.
+                <span className="font-semibold">UI & Animations</span> Design and code
+                responsive, pixel-perfect interfaces with micro-interactions,
+                 and animations that make every interaction
+                feel alive and effortless.
               </li>
             </ul>
           </div>
@@ -334,16 +316,16 @@ export const PROJECTS = [
               <li>
                 <span className="font-semibold">B2B Fintech platform</span> -
                 Multi-product dashboard with two products, multi-team
-                architecture, three-tier role-based access, Firebase auth with
-                MFA, role-adaptive onboarding, and Stripe payments.
+                architecture, three-user types role-based access, Firebase auth
+                with MFA, multi-step onboarding, and Stripe payments.
               </li>
-              <li>
+              {/* <li>
                 <span className="font-semibold">Core architecture</span> -
                 Central app context handling auth, global state, and parallel
                 API orchestration across users, teams, products, and
                 subscriptions - with caching, error handling, lazy loading, and
                 code splitting across dozens of screens.
-              </li>
+              </li> */}
               <li>
                 <span className="font-semibold">Customer-facing apps</span> -
                 Each product ships its own customer app with multi-step flows,
@@ -404,98 +386,84 @@ export const PROJECTS = [
   {
     name: "Lantern",
     link: "Lantern",
-    description:
-      "Data-heavy B2B sales platform. Built dashboard with complex tables with rich cell layouts and charts for large sales datasets, and an AI email composer to help sales teams personalise outreach.",
-    techs: ["TypeScript", "React", "Tailwind Css", "Framer Motion"],
-    roleHTML: (
-      <Typography variant="body2" className="text-zinc-500 text-sm">
-        <span>Frontend Developer & UI Lead &nbsp;</span>
-        {/* <span>  
-  (Frontend · AI)
-  </span> */}
-      </Typography>
+    description: (
+      <div className="flex flex-col gap-3">
+        <Typography variant="body1">Data-heavy B2B sales platform.</Typography>
+        <Typography variant="body1">
+          Built dashboard with complex tables with rich cell layouts and charts
+          for large sales datasets, and an AI email composer to help sales teams
+          personalise outreach.
+        </Typography>
+      </div>
     ),
+    techs: ["TypeScript", "React", "Tailwind Css", "Framer Motion"],
+    role: "Frontend Developer & UI Lead",
     previewImage: IllustrationLantern,
-    color: {
-      bgColor: "#EBE5ED",
-      borderColor: "#C6B3CF",
-    },
-    colorClass: {
-      bgColor: "bg-purple-100",
-      borderColor: "border-purple-700",
-    },
     isDescriptionOnLeft: false,
     href: "https://www.withlantern.com/",
     modalContent: {
-      role: "Frontend Developer & UI Lead",
       responsibilities: (
         <React.Fragment>
           <div className="flex flex-col gap-1">
             <h4 className="font-bold text-base mb-1">
-              Data heavy B2B Platform
+              Data-heavy B2B Platform
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">Dashboard</span> - built a
-                visually complex data-heavy B2B dashboard supporting three
-                distinct user roles, each with tailored views, permissions, and
-                workflows.
+                <span className="font-semibold">
+                  Built Complex Table system
+                </span>{" "}
+                - TanStack Table + React Query with virtualization - cells
+                support inline editing, embedded charts, dropdown panels,
+                dynamic row actions, and bulk multi-select and more, turning
+                large datasets into a fully interactive workspace.
               </li>
               <li>
-                <span className="font-semibold">Density</span> - one of the most
-                component-dense and visually complex platforms I&apos;ve worked
-                on.
+                <span className="font-semibold">Data visualizations</span> -
+                complex charts via Recharts to give context to the data.
               </li>
             </ul>
           </div>
 
           <div className="flex flex-col gap-1">
             <h4 className="font-bold text-base mb-1">
-              AI & Data Visualization
+              AI & Workflow Automation
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">AI chat</span> - built AI chat
-                interface for the platform, integrating AI-powered features via
-                OpenAI API to enhance key workflows.
+                <span className="font-semibold">AI email composer</span> -
+                OpenAI-powered AI chat to personalise outreach emails at scale.
               </li>
               <li>
-                <span className="font-semibold">Core table system</span> -
-                highly customizable, UI-dense table for large datasets with rich
-                cell layouts, optimized with TanStack Table + React Query and
-                virtualization.
-              </li>
-              <li>
-                <span className="font-semibold">Data visualizations</span> -
-                built charts using Recharts (D3 wrapper) to make complex data
-                actionable.
+                <span className="font-semibold">Workflow builder</span> - React
+                Flow based multi-step builder with branching logic and
+                conditional stages.
               </li>
             </ul>
           </div>
+
           <div className="flex flex-col gap-1">
             <h4 className="font-bold text-base mb-1">
               Design System & Leadership
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">Design system</span> - built a
-                scalable system with multiple component variants tailored for a
-                data-heavy platform.
+                <span className="font-semibold">Design system</span> - scalable
+                component library with variants tuned for data-heavy interfaces.
               </li>
               <li>
                 <span className="font-semibold">Team lead</span> - led 3 junior
-                developers as UI lead while remaining hands-on with architecture
-                and core components.
+                devs as UI lead, hands-on with architecture and core components.
               </li>
             </ul>
           </div>
+
           <div className="flex flex-col gap-1">
             <h4 className="font-bold text-base mb-1">Marketing</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
                 <span className="font-semibold">Website</span> - built
-                Lantern&apos;s initial marketing website, establishing their
-                public-facing presence.
+                Lantern&apos;s initial marketing website from scratch.
               </li>
             </ul>
           </div>
@@ -510,30 +478,27 @@ export const PROJECTS = [
   {
     name: "Mokoboko",
     link: "Mokoboko",
-    description:
-      "Pilates booking app with multi-tenant admin portal. Owned everything - booking UX, custom calendar, payment flows, backend integrations, and multi-business configuration.",
+    description: (
+      <div className="flex flex-col gap-3">
+        <Typography variant="body1">
+          Pilates booking app with multi-tenant admin portal.
+        </Typography>
+        <Typography variant="body1">
+          Owned everything - booking UX, custom calendar, payment flows, backend
+          integrations, and multi-business configuration.
+        </Typography>
+      </div>
+    ),
     techs: ["TypeScript", "Next.js", "Tailwind Css"],
-    roleHTML: (
-      <Typography variant="body2" className="text-zinc-500 text-sm">
+    role: (
+      <Typography variant="body2" className="text-zinc-400 font-medium uppercase">
         <span>Full Stack Developer &nbsp;</span>
-        {/* <span>  
-  (UI · Frontend · Backend)
-  </span> */}
       </Typography>
     ),
     previewImage: IllustrationMokoboko,
-    color: {
-      bgColor: "#D1D7CE",
-      borderColor: "#A8B0A4",
-    },
-    colorClass: {
-      bgColor: "bg-green-100",
-      borderColor: "border-green-700",
-    },
     isDescriptionOnLeft: true,
     href: "https://mokoboko.xyz/",
     modalContent: {
-      role: "Full Stack Developer",
       responsibilities: (
         <React.Fragment>
           <div className="flex flex-col gap-1">
@@ -579,16 +544,19 @@ export const PROJECTS = [
   {
     name: "Scraye",
     link: "Scraye",
-    description:
-      "UK property renting and lending platform. Built 3D house viewing, custom calendar, and media support - leading a team of 8 to translate non-technical client requirements into product decisions.",
-    roleHTML: (
-      <Typography variant="body2" className="text-zinc-500 text-sm">
-        <span>Frontend Developer & Project Lead &nbsp;</span>
-        {/* <span>  
-    (UI · Frontend)
-    </span> */}
-      </Typography>
+    description: (
+      <div className="flex flex-col gap-3">
+        <Typography variant="body1">
+          UK property renting and lending platform.
+        </Typography>
+        <Typography variant="body1">
+          Built 3D house viewing, custom calendar, and media support - leading a
+          team of 8 to translate non-technical client requirements into product
+          decisions.
+        </Typography>
+      </div>
     ),
+    role: "Frontend Developer & Project Lead",
     techs: [
       "TypeScript",
       "React",
@@ -599,18 +567,9 @@ export const PROJECTS = [
       "Cypress",
     ],
     previewImage: IllustrationScraye,
-    color: {
-      bgColor: "#E2EAEE",
-      borderColor: "#B6C1C6",
-    },
-    colorClass: {
-      bgColor: "bg-sky-100",
-      borderColor: "border-sky-700",
-    },
     isDescriptionOnLeft: true,
     href: "https://www.scraye.com/",
     modalContent: {
-      role: "Frontend Developer & Project Lead",
       responsibilities: (
         <React.Fragment>
           <div className="flex flex-col gap-1">
@@ -656,8 +615,18 @@ export const PERSONAL_PROJECTS = [
   {
     name: "yap - AI Chat Interfaces",
     link: "Chat Interfaces",
-    description:
-      "Production-ready AI chat templates - plug in your API key and ship in minutes.",
+    role: "",
+    description: (
+      <div className="flex flex-col gap-3">
+        <Typography variant="body1">
+          Production-ready AI chat interfaces.
+        </Typography>
+        <Typography variant="body1">
+          Plug in your API key and ship in minutes with thoughtfully built chat
+          interfaces.
+        </Typography>
+      </div>
+    ),
     techs: [
       "TypeScript",
       "Next.js",
@@ -666,14 +635,6 @@ export const PERSONAL_PROJECTS = [
       "Vercel",
     ],
     previewImage: IllustrationChatInterfaces,
-    color: {
-      bgColor: "#EBE5ED",
-      borderColor: "#C6B3CF",
-    },
-    colorClass: {
-      bgColor: "bg-purple-100",
-      borderColor: "border-purple-700",
-    },
     isDescriptionOnLeft: false,
     href: "https://aichats.dsystudio.xyz",
     modalContent: {
@@ -684,20 +645,26 @@ export const PERSONAL_PROJECTS = [
             <h4 className="font-bold text-base mb-1">How I got here</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">I believe AI is the future</span> -
-                every product will have AI in it. And every AI product needs
-                a chat interface.
+                <span className="font-semibold">
+                  I believe AI is the future
+                </span>{" "}
+                - every product will have AI in it. And every AI product needs a
+                chat interface.
               </li>
               <li>
-                <span className="font-semibold">AI can build it - but that&apos;s not enough</span> -
-                a great chat needs more than just responses. Smooth streaming,
-                thoughtful loading states, reliable scroll, proper errors -
-                the UX is what makes users trust it.
+                <span className="font-semibold">
+                  AI can build it - but that&apos;s not enough
+                </span>{" "}
+                - a great chat needs more than just responses. Smooth streaming,
+                thoughtful loading states, reliable scroll, proper errors - the
+                UX is what makes users trust it.
               </li>
               <li>
-                <span className="font-semibold">An AI product is only as good as its chat</span> -
-                get that wrong and it doesn&apos;t matter how good the model is.
-                Users feel it immediately.
+                <span className="font-semibold">
+                  An AI product is only as good as its chat
+                </span>{" "}
+                - get that wrong and it doesn&apos;t matter how good the model
+                is. Users feel it immediately.
               </li>
             </ul>
           </div>
@@ -707,13 +674,13 @@ export const PERSONAL_PROJECTS = [
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
                 <span className="font-semibold">Plug and play templates</span> -
-                production-ready chat interfaces built on Next.js and Vercel
-                AI SDK. Add your API key, ship in minutes.
+                production-ready chat interfaces built on Next.js and Vercel AI
+                SDK. Add your API key, ship in minutes.
               </li>
               <li>
                 <span className="font-semibold">Everything handled</span> -
-                streaming, loading, errors, retries, auto-scroll. Built with
-                the details that make a chat feel good.
+                streaming, loading, errors, retries, auto-scroll. Built with the
+                details that make a chat feel good.
               </li>
             </ul>
           </div>
@@ -722,8 +689,8 @@ export const PERSONAL_PROJECTS = [
             <h4 className="font-bold text-base mb-1">Where it&apos;s at</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                Few interfaces live, website up. Exploring and expanding -
-                not sure exactly where it goes but I&apos;m in it.
+                Few interfaces live, website up. Exploring and expanding - not
+                sure exactly where it goes but I&apos;m in it.
               </li>
             </ul>
           </div>
@@ -734,18 +701,18 @@ export const PERSONAL_PROJECTS = [
   {
     name: "DSy - Design System made Easy",
     link: "DSy",
-    description:
-      "A visual design system builder - define colours, themes and components in minutes. No designer needed.",
+    role: "",
+    description: (
+      <div className="flex flex-col gap-3">
+        <Typography variant="body1">Visual design system builder.</Typography>
+        <Typography variant="body1">
+          Define colours, themes and components in minutes without needing a
+          designer.
+        </Typography>
+      </div>
+    ),
     techs: ["TypeScript", "Next.js", "Tailwind Css", "Vercel"],
     previewImage: IllustrationDSy,
-    color: {
-      bgColor: "#DEDFEF",
-      borderColor: "#ADAFD0",
-    },
-    colorClass: {
-      bgColor: "bg-indigo-100",
-      borderColor: "border-indigo-700",
-    },
     isDescriptionOnLeft: false,
     href: "https://dsystudio.xyz",
     modalContent: {
@@ -756,16 +723,20 @@ export const PERSONAL_PROJECTS = [
             <h4 className="font-bold text-base mb-1">How I got here</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">I was freelancing across multiple projects</span> -
-                some clients had a design system, most had nothing. Every
-                time I joined a new project I rebuilt the same components,
-                the same colour tokens, the same themes from scratch.
+                <span className="font-semibold">
+                  I was freelancing across multiple projects
+                </span>{" "}
+                - some clients had a design system, most had nothing. Every time
+                I joined a new project I rebuilt the same components, the same
+                colour tokens, the same themes from scratch.
               </li>
               <li>
-                <span className="font-semibold">Then I saw the same problem everywhere</span> -
-                solo founders and indie makers building products alone had
-                no idea how to set up a design system. They&apos;d either skip
-                it and ship messy UI or waste days trying to figure it out.
+                <span className="font-semibold">
+                  Then I saw the same problem everywhere
+                </span>{" "}
+                - solo founders and indie makers building products alone had no
+                idea how to set up a design system. They&apos;d either skip it
+                and ship messy UI or waste days trying to figure it out.
               </li>
             </ul>
           </div>
@@ -774,15 +745,17 @@ export const PERSONAL_PROJECTS = [
             <h4 className="font-bold text-base mb-1">So I built this</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">A visual design system builder</span> -
-                define your colours, themes and components in minutes.
+                <span className="font-semibold">
+                  A visual design system builder
+                </span>{" "}
+                - define your colours, themes and components in minutes.
                 Consistent, beautiful UI without needing a designer.
               </li>
               <li>
                 <span className="font-semibold">Did everything myself</span> -
-                built the app, designed the UX, wrote the content, built
-                the website, sent prototypes to real developers, spoke to
-                people. My first real 0 to 1.
+                built the app, designed the UX, wrote the content, built the
+                website, sent prototypes to real developers, spoke to people. My
+                first real 0 to 1.
               </li>
             </ul>
           </div>
@@ -791,14 +764,15 @@ export const PERSONAL_PROJECTS = [
             <h4 className="font-bold text-base mb-1">What happened</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">AI bloomed</span> -
-                while I was building, AI changed everything. I could see
-                it coming, knew this wouldn&apos;t survive it, and made the
-                call to shelve it.
+                <span className="font-semibold">AI bloomed</span> - while I was
+                building, AI changed everything. I could see it coming, knew
+                this wouldn&apos;t survive it, and made the call to shelve it.
               </li>
               <li>
-                <span className="font-semibold">Learned more than any client project taught me</span> -
-                product thinking, content, talking to users, making hard
+                <span className="font-semibold">
+                  Learned more than any client project taught me
+                </span>{" "}
+                - product thinking, content, talking to users, making hard
                 calls. No regrets.
               </li>
             </ul>

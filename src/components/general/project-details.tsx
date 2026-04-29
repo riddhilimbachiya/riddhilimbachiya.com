@@ -5,9 +5,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
 
-import { twMerge } from "tailwind-merge";
-import { ArrowUpRight } from "iconoir-react";
-
 import { SKILLS } from "@/lib/data";
 import Typography from "@/components/general/typography";
 import Skill from "@/components/general/skill";
@@ -18,77 +15,38 @@ import {
   ModalTitle,
   ModalDescription,
 } from "@/components/general/modal";
-
-interface PropertyColors {
-  borderColor: string;
-  bgColor: string;
-}
+import { ArrowUpRight } from "iconoir-react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface ModalContent {
-  role: string;
   responsibilities: React.ReactNode;
 }
 
 interface ProjectDetailsProps {
   name: string;
-  description: string;
+  description: React.ReactNode;
   techs?: string[];
   isDescriptionOnLeft: boolean;
   image: StaticImageData;
-  color: PropertyColors;
-  colorClass: PropertyColors;
   href: string;
   modalContent?: ModalContent;
-  link: string;
   role?: string;
-  roleHTML?: React.ReactNode;
 }
-
-const Shape = ({ bgColor, borderColor }: PropertyColors) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={418}
-      height={298}
-      fill="none"
-    >
-      <mask id={bgColor} fill="#fff">
-        <path
-          fillRule="evenodd"
-          d="M327.134 0c6.308 0 10.359 7.185 8.773 13.29a47.05 47.05 0 0 0-1.509 11.857c0 25.957 21.043 47 47 47 6.671 0 13.016-1.39 18.763-3.895C407.079 65.237 418 69.747 418 77.293V290a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8V8a8 8 0 0 1 8-8h319.134Z"
-          clipRule="evenodd"
-        />
-      </mask>
-      <path
-        fill={bgColor}
-        fillRule="evenodd"
-        d="M327.134 0c6.308 0 10.359 7.185 8.773 13.29a47.05 47.05 0 0 0-1.509 11.857c0 25.957 21.043 47 47 47 6.671 0 13.016-1.39 18.763-3.895C407.079 65.237 418 69.747 418 77.293V290a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8V8a8 8 0 0 1 8-8h319.134Z"
-        clipRule="evenodd"
-      />
-      <path
-        fill={borderColor}
-        d="m400.161 68.252-.799-1.833.799 1.833Zm-64.254-54.961-1.936-.504 1.936.503Zm.491 11.856c0-3.925.502-7.729 1.444-11.353l-3.871-1.007a49.064 49.064 0 0 0-1.573 12.36h4Zm45 45c-24.852 0-45-20.148-45-45h-4c0 27.062 21.938 49 49 49v-4Zm17.964-3.728a44.843 44.843 0 0 1-17.964 3.728v4a48.845 48.845 0 0 0 19.563-4.062l-1.599-3.666ZM416 77.293V290h4V77.293h-4ZM410 296H8v4h402v-4ZM2 290V8h-4v282h4ZM8 2h319.134v-4H8v4Zm0 294a6 6 0 0 1-6-6h-4c0 5.523 4.477 10 10 10v-4Zm408-6a6 6 0 0 1-6 6v4c5.523 0 10-4.477 10-10h-4ZM400.961 70.085c2.818-1.228 6.666-.97 9.861.536 3.209 1.512 5.178 3.97 5.178 6.672h4c0-4.843-3.492-8.414-7.473-10.29-3.995-1.882-9.066-2.371-13.165-.584l1.599 3.666ZM2 8a6 6 0 0 1 6-6v-4C2.477-2-2 2.477-2 8h4Zm335.842 5.794c.941-3.62.209-7.505-1.666-10.5C334.289.282 331.119-2 327.134-2v4c2.323 0 4.332 1.31 5.652 3.417 1.33 2.125 1.831 4.885 1.185 7.37l3.871 1.007Z"
-        mask={`url(#${bgColor})`}
-      />
-    </svg>
-  );
-};
 
 const ProjectDetails = ({
   name,
   description,
   techs,
   image,
-  color,
-  colorClass,
-  href,
   modalContent,
-  link,
   role,
-  roleHTML,
+  href,
 }: ProjectDetailsProps) => {
   const [filteredTechs, setFilteredTechs] = useState([]);
   const [open, setOpen] = useState(false);
+
+  const router = useRouter();
 
   const renderTechs = () => {
     const filteredTechsLocal = techs
@@ -102,68 +60,52 @@ const ProjectDetails = ({
   }, []);
 
   const ProjectCard = () => (
-    <>
-      <div
-        className="w-full h-[298px] rounded-lg relative flex justify-center max-lg:hidden cursor-pointer"
-        onClick={() => window.open(href, "_blank")}
-      >
-        <Shape borderColor={color.borderColor} bgColor={color.bgColor} />
-        <Image src={image} alt={name} className="absolute bottom-0" />
-        <div
-          className={twMerge(
-            "w-[70px] h-[70px] rounded-full flex items-center justify-center absolute -top-2.5 right-0.5 border-2",
-            colorClass.bgColor,
-            colorClass.borderColor,
-          )}
-        >
-          <div className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-sm group-hover:text-base transform transition">
-            <ArrowUpRight color={color.borderColor} strokeWidth={2.5} />
-          </div>
-        </div>
+    <div className="cursor-pointer group flex flex-col gap-6"
+    onClick={() => setOpen(true)}>
+      <div className="w-full h-[300px] rounded-2xl rounded-br-none relative overflow-hidden max-lg:hidden group-hover:scale-[1.02] transition-all duration-300">
+        <Image
+          src={image}
+          alt={name}
+          fill
+          className="object-cover"
+          sizes="100vw"
+          loading="lazy"
+        />
+        
+{/* <div className="absolute inset-0"
+  style={{
+    background: "linear-gradient(to top left, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.05) 55%, transparent 70%)",
+  }}
+/> */}
       </div>
-
-      <div
-        className={twMerge(
-          "w-full h-[298px] rounded-lg border justify-center hidden max-lg:flex cursor-pointer",
-          colorClass.borderColor,
-          colorClass.bgColor,
-        )}
-        onClick={() => window.open(href, "_blank")}
-      >
-        <Image src={image} alt={name} />
-      </div>
-      <div className="flex flex-col gap-6">
-        <div className="flex flex-col gap-1">
-          <div className="w-full flex mb-4 flex-col">
+      <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-5">
+          <div className="w-full flex flex-col gap-1">
             <Typography variant="h3" component="h3">
               {name}
             </Typography>
-              {roleHTML}
+            <Typography
+              variant="body2"
+              className="text-zinc-400 font-medium uppercase"
+            >
+              {role}
+            </Typography>
           </div>
-          <Typography variant="body1">{description}</Typography>
+          {description}
         </div>
-        <div className="flex gap-2 flex-wrap">
-          {filteredTechs.map((tech: any) => (
-            <React.Fragment key={tech.label}>
-              <Skill label={tech.label} icon={tech.icon} variant="sm" />
-            </React.Fragment>
-          ))}
-        </div>
-        <div className={twMerge("flex gap-1 items-center")}>
-          <Typography
-            className="mt-3 underline underline-offset-8 decoration-1 hover:decoration-2 cursor-pointer"
-            style={{ textDecorationColor: color.borderColor }}
-            variant="body1"
-            onClick={(e) => {
-              e.stopPropagation();
-              setOpen(true);
-            }}
-          >
-            Here&apos;s what I did at {link} 👉
-          </Typography>
+        <div
+          className="underline underline-offset-8 decoration-1 hover:decoration-2 cursor-pointer decoration-zinc-200 mb-2"
+        >
+          More details here
+          <ArrowUpRight
+            strokeWidth={2.5}
+            className="inline-block ml-1 text-zinc-500 group-hover:translate-x-1 transition-all duration-300"
+            height={14}
+            width={14}
+          />
         </div>
       </div>
-    </>
+    </div>
   );
 
   if (modalContent) {
@@ -176,9 +118,9 @@ const ProjectDetails = ({
           <ModalHeader className="px-8 py-6 border-b border-zinc-200 relative overflow-hidden">
             {/* Diagonal check pattern at top right - fades from right to left */}
             <div
-              className="absolute top-0 right-0 w-[450px] h-40 opacity-80"
+              className="absolute top-0 right-0 w-[450px] h-56 opacity-80"
               style={{
-                backgroundImage: `radial-gradient(${color.bgColor} 1.5px, transparent 0)`,
+                backgroundImage: `radial-gradient(rgba(0,0,0,0.1) 1.5px, transparent 0)`,
                 backgroundSize: "16px 16px",
                 maskImage:
                   "linear-gradient(to left, black 26%, black 15%, transparent 90%)",
@@ -187,13 +129,27 @@ const ProjectDetails = ({
               }}
             />
             <div className="relative z-10">
-              <ModalTitle className="text-2xl font-bold">{name}</ModalTitle>
-              <ModalDescription className="text-sm">
-                {modalContent.role}
+            <Link href={href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              <ModalTitle className="flex items-center gap-2 w-full">
+                <Typography variant="h2" component="h2" className="text-zinc-900 font-bold">{name}</Typography>
+          
+                 <ArrowUpRight strokeWidth={2.5} className="inline-flex text-zinc-400" height={12} width={12} />
+               
+              </ModalTitle>
+              </Link>
+              <ModalDescription className="text-sm flex flex-col">
+                {role}
+                <div className="flex gap-2 flex-wrap mt-4">
+                  {filteredTechs.map((tech: any) => (
+                    <React.Fragment key={tech.label}>
+                      <Skill label={tech.label} icon={tech.icon} variant="sm" />
+                    </React.Fragment>
+                  ))}
+                </div>
               </ModalDescription>
             </div>
           </ModalHeader>
-          <div className="flex flex-col gap-6 px-8 py-6 overflow-y-auto max-h-[calc(90vh-200px)] [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-zinc-300 [&::-webkit-scrollbar-thumb]:rounded-full">
+          <div className="flex flex-col gap-6 px-8 py-6 overflow-y-auto max-h-[calc(90vh-100px)] [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-zinc-300 [&::-webkit-scrollbar-thumb]:rounded-full">
             <div className="flex flex-col gap-6 text-base text-zinc-900">
               {modalContent.responsibilities}
             </div>

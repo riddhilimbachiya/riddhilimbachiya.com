@@ -8,6 +8,7 @@ import Link from "next/link";
 import Typography from "@/components/general/typography";
 import Skill from "@/components/general/skill";
 import { JOURNEY_SKILLS } from "@/lib/data";
+import { ArrowUpRight } from "iconoir-react";
 
 const Journey = () => {
   const skills = JOURNEY_SKILLS;
@@ -75,7 +76,7 @@ const Journey = () => {
             href="#work"
             className="underline underline-offset-8 decoration-1 hover:decoration-2 cursor-pointer decoration-zinc-200 mb-2"
           >
-           You can peek at my work here<span className="text-2xl">👩🏼‍💻</span>
+      Here's what I've built <ArrowUpRight strokeWidth={2.5} className="inline-block ml-1 text-zinc-500" height={12} width={12}/>
           </Link>
 
           {/* Things I've built */}

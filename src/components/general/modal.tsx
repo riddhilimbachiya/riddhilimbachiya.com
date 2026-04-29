@@ -20,7 +20,7 @@ const ModalOverlay = React.forwardRef<
   <DialogPrimitive.Overlay
     ref={ref}
     className={twMerge(
-      'fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
+      'fixed inset-0 z-50 bg-black/60 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
       className
     )}
     {...props}
@@ -37,7 +37,7 @@ const ModalContent = React.forwardRef<
     <DialogPrimitive.Content
       ref={ref}
       className={twMerge(
-        'fixed left-[50%] top-0 z-50 flex flex-col w-full max-w-4xl translate-x-[-50%] mt-[5vh] bg-white shadow-2xl duration-300 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:slide-out-to-top-[4%] data-[state=open]:slide-in-from-top-[4%] rounded-2xl max-h-[90vh] [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-zinc-300 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:hover:bg-zinc-400',
+        'fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-50 flex flex-col w-full max-w-4xl bg-white shadow-2xl duration-300 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:slide-out-to-top-[4%] data-[state=open]:slide-in-from-top-[4%] rounded-2xl max-h-[90vh] [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-zinc-300 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:hover:bg-zinc-400',
         className
       )}
       {...props}>
