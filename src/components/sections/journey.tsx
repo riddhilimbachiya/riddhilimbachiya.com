@@ -76,7 +76,7 @@ const Journey = () => {
             href="#work"
             className="underline underline-offset-8 decoration-1 hover:decoration-2 cursor-pointer decoration-zinc-200 mb-2"
           >
-      Here's what I've built <ArrowUpRight strokeWidth={2.5} className="inline-block ml-1 text-zinc-500" height={12} width={12}/>
+      Here&apos;s what I&apos;ve built <ArrowUpRight strokeWidth={2.5} className="inline-block ml-1 text-zinc-500" height={12} width={12}/>
           </Link>
 
           {/* Things I've built */}

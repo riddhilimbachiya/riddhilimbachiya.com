@@ -62,13 +62,13 @@ const ProjectDetails = ({
   const ProjectCard = () => (
     <div className="cursor-pointer group flex flex-col gap-6"
     onClick={() => setOpen(true)}>
-      <div className="w-full h-[300px] rounded-2xl rounded-br-none relative overflow-hidden max-lg:hidden group-hover:scale-[1.02] transition-all duration-300">
+      <div className="w-full h-[300px] rounded-2xl rounded-br-none relative overflow-hidden group-hover:scale-[1.02] transition-all duration-300">
         <Image
           src={image}
           alt={name}
           fill
-          className="object-cover"
-          sizes="100vw"
+          className="object-cover object-top"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           loading="lazy"
         />
         
