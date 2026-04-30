@@ -509,7 +509,7 @@ export const PROJECTS = [
           Booking platform for businesses and their customers.
         </Typography>
         <Typography variant="body1">
-          Owned frontend and backend- built an admin portal for businesses to
+         Built an admin portal for businesses to
           manage services, slots, and customise their booking experience, and a
           customer booking app with a custom Calendly-style calendar,
           scheduling, and payment flows.
