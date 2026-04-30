@@ -327,7 +327,7 @@ export const PROJECTS = [
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">Core dashboard</span> - Fiskil's
+                <span className="font-semibold">Core dashboard</span> - Fiskil&apos;s
                 main console managing Data API and Data Holder products with
                 multi-team architecture, three user roles, Firebase auth with
                 MFA, multi-step onboarding, and Stripe payments.
@@ -488,7 +488,7 @@ export const PROJECTS = [
           <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
             <li>
               <span className="font-semibold">Website</span> - Built
-              Lantern's marketing website from scratch.
+              Lantern&apos;s marketing website from scratch.
             </li>
           </ul>
         </div>
@@ -576,7 +576,7 @@ export const PROJECTS = [
               </li>
               <li>
                 <span className="font-semibold">Payments</span> - Integrated
-                Acuity's scheduling APIs with custom payment logic and fallback
+                Acuity&apos;s scheduling APIs with custom payment logic and fallback
                 handling for unsupported beta API cases.
               </li>
               <li>
