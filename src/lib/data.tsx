@@ -260,6 +260,7 @@ export const PROJECTS = [
       "Tailwind Css",
       "Framer Motion",
       "Vercel AI SDK",
+      "TanStack",
     ],
     previewImage: IllustrationFiskil,
     isDescriptionOnLeft: false,
