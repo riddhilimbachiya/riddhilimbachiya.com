@@ -96,7 +96,7 @@ const ProjectDetails = ({
         <div
           className="underline underline-offset-8 decoration-1 hover:decoration-2 cursor-pointer decoration-zinc-200 mb-2"
         >
-          More details here
+          View more
           <ArrowUpRight
             strokeWidth={2.5}
             className="inline-block ml-1 text-zinc-500 group-hover:translate-x-1 transition-all duration-300"
