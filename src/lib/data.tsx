@@ -232,13 +232,15 @@ export const PROJECTS = [
     link: "Fiskil",
     description: (
       <div className="flex flex-col gap-3">
-        <Typography variant="body1">B2B fintech platform.</Typography>
         <Typography variant="body1">
-       From UX flows to code - built a RAG-powered AI assistants, multi-product multi-team dashboard with role-based access, customer apps & docs site per product, multi-region marketing site, and design system as a reusable npm package.
+          B2B fintech platform serving AU, UK, US & LATAM.
+        </Typography>
+        <Typography variant="body1">
+          From design to code - built RAG-powered AI assistant, B2B multi-product dashboard, customer permission and account apps per product, shared docs site, multi-region marketing site, and a design system shipped as an npm package.
         </Typography>
       </div>
     ),
-    role: "Senior Product Engineer",
+    role: "Senior Product Engineer (Design, Frontend, AI)",
     techs: [
       "Figma",
       "Next.js",
@@ -258,8 +260,10 @@ export const PROJECTS = [
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
                 <span className="font-semibold">RAG-powered assistant</span> -
-                Design & built real-time AI chat interface with
-                streaming responses, states, and smooth interactions alongside implementing a RAG pipeline for context-aware retrieval and responses.
+                Design & built real-time AI chat interface with streaming
+                responses, states, and smooth interactions alongside
+                implementing a RAG pipeline for context-aware retrieval and
+                responses.
               </li>
               <li>
                 <span className="font-semibold">Docs Assistant</span> -
@@ -297,9 +301,9 @@ export const PROJECTS = [
                 closely with the CEO.
               </li>
               <li>
-                <span className="font-semibold">UI & Animations</span> Design and code
-                responsive, pixel-perfect interfaces with micro-interactions,
-                 and animations that make every interaction
+                <span className="font-semibold">UI & Animations</span> Design
+                and code responsive, pixel-perfect interfaces with
+                micro-interactions, and animations that make every interaction
                 feel alive and effortless.
               </li>
             </ul>
@@ -311,10 +315,10 @@ export const PROJECTS = [
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">B2B Fintech platform</span> -
-                Multi-product dashboard with two products, multi-team
-                architecture, three-user types role-based access, Firebase auth
-                with MFA, multi-step onboarding, and Stripe payments.
+                <span className="font-semibold">Core dashboard</span> - Fiskil's
+                main console managing Data API and Data Holder products with
+                multi-team architecture, three user roles, Firebase auth with
+                MFA, multi-step onboarding, and Stripe payments.
               </li>
               {/* <li>
                 <span className="font-semibold">Core architecture</span> -
@@ -324,16 +328,15 @@ export const PROJECTS = [
                 code splitting across dozens of screens.
               </li> */}
               <li>
-                <span className="font-semibold">Customer-facing apps</span> -
-                Each product ships its own customer app with multi-step flows,
-                built inside a monorepo using shared logic and a reusable
-                component library.
+                <span className="font-semibold">Customer apps per product</span>{" "}
+                - Each product ships its own consent and account management app
+                for end users, built in a monorepo with shared.
               </li>
               <li>
                 <span className="font-semibold">Design system</span> -
                 Company-wide component library - tokens, patterns, and
-                components - shipped as a standalone package used across every
-                product. 30% faster dev time.
+                components - as a npm package used across every product. 30%
+                faster dev time.
               </li>
             </ul>
           </div>
@@ -488,7 +491,10 @@ export const PROJECTS = [
     ),
     techs: ["TypeScript", "Next.js", "Tailwind Css"],
     role: (
-      <Typography variant="body2" className="text-zinc-400 font-medium uppercase">
+      <Typography
+        variant="body2"
+        className="text-zinc-400 font-medium uppercase"
+      >
         <span>Full Stack Developer &nbsp;</span>
       </Typography>
     ),
