@@ -28,6 +28,7 @@ import LogoCursor from "/public/icons/icon-cursor.svg";
 import LogoShadcn from "/public/icons/icon-shadcn.svg";
 import LogoFramerMotion from "/public/icons/icon-framer-motion.svg";
 import LogoRAG from "/public/icons/icon-rag.svg";
+import LogoTanStack from "/public/icons/icon-tanstack.svg";
 
 import IllustrationFiskil from "/public/images/work/fiskil.png";
 import IllustrationLantern from "/public/images/work/lantern.png";
@@ -104,6 +105,10 @@ export const SKILLS = [
   {
     label: "Framer Motion",
     icon: LogoFramerMotion,
+  },
+  {
+    label: "TanStack",
+    icon: LogoTanStack,
   },
   {
     label: "Vercel",
@@ -197,6 +202,10 @@ export const JOURNEY_SKILLS = [
     icon: LogoStorybook,
   },
   {
+    label: "TanStack",
+    icon: LogoTanStack,
+  },
+  {
     label: "Vercel AI SDK",
     icon: LogoVercelAIElements,
   },
@@ -236,7 +245,10 @@ export const PROJECTS = [
           B2B fintech platform serving AU, UK, US & LATAM.
         </Typography>
         <Typography variant="body1">
-          From design to code - built RAG-powered AI assistant, B2B multi-product dashboard, customer permission and account apps per product, shared docs site, multi-region marketing site, and a design system shipped as an npm package.
+          From design to code - built RAG-powered AI assistant, B2B
+          multi-product dashboard, customer permission and account apps per
+          product, shared docs site, multi-region marketing site, and a design
+          system shipped as an npm package.
         </Typography>
       </div>
     ),
@@ -390,13 +402,13 @@ export const PROJECTS = [
       <div className="flex flex-col gap-3">
         <Typography variant="body1">Data-heavy B2B sales platform.</Typography>
         <Typography variant="body1">
-          Built dashboard with complex tables with rich cell layouts and charts
-          for large sales datasets, and an AI email composer to help sales teams
-          personalise outreach.
+        Built a complex data-heavy dashboard with
+        three user roles, rich interactive tables with virtualisation, and
+        charts, an AI email composer, and a workflow builder.
         </Typography>
       </div>
     ),
-    techs: ["TypeScript", "React", "Tailwind Css", "Framer Motion"],
+    techs: ["TypeScript", "React", "Tailwind Css", "Framer Motion", "TanStack"],
     role: "Frontend Developer & UI Lead",
     previewImage: IllustrationLantern,
     isDescriptionOnLeft: false,
@@ -404,70 +416,83 @@ export const PROJECTS = [
     modalContent: {
       responsibilities: (
         <React.Fragment>
-          <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">
-              Data-heavy B2B Platform
-            </h4>
-            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
-              <li>
-                <span className="font-semibold">
-                  Built Complex Table system
-                </span>{" "}
-                - TanStack Table + React Query with virtualization - cells
-                support inline editing, embedded charts, dropdown panels,
-                dynamic row actions, and bulk multi-select and more, turning
-                large datasets into a fully interactive workspace.
-              </li>
-              <li>
-                <span className="font-semibold">Data visualizations</span> -
-                complex charts via Recharts to give context to the data.
-              </li>
-            </ul>
-          </div>
+        <div className="flex flex-col gap-1">
+          <h4 className="font-bold text-base mb-1">
+            Data-Heavy Dashboard
+          </h4>
+          <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
+            <li>
+              <span className="font-semibold">Role-based views</span> -
+              Three user roles each with their own pages, navigation, and
+              access - with role-based routing, guards, and a credit system
+              that unlocks data for specific users.
+            </li>
+            <li>
+              <span className="font-semibold">Complex table system</span> -
+              Built with TanStack Table and React Query with virtualization
+              - cells support inline editing, embedded charts, dropdown
+              panels, dynamic row actions, and bulk multi-select, turning
+              large datasets into a fully interactive workspace.
+            </li>
+            <li>
+              <span className="font-semibold">Data visualizations</span> -
+              Built complex charts with Recharts to surface insights and
+              give context to large sales datasets.
+            </li>
+            <li>
+              <span className="font-semibold">Page architecture</span> -
+              Built complex UIs across dozens of pages, managing contexts
+              and logic to keep components clean, scalable, and maintainable.
+            </li>
+          </ul>
+        </div>
 
-          <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">
-              AI & Workflow Automation
-            </h4>
-            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
-              <li>
-                <span className="font-semibold">AI email composer</span> -
-                OpenAI-powered AI chat to personalise outreach emails at scale.
-              </li>
-              <li>
-                <span className="font-semibold">Workflow builder</span> - React
-                Flow based multi-step builder with branching logic and
-                conditional stages.
-              </li>
-            </ul>
-          </div>
+        <div className="flex flex-col gap-1">
+          <h4 className="font-bold text-base mb-1">
+            AI & Workflow Automation
+          </h4>
+          <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
+            <li>
+              <span className="font-semibold">AI email composer</span> -
+              Built an OpenAI-powered email composer that helps sales teams
+              personalise outreach at scale.
+            </li>
+            <li>
+              <span className="font-semibold">Workflow builder</span> -
+              Built a React Flow based multi-step workflow builder with
+              branching logic and conditional stages.
+            </li>
+          </ul>
+        </div>
 
-          <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">
-              Design System & Leadership
-            </h4>
-            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
-              <li>
-                <span className="font-semibold">Design system</span> - scalable
-                component library with variants tuned for data-heavy interfaces.
-              </li>
-              <li>
-                <span className="font-semibold">Team lead</span> - led 3 junior
-                devs as UI lead, hands-on with architecture and core components.
-              </li>
-            </ul>
-          </div>
+        <div className="flex flex-col gap-1">
+          <h4 className="font-bold text-base mb-1">
+            Design System & Leadership
+          </h4>
+          <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
+            <li>
+              <span className="font-semibold">Design system</span> -
+              Built a scalable component library with variants tuned for
+              data-heavy interfaces, used across the platform.
+            </li>
+            <li>
+              <span className="font-semibold">UI lead</span> - Led 3
+              junior developers - hands-on with architecture decisions,
+              core components, and code standards.
+            </li>
+          </ul>
+        </div>
 
-          <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">Marketing</h4>
-            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
-              <li>
-                <span className="font-semibold">Website</span> - built
-                Lantern&apos;s initial marketing website from scratch.
-              </li>
-            </ul>
-          </div>
-        </React.Fragment>
+        <div className="flex flex-col gap-1">
+          <h4 className="font-bold text-base mb-1">Marketing</h4>
+          <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
+            <li>
+              <span className="font-semibold">Website</span> - Built
+              Lantern's marketing website from scratch.
+            </li>
+          </ul>
+        </div>
+      </React.Fragment>
       ),
       challenges:
         "Handling and displaying large amounts of customer data efficiently while maintaining a smooth user experience required careful optimization and lazy loading strategies.",
@@ -481,15 +506,17 @@ export const PROJECTS = [
     description: (
       <div className="flex flex-col gap-3">
         <Typography variant="body1">
-          Pilates booking app with multi-tenant admin portal.
+          Booking platform for businesses and their customers.
         </Typography>
         <Typography variant="body1">
-          Owned everything - booking UX, custom calendar, payment flows, backend
-          integrations, and multi-business configuration.
+          Owned frontend and backend- built an admin portal for businesses to
+          manage services, slots, and customise their booking experience, and a
+          customer booking app with a custom Calendly-style calendar,
+          scheduling, and payment flows.
         </Typography>
       </div>
     ),
-    techs: ["TypeScript", "Next.js", "Tailwind Css"],
+    techs: ["TypeScript", "Next.js", "Tailwind CSS"],
     role: (
       <Typography
         variant="body2"
@@ -506,37 +533,56 @@ export const PROJECTS = [
         <React.Fragment>
           <div className="flex flex-col gap-1">
             <h4 className="font-bold text-base mb-1">
-              Admin & Multi-Tenant Platform
+              Multi-Tenant Admin Portal
             </h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">Multi-tenant</span> - built an
-                admin portal enabling multiple businesses to use the same
-                booking app with their own branding, settings, and
-                configurations.
+                <span className="font-semibold">Service management</span> -
+                Built service setup flows where businesses add their offerings -
+                name, description, pricing, and available slots - all powering
+                their customer-facing booking app.
+              </li>
+              <li>
+                <span className="font-semibold">Customer & bookings</span> -
+                Built dedicated screens to manage customers, view booking
+                history, and track all activity across the business.
+              </li>
+              <li>
+                <span className="font-semibold">Email automation</span> -
+                Businesses configure when emails go out - after booking,
+                rescheduling, cancellation, or as a slot reminder - with fully
+                customisable templates per business.
+              </li>
+              <li>
+                <span className="font-semibold">Branding</span> - Built
+                customisation settings for businesses to apply their own logo,
+                colors, and content to their booking app.
               </li>
             </ul>
           </div>
           <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">
-              End-User Booking Application
-            </h4>
+            <h4 className="font-bold text-base mb-1">End-User Booking App</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">Booking app</span> - full-stack
-                Pilates booking app using Next.js with a custom Calendly-style
-                calendar for selecting and booking time slots.
+                <span className="font-semibold">Custom calendar</span> - Built a
+                Calendly-style calendar from scratch - customers browse
+                services, pick a time slot, and book instantly with real-time
+                availability.
               </li>
               <li>
-                <span className="font-semibold">Payment flows</span> -
-                integrated Acuity&apos;s scheduling APIs and designed custom
-                payment flows with fallback logic for cases their beta APIs
-                didn&apos;t support.
+                <span className="font-semibold">Booking management</span> -
+                Built reschedule and cancel flows with live availability updates
+                and automatic email notifications.
               </li>
               <li>
-                <span className="font-semibold">End to end</span> - owned the
-                complete flow from booking UX and frontend logic to backend
-                integrations and data handling.
+                <span className="font-semibold">Payments</span> - Integrated
+                Acuity's scheduling APIs with custom payment logic and fallback
+                handling for unsupported beta API cases.
+              </li>
+              <li>
+                <span className="font-semibold">Full-stack ownership</span> -
+                Owned frontend and backend across both apps- UI, business logic,
+                API integrations, and data handling end to end.
               </li>
             </ul>
           </div>
@@ -550,12 +596,11 @@ export const PROJECTS = [
     description: (
       <div className="flex flex-col gap-3">
         <Typography variant="body1">
-          UK property renting and lending platform.
+          UK property renting platform for tenants, landlords, and agents.
         </Typography>
         <Typography variant="body1">
-          Built 3D house viewing, custom calendar, and media support - leading a
-          team of 8 to translate non-technical client requirements into product
-          decisions.
+          Led a team of 8 and owned the frontend - built an app for tenants, landlords, and agents with property listings, 3D viewing, appointment booking, agreements,
+          and payment.
         </Typography>
       </div>
     ),
@@ -565,7 +610,6 @@ export const PROJECTS = [
       "React",
       "Redux",
       "Tailwind Css",
-      "MUI",
       "Storybook",
       "Cypress",
     ],
@@ -575,36 +619,78 @@ export const PROJECTS = [
     modalContent: {
       responsibilities: (
         <React.Fragment>
-          <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">Product & Features</h4>
+                <div className="flex flex-col gap-1">
+            <h4 className="font-bold text-base mb-1">Project Ownership & Product Decisions</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">Product ownership</span> - led
-                end-to-end development using React and MUI, from initial
-                implementation to delivery.
+                <span className="font-semibold">Team leadership</span> - Led a
+                team of 8 developers - managing tasks, code quality, and
+                delivery end to end.
               </li>
               <li>
-                <span className="font-semibold">Interactive features</span> - 3D
-                house viewing, custom calendar integration, and media support
-                (photos and videos).
+                <span className="font-semibold">Client collaboration</span> - Worked
+                directly with the non-technical client to translate UK property
+                requirements into product features and technical decisions.
               </li>
               <li>
-                <span className="font-semibold">Storybook</span> - set up and
+                <span className="font-semibold">Storybook</span> - Set up and
                 maintained component documentation to ensure UI consistency
-                across the project.
+                across all three user apps.
               </li>
             </ul>
           </div>
           <div className="flex flex-col gap-1">
-            <h4 className="font-bold text-base mb-1">
-              Client Collaboration & Business Scope
-            </h4>
+            <h4 className="font-bold text-base mb-1">Tenant View</h4>
             <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
               <li>
-                <span className="font-semibold">Non-technical client</span> -
-                worked directly with the client, translating UK property renting
-                and lending requirements into practical product features and UX
-                decisions.
+                <span className="font-semibold">Property browsing</span> - Built
+                property listings with photos, videos, and 3D house viewing so
+                tenants can explore properties remotely.
+              </li>
+              <li>
+                <span className="font-semibold">Appointment booking</span> - Built
+                a custom calendar for tenants to book viewing slots with landlords
+                or agents directly.
+              </li>
+              <li>
+                <span className="font-semibold">Favourites</span> - Built
+                favouriting so tenants can save and revisit properties they&apos;re
+                interested in.
+              </li>
+              <li>
+                <span className="font-semibold">Agreement & payments</span> - Built
+                end-to-end rental agreement and payment flows so tenants can
+                sign and pay directly through the platform.
+              </li>
+            </ul>
+          </div>
+          <div className="flex flex-col gap-1">
+            <h4 className="font-bold text-base mb-1">Landlord View</h4>
+            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
+              <li>
+                <span className="font-semibold">Property management</span> - Built
+                property listing and management - landlords add their properties,
+                upload media, and manage availability.
+              </li>
+              <li>
+                <span className="font-semibold">Appointments</span> - Built
+                appointment management so landlords view and manage viewing
+                requests from interested tenants.
+              </li>
+              <li>
+                <span className="font-semibold">Tenant contact</span> - Built
+                contact flows so landlords can reach out to tenants showing
+                interest in their property.
+              </li>
+            </ul>
+          </div>
+          <div className="flex flex-col gap-1">
+            <h4 className="font-bold text-base mb-1">Agent View</h4>
+            <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
+              <li>
+                <span className="font-semibold">Broker flow</span> - Built agent
+                flows for third-party brokers to connect landlords and tenants
+                and manage their commission.
               </li>
             </ul>
           </div>
