@@ -234,9 +234,7 @@ export const PROJECTS = [
       <div className="flex flex-col gap-3">
         <Typography variant="body1">B2B fintech platform.</Typography>
         <Typography variant="body1">
-          From UX flows to code - built a RAG-powered AI assistant, complex
-          multi-product multi-team dashboard, a multi-region marketing site, and
-          a design system.
+       From UX flows to code - built a RAG-powered AI assistants, multi-product multi-team dashboard with role-based access, customer apps & docs site per product, multi-region marketing site, and design system as a reusable npm package.
         </Typography>
       </div>
     ),
