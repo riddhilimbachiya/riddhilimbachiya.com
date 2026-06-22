@@ -726,7 +726,7 @@ export const PERSONAL_PROJECTS = [
     ],
     previewImage: IllustrationChatInterfaces,
     isDescriptionOnLeft: false,
-    href: "https://aichats.dsystudio.xyz",
+    href: "https://chat-interface-marketing-git-main-riddhilimbachiyas-projects.vercel.app/",
     modalContent: {
       role: "Founder · 2024",
       responsibilities: (
@@ -804,7 +804,7 @@ export const PERSONAL_PROJECTS = [
     techs: ["TypeScript", "Next.js", "Tailwind Css", "Vercel"],
     previewImage: IllustrationDSy,
     isDescriptionOnLeft: false,
-    href: "https://dsystudio.xyz",
+    href: "https://dsy-git-main-riddhilimbachiyas-projects.vercel.app/",
     modalContent: {
       role: "Founder",
       responsibilities: (
