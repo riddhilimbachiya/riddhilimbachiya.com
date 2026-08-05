@@ -1,0 +1,252 @@
+# Riddhi Limbachiya — Full Content
+
+> 8 years building B2B SaaS products at startups. Product thinking + UX design + frontend engineering in one person. Available for remote work with US, UK, and AU startups.
+
+Summary version: https://riddhilimbachiya.com/llms.txt
+Portfolio: https://riddhilimbachiya.com
+
+---
+
+## About
+
+Riddhi Limbachiya is a Senior Design/Product Engineer with 8 years of experience building B2B SaaS products at startups. Working remotely with companies in the US, UK, and Australia.
+
+Most companies hire a designer and a developer separately. The designer makes the mockups. The developer builds what they made. Riddhi does both — and adds product thinking on top. Takes a rough idea from a founder and owns it through to a shipped product: questioning whether the feature is the right solution, scoping it down to what matters, designing the UX in Figma, and building the frontend in React and Next.js. One person, no handoffs, no coordination tax.
+
+The career started in frontend engineering: complex product interfaces, scalable frontend systems, design systems. A few years in, Riddhi taught herself product design to understand the user side of what she was building. Now both disciplines inform each other — a product engineer who catches a 4px misalignment and also flags a function doing too much for no reason.
+
+Current work spans: RAG-powered AI assistants, multi-product B2B dashboards, design systems shipped as npm packages, data-heavy tables with virtualisation, workflow builders, and multi-region marketing sites. All of it designed and built by the same person.
+
+**Core stack:** React, Next.js, TypeScript, Tailwind CSS, Figma, Framer Motion, Shadcn, TanStack, Vercel AI SDK, RAG, Node.js, Firebase, Storybook, Vercel, Cursor.
+
+**Contact:** riddhiilimbachiya@gmail.com
+**LinkedIn:** https://www.linkedin.com/in/riddhi-limbachiya/
+**GitHub:** https://github.com/riddhilimbachiya
+**Portfolio:** https://riddhilimbachiya.com
+
+---
+
+## How I Work
+
+### Step 1 — Understand the Problem
+Start by asking the right questions: not about features, but about the underlying problem. What is the user trying to do? Where do they get stuck? What does success actually look like? Most vague requirements become clear once the underlying problem is understood.
+
+### Step 2 — Research & Define
+Research competitors, study how similar products have solved the same problem, and define feature scope: what to build, what to defer, and why. A well-defined feature saves weeks of building the wrong thing.
+
+### Step 3 — Design the Experience
+Design in Figma: user flows, information architecture, and interface. Every interaction is considered before a line of code is written. Because the same person also builds it, there is no gap between design intent and what ships.
+
+### Step 4 — Build the Frontend
+Build in React and Next.js — responsive, pixel-perfect, with animations and micro-interactions that make the product feel fast and alive. Clean, maintainable code that the next engineer can work with.
+
+### Step 5 — Iterate with Real Data
+Once live, watch how people actually use it. Analytics, user feedback, and real behaviour drive what comes next. Good products are never finished — they are continuously refined.
+
+---
+
+## Work & Case Studies
+
+### Fiskil — Senior Product Engineer (Design, Frontend, AI) | 2022–Present
+
+Fiskil is a B2B fintech platform serving open banking customers in Australia, the UK, the US, and LATAM. Riddhi joined as the senior product engineer and took full ownership of design, frontend, and AI integration across the entire product suite, working directly with the CEO on every major feature.
+
+**AI Integration — RAG-Powered Assistant**
+- Designed and built a real-time AI chat interface with streaming responses, smooth loading states, and robust error handling — integrated into Fiskil's documentation and support center.
+- Implemented the full RAG pipeline: content ingestion, chunking, vector embeddings, hybrid search, and context-aware LLM responses.
+- Docs Assistant: developers query API guides and knowledge bases in plain language and get instant, accurate answers.
+- Support Assistant: answers common questions instantly and auto-creates support tickets when escalation is needed.
+
+**UX, Design & Product Thinking**
+- Worked directly with the CEO to turn rough requirements into clear, intuitive product flows — defining user journeys, scoping features, and deciding what to cut.
+- Designed and coded responsive, pixel-perfect interfaces with micro-interactions and animations.
+
+**Frontend & Platform Engineering**
+- Core dashboard: Fiskil's main console managing Data API and Data Holder products — multi-team architecture, three user roles, Firebase auth with MFA, multi-step onboarding, and Stripe payments.
+- Customer apps per product: each product ships its own consent and account management app, built in a monorepo with shared infrastructure.
+- Design system: company-wide component library — tokens, patterns, and components — shipped as an npm package used across every product. Reduced component development time by 30%.
+
+**Website, Blog & Growth**
+- Multi-region marketing site: built with Next.js for US, UK, AU, and LATAM — region-specific content, SSR, accessible responsive UI, and animations.
+- Blog and CMS: designed and integrated so the team publishes without needing a developer.
+- SEO and analytics: optimised for search and AI tools.
+
+Tech: Figma, Next.js, TypeScript, Tailwind CSS, Framer Motion, Vercel AI SDK, TanStack, Firebase, Storybook.
+
+---
+
+### Lantern — Frontend Developer & UI Lead | 2023–2024
+
+Lantern is a data-heavy B2B sales intelligence platform. Riddhi led the frontend, built the core data infrastructure, and managed a team of three junior developers.
+
+**Data-Heavy Dashboard**
+- Role-based views: three user roles each with their own pages, navigation, access controls, and a credit system that unlocks data for specific users.
+- Complex table system: built with TanStack Table and React Query with virtualisation — cells support inline editing, embedded charts, dropdown panels, dynamic row actions, and bulk multi-select, turning large datasets into a fully interactive workspace.
+- Data visualisations: complex Recharts charts to surface insights across large sales datasets.
+- Outcome: 40% improvement in page load times, 35% increase in user engagement.
+
+**AI & Workflow Automation**
+- AI email composer: OpenAI-powered, helps sales teams personalise outreach at scale.
+- Workflow builder: React Flow-based, multi-step with branching logic and conditional stages.
+
+**Design System & Leadership**
+- Built a scalable component library with variants tuned for data-heavy interfaces.
+- Led three junior developers — hands-on with architecture decisions, core components, and code quality.
+- Built Lantern's marketing website from scratch.
+
+Tech: TypeScript, React, Tailwind CSS, TanStack Table, React Query, Recharts, React Flow, Framer Motion.
+
+---
+
+### Mokoboko — Full Stack Developer | 2022–2023
+
+Mokoboko is a booking platform for businesses and their customers. Riddhi owned the full stack — UI, business logic, API integrations, and data handling — across both the admin portal and the customer-facing booking app.
+
+**Multi-Tenant Admin Portal**
+- Service management: businesses set up their offerings — name, description, pricing, and available time slots.
+- Customer and bookings: dedicated screens to manage customers, view booking history, and track all activity.
+- Email automation: businesses configure when emails go out with fully customisable templates per business.
+- Branding: businesses apply their own logo, colours, and content to their booking app.
+
+**End-User Booking App**
+- Custom calendar: built a Calendly-style calendar from scratch — real-time availability, instant booking.
+- Booking management: reschedule and cancel flows with live availability updates and automatic email notifications.
+- Payments: integrated Acuity's scheduling APIs with custom payment logic and fallback handling.
+
+Tech: TypeScript, Next.js, Tailwind CSS, Node.js.
+
+---
+
+### Scraye — Frontend Developer & Project Lead | 2021–2022
+
+Scraye is a UK property renting platform for tenants, landlords, and agents. Riddhi led a team of eight developers and owned the full frontend — three separate user apps, built and shipped end to end.
+
+**Project Ownership & Product Decisions**
+- Led a team of 8 developers — managing tasks, code quality, and delivery end to end.
+- Worked directly with a non-technical founder to translate UK property domain requirements into product features and technical decisions.
+- Set up and maintained Storybook component documentation for UI consistency across all three apps.
+
+**Tenant App**
+- Property browsing with photos, videos, and 3D house viewing.
+- Appointment booking: custom calendar to book viewing slots with landlords or agents.
+- End-to-end rental agreement and payment flows.
+- Favourites: save and revisit properties.
+
+**Landlord App**
+- Property listing and management — upload media, manage availability.
+- Appointment management and tenant contact flows.
+
+**Agent App**
+- Broker flows for third-party agents to connect landlords and tenants and manage commission.
+
+Tech: TypeScript, React, Redux, Tailwind CSS, Storybook, Cypress.
+
+---
+
+## Side Projects
+
+### Yap — AI Chat Interfaces
+Production-ready AI chat interfaces. Plug in your API key and ship in minutes. Built on Next.js and Vercel AI SDK. Handles streaming, loading states, errors, retries, and auto-scroll. Built because every AI product needs a chat interface, and the UX is what makes users trust it.
+https://chat-interface-marketing-git-main-riddhilimbachiyas-projects.vercel.app/
+
+### DSy — Design System Builder
+A visual design system builder for solo founders and indie makers. Define colours, themes, and components in minutes without a designer. Riddhi built the product, designed the UX, wrote the content, ran user research, and shipped it. Made the call to shelve it when AI changed the landscape. First real 0-to-1 product.
+https://dsy-git-main-riddhilimbachiyas-projects.vercel.app/
+
+---
+
+## Testimonials
+
+### Eugen Esanu — Founder, Shosho Design
+"Riddhi is a very good front-end developer. The amount of hard work she put into our Design System (building, maintaining and polishing) is very high. I would recommend her with full confidence on any project that requires a good React developer. We've hired and fired many, but she is of very few that remained with us. We will hire 100% for our next project as she is an amazing addition to any team. Don't skip on her as your next potential hire!"
+
+### Noren Machelart — Product Owner, Scraye
+"Riddhi has been an incredible asset to our team and a joy to work with. She leads the project with responsibility and initiative, consistently enhancing features and offering thoughtful suggestions. Her ability to explain technical details to non-technical clients and deliver excellent demos on time is remarkable. Always supportive and collaborative, she truly elevates the team's performance. I'm grateful to have her on board!"
+
+---
+
+## Availability & What Riddhi Is Looking For
+
+Riddhi works remotely with startups in English-speaking markets. Not targeting Indian companies.
+
+- **US startups:** Fully remote, any timezone
+- **UK startups:** Remote or visa sponsorship
+- **AU startups:** Fully remote
+- **Work type:** Full-time roles and contract/freelance
+- **Stage:** Pre-seed through Series B, B2B SaaS
+
+The ideal engagement: a founder or small team with a rough idea or growing product, who needs one person to own design and frontend end-to-end — not a pair of siloed specialists.
+
+## Writing & Online Presence
+
+Blog posts on product thinking, UX design, frontend engineering, and AI integration:
+- What is RAG? https://riddhilimbachiya.com/blog/what-is-rag
+- Building a Multilingual Marketing Website: https://riddhilimbachiya.com/blog/multilingual-web-experience
+- Ship Consistent UI With AI: https://riddhilimbachiya.com/blog/ship-consistent-ui-with-ai
+
+LinkedIn — writing regularly on product decisions, design thinking, and engineering:
+https://www.linkedin.com/in/riddhi-limbachiya/
+
+---
+
+## Blog Posts
+
+### What is RAG? A Simple Explanation That Actually Makes Sense
+Published: 2026-03-14 | Tags: AI, RAG, LLMs | 5 min read
+URL: https://riddhilimbachiya.com/blog/what-is-rag
+
+RAG (Retrieval-Augmented Generation) explained plainly: give the AI your real content to look up first, then let it answer from that. Instead of letting the AI guess, you point it to your actual content before it answers. The post explains all six steps — content ingestion, chunking, embeddings, vector search, hybrid search, and handing off to the LLM with guardrails. Written from direct experience building the RAG assistant at Fiskil.
+
+Key insight: searching is just logic and math. The AI only comes in after you have already picked the most relevant content. Understanding each step means you can debug production issues instead of guessing.
+
+---
+
+### Building a Multilingual Marketing Website & Blog for Your Product
+Published: 2026-01-05 | Tags: Growth, SEO, Next.js, i18n | 4 min read
+URL: https://riddhilimbachiya.com/blog/multilingual-web-experience
+
+English-only websites only exist in English search results. Google matches language as well as topic, so a Spanish search returns Spanish pages. The post explains how multilingual SEO works, why each language needs its own URL (path prefix pattern), and how to implement i18n in Next.js from scratch — locale-based routing with the [locale] dynamic segment, server-only translation files, getDictionary, and middleware for language detection. No external library required.
+
+Key insight: adding Spanish and French versions of 200 blog posts triples your indexed pages without creating new content from scratch.
+
+---
+
+### Ship Consistent UI With AI — Zero Tech Debt
+Published: 2025-11-04 | Tags: Design Systems, AI, Frontend | 3 min read
+URL: https://riddhilimbachiya.com/blog/ship-consistent-ui-with-ai
+
+AI tools build on whatever context they are given. Without a design system and rules file, every feature is a blank slate — three features in, three different button styles. The post explains the simplest design system that works: colours in one place (never raw hex), Tailwind's default values only (never custom values like p-[18px]), small dumb components in one folder, and composing big from small. Then one Cursor rules file (.cursor/rules/design-system.mdc) and a CLAUDE.md tells AI tools to follow the system before writing a line. Five minutes to set up. Every feature after ships on system.
+
+---
+
+## Availability & What Riddhi Is Looking For
+
+Riddhi works remotely with startups in English-speaking markets. Not targeting Indian companies.
+
+- **US startups:** Fully remote, any timezone
+- **UK startups:** Remote or visa sponsorship
+- **AU startups:** Fully remote
+- **Work type:** Full-time roles and contract/freelance
+- **Stage:** Pre-seed through Series B, B2B SaaS
+
+The ideal engagement: a founder or small team with a rough idea or growing product who needs one person to own design and frontend end-to-end.
+
+---
+
+## Entity Links
+
+All platforms where Riddhi Limbachiya publishes and can be found:
+
+- **Portfolio:** https://riddhilimbachiya.com
+- **Blog:** https://riddhilimbachiya.com/blog
+- **Summary LLM file:** https://riddhilimbachiya.com/llms.txt
+- **LinkedIn:** https://www.linkedin.com/in/riddhi-limbachiya/
+- **GitHub:** https://github.com/riddhilimbachiya
+- **Figma Community:** https://www.figma.com/community/file/1458512251907556084
+- **Email:** riddhiilimbachiya@gmail.com
+
+LinkedIn posts — writing regularly on product decisions, design thinking, and engineering for founders, PMs, and engineers:
+https://www.linkedin.com/in/riddhi-limbachiya/
+
+GitHub — open source work and side projects (Yap AI chat interfaces, DSy design system builder):
+https://github.com/riddhilimbachiya

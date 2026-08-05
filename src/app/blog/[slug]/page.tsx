@@ -82,17 +82,31 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const post = getBlogBySlug(params.slug);
   if (!post) return { title: 'Post Not Found' };
 
+  const canonicalUrl = `https://riddhilimbachiya.com/blog/${params.slug}`;
+
   return {
     title: `${post.frontmatter.title} | Riddhi Limbachiya`,
     description: post.frontmatter.description,
+    alternates: { canonical: canonicalUrl },
     openGraph: {
       title: post.frontmatter.title,
       description: post.frontmatter.description,
       type: 'article',
+      url: canonicalUrl,
       publishedTime: post.frontmatter.date,
+      authors: ['Riddhi Limbachiya'],
       images: post.frontmatter.coverImage
         ? [{ url: post.frontmatter.coverImage }]
-        : [],
+        : [{ url: '/images/open-graph-riddhi.png', width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.frontmatter.title,
+      description: post.frontmatter.description,
+      creator: '@limbachiyariddh',
+      images: post.frontmatter.coverImage
+        ? [post.frontmatter.coverImage]
+        : ['/images/open-graph-riddhi.png'],
     },
   };
 }
@@ -110,8 +124,37 @@ export default function BlogPostPage({ params }: PageProps) {
   const post = getBlogBySlug(params.slug);
   if (!post) notFound();
 
+  const blogPostingJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.frontmatter.title,
+    description: post.frontmatter.description,
+    datePublished: post.frontmatter.date,
+    dateModified: post.frontmatter.date,
+    author: {
+      '@type': 'Person',
+      name: 'Riddhi Limbachiya',
+      url: 'https://riddhilimbachiya.com',
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Riddhi Limbachiya',
+      url: 'https://riddhilimbachiya.com',
+    },
+    url: `https://riddhilimbachiya.com/blog/${params.slug}`,
+    keywords: post.frontmatter.tags.join(', '),
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://riddhilimbachiya.com/blog/${params.slug}`,
+    },
+  };
+
   return (
     <div className="flex flex-col items-center w-full">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }}
+      />
       <div className="w-full max-w-[780px] mx-auto px-6 max-lg:px-4">
         <Link href="/blog">
           <Typography

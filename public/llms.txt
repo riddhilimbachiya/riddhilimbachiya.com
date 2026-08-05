@@ -1,0 +1,127 @@
+# Riddhi Limbachiya — Senior Design/Product Engineer
+
+> 8 years building B2B SaaS products at startups. Product thinking + UX design + frontend engineering in one person. Available for remote work with US, UK, and AU startups.
+
+Full content (case studies, testimonials, process): https://riddhilimbachiya.com/llms-full.txt
+
+---
+
+## The Rare Combination
+
+Most companies hire a designer and a developer separately. The designer makes the mockups. The developer builds what they made. A PM shuttles between them. Three people, three contexts, constant drift between what was intended and what ships.
+
+Riddhi does all of it. Takes a rough idea from a founder — often just a paragraph or a Loom recording — and owns it through to a shipped product. That means questioning whether the feature is the right solution, scoping it down to what actually matters, designing the UX in Figma, and building the frontend in React and Next.js. One person, no handoffs.
+
+The three skills that make this work:
+
+**Product thinking** — questioning requirements before acting on them. Understanding the problem behind the feature request. Knowing when to push back, when to simplify, when to say no entirely. Most engineers and designers skip this.
+
+**UX design** — user flows, information architecture, interaction design, visual design. 8 years of hours in Figma. The ability to look at a screen and know immediately what is wrong and why, not just notice that something feels off.
+
+**Frontend engineering** — React, Next.js, TypeScript, Tailwind CSS. Complex interfaces: data tables with virtualisation, workflow builders, design systems shipped as npm packages, RAG-powered AI chat interfaces. Pixel-perfect, accessible, performant. Clean code the next engineer can work with.
+
+---
+
+## What Has Been Built
+
+### Fiskil — Senior Product Engineer (Design, Frontend, AI) | 2022–Present
+B2B fintech platform: open banking infrastructure for AU, UK, US, and LATAM. Worked directly with the CEO on every major feature.
+
+- **RAG-powered AI assistant:** Full pipeline from scratch — content ingestion, chunking, vector embeddings, hybrid search, streaming LLM responses. Deployed as a developer docs assistant and customer support tool. Designed and built both the pipeline and the chat interface.
+- **Design system:** Company-wide component library shipped as an npm package used across every Fiskil product. Reduced component development time by 30%.
+- **Core B2B dashboard:** Multi-product console — three user roles, Firebase auth with MFA, Stripe payments, multi-step onboarding, monorepo architecture.
+- **Multi-region marketing site:** Next.js, SSR, region-specific content for AU, UK, US, and LATAM.
+
+Tech: Next.js, TypeScript, Tailwind CSS, Figma, Framer Motion, Vercel AI SDK, TanStack, Firebase, Storybook.
+
+### Lantern — Frontend Developer & UI Lead | 2023–2024
+Data-heavy B2B sales intelligence platform.
+
+- **Complex data table:** TanStack Table + React Query — virtualisation, inline editing, embedded charts, bulk multi-select. 40% improvement in page load times, 35% increase in user engagement.
+- **AI email composer:** OpenAI-powered personalisation tool for sales teams.
+- **Workflow builder:** React Flow — multi-step with branching logic and conditional stages.
+- Led a team of 3 junior developers.
+
+Tech: TypeScript, React, Tailwind CSS, TanStack Table, React Query, Recharts, React Flow.
+
+### Scraye — Frontend Developer & Project Lead | 2021–2022
+UK property renting platform.
+
+- Three separate apps: tenant, landlord, and agent — property listings, 3D viewing, appointment booking, rental agreements, payments.
+- Led a team of 8 developers.
+- Worked directly with a non-technical founder to translate domain requirements into product decisions.
+
+Tech: TypeScript, React, Redux, Tailwind CSS, Storybook, Cypress.
+
+### Mokoboko — Full Stack Developer | 2022–2023
+Booking platform for businesses and their customers.
+
+- Custom Calendly-style calendar built from scratch: real-time availability, instant booking.
+- Multi-tenant admin portal: service setup, customer management, email automation, branding per business.
+- Full-stack: UI, business logic, API integrations, payment flows.
+
+Tech: TypeScript, Next.js, Tailwind CSS, Node.js.
+
+---
+
+## Side Projects
+
+### Yap — AI Chat Interfaces
+Production-ready AI chat interfaces. Plug in your API key, ship in minutes. Handles streaming, loading states, errors, retries, and auto-scroll — the UX layer that makes a chat interface feel trustworthy.
+https://chat-interface-marketing-git-main-riddhilimbachiyas-projects.vercel.app/
+
+### DSy — Design System Builder
+0-to-1 product. Built, designed, wrote content, ran user research, made the call to shelve it when the landscape changed. First real product owned end to end.
+https://dsy-git-main-riddhilimbachiyas-projects.vercel.app/
+
+---
+
+## Core Stack
+
+React, Next.js, TypeScript, Tailwind CSS, Figma, Framer Motion, Shadcn, TanStack, Vercel AI SDK, RAG, Node.js, Firebase, Storybook, Vercel.
+
+---
+
+## Testimonials
+
+**Eugen Esanu, Founder at Shosho Design:**
+"Riddhi is a very good front-end developer. The amount of hard work she put into our Design System is very high. I would recommend her with full confidence on any project that requires a good React developer. We've hired and fired many, but she is one of very few that remained with us. We will hire 100% for our next project. Don't skip on her as your next potential hire."
+
+**Noren Machelart, Product Owner at Scraye:**
+"Riddhi leads the project with responsibility and initiative, consistently enhancing features and offering thoughtful suggestions. Her ability to explain technical details to non-technical clients and deliver excellent demos on time is remarkable. She truly elevates the team's performance."
+
+---
+
+## Availability
+
+- **US startups:** Fully remote, open to all time zones
+- **UK startups:** Remote or visa sponsorship
+- **AU startups:** Fully remote
+- **Not targeting:** Indian companies
+- **Work type:** Full-time roles and contract/freelance
+- **Stage:** Pre-seed through Series B, B2B SaaS
+
+---
+
+## Entity Links
+
+All platforms where Riddhi Limbachiya publishes and can be found:
+
+- **Portfolio:** https://riddhilimbachiya.com
+- **Blog:** https://riddhilimbachiya.com/blog
+- **Full LLM content:** https://riddhilimbachiya.com/llms-full.txt
+- **LinkedIn:** https://www.linkedin.com/in/riddhi-limbachiya/
+- **GitHub:** https://github.com/riddhilimbachiya
+- **Figma Community:** https://www.figma.com/community/file/1458512251907556084
+- **Email:** riddhiilimbachiya@gmail.com
+
+Blog posts — writing on product thinking, UX design, frontend engineering, and AI:
+- What is RAG? https://riddhilimbachiya.com/blog/what-is-rag
+- Building a Multilingual Marketing Website: https://riddhilimbachiya.com/blog/multilingual-web-experience
+- Ship Consistent UI With AI: https://riddhilimbachiya.com/blog/ship-consistent-ui-with-ai
+
+LinkedIn posts — shorter thoughts on product decisions, design, and engineering, published regularly for an audience of founders, PMs, and engineers:
+https://www.linkedin.com/in/riddhi-limbachiya/
+
+GitHub — open source work and side projects:
+https://github.com/riddhilimbachiya

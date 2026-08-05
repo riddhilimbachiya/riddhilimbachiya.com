@@ -1,6 +1,21 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 
 import { ArrowLeft } from 'iconoir-react';
+
+export const metadata: Metadata = {
+  title: 'Beyond the Bio | Riddhi Limbachiya — Senior Design/Product Engineer',
+  description:
+    'The person behind the product work. 8 years in B2B SaaS startups, self-taught designer, frontend engineer, and product thinker. One person who owns the full loop — design, code, and the decisions in between.',
+  alternates: { canonical: 'https://riddhilimbachiya.com/beyond-bio' },
+  openGraph: {
+    title: 'Beyond the Bio | Riddhi Limbachiya — Senior Design/Product Engineer',
+    description:
+      'The person behind the product work. 8 years in B2B SaaS startups, self-taught designer, frontend engineer, and product thinker. One person who owns the full loop — design, code, and the decisions in between.',
+    url: 'https://riddhilimbachiya.com/beyond-bio',
+    images: [{ url: '/images/open-graph-riddhi.png', width: 1200, height: 630, alt: 'Riddhi Limbachiya – Senior Design/Product Engineer' }],
+  },
+};
 
 import Riddhi from '/public/images/riddhi-beyond-bio.png';
 import Footer from '@/components/layout/footer';

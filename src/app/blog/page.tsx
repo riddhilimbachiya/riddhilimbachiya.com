@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { getAllBlogs } from '@/lib/blog';
 import Typography from '@/components/general/typography';
 import Badge from '@/components/general/badge';
@@ -5,10 +6,19 @@ import Footer from '@/components/layout/footer';
 import Link from 'next/link';
 import BlogCover from '@/components/blog/blog-cover';
 import { ArrowRight } from 'iconoir-react';
-export const metadata = {
+
+export const metadata: Metadata = {
   title: 'Blog | Riddhi Limbachiya',
   description:
-    'Thoughts on frontend engineering, design systems, AI interfaces, and building products from 0 to 1.',
+    'Writing on product thinking, UX design, frontend engineering, and AI integration — from 8 years building B2B SaaS products at startups.',
+  alternates: { canonical: 'https://riddhilimbachiya.com/blog' },
+  openGraph: {
+    title: 'Blog | Riddhi Limbachiya',
+    description:
+      'Writing on product thinking, UX design, frontend engineering, and AI integration — from 8 years building B2B SaaS products at startups.',
+    url: 'https://riddhilimbachiya.com/blog',
+    images: [{ url: '/images/open-graph-riddhi.png', width: 1200, height: 630, alt: 'Riddhi Limbachiya – Senior Design/Product Engineer' }],
+  },
 };
 
 function formatDate(dateString: string): string {
@@ -32,9 +42,19 @@ export default function BlogPage() {
           <Typography
             variant="body1"
             className="text-zinc-500 text-lg">
-            Thoughts on UX, frontend engineering, AI integration and building
-            products.
+            Writing on product thinking, UX design, frontend engineering, and AI integration — from 8 years building B2B SaaS products at startups.
           </Typography>
+          <p className="text-sm text-zinc-400 mt-3">
+            Also sharing shorter thoughts on{' '}
+            <Link
+              href="https://www.linkedin.com/in/riddhi-limbachiya/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-600 underline underline-offset-4 decoration-zinc-300 hover:text-zinc-900 hover:decoration-zinc-500 transition-colors">
+              LinkedIn
+            </Link>
+            .
+          </p>
         </div>
 
         {posts.length === 0 ? (
