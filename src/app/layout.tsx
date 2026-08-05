@@ -53,6 +53,9 @@ export const metadata: Metadata = {
     images: ['/images/open-graph-riddhi.png'],
     creator: '@limbachiyariddh',
   },
+  verification: {
+    google: 'nerboedeqbEdJKnC4Hgc-ukgx_iZg_uHUAZsrsVSDng',
+  },
   other: {
     'theme-color': '#000000',
   },
