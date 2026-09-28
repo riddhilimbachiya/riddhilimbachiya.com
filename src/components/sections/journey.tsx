@@ -15,7 +15,7 @@ const STEPS = [
   {
     num: "01",
     label: "Plan the feature",
-    desc: "I take the vague brief, and turn it into a clear feature plan",
+    desc: "I take the vague brief, and turn it into a clear feature plan around users and business",
     accent: "#fb923c", // orange
   },
   {
@@ -62,7 +62,7 @@ const Journey = () => {
           >
             <Typography variant="body1">
               I design and build products. 8 years in startups, mostly B2B SaaS
-              - started as an engineer, self-taught design 5 years back.
+              - started as an engineer, self-taught product design 5 years back.
             </Typography>
             <Typography variant="body1">
               Somewhere along the way, I ended up being the product owner, the
@@ -73,7 +73,7 @@ const Journey = () => {
 
           {/* steps */}
           <div className="flex flex-col">
-            <Typography variant="body1" className="w-full mb-4">
+            <Typography variant="body1" className="w-full mb-2">
               Heres how
             </Typography>
 
