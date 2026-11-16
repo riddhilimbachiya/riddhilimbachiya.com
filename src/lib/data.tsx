@@ -64,6 +64,10 @@ export const NAV_LINKS = [
     href: "#what-i-do",
   },
   {
+    children: "How I Help",
+    href: "#how-i-help",
+  },
+  {
     children: "Work",
     href: "#work",
   },
@@ -235,6 +239,29 @@ export const JOURNEY_SKILLS = [
   },
 ];
 
+export const HOW_I_HELP_FLOW = [
+  {
+    stage: "You give me the idea",
+    line: "Rough, vague, half-baked. That's fine.",
+    illustration: "idea",
+  },
+  {
+    stage: "I figure out what to build",
+    line: "Ask questions, talk to users, decide what's actually worth making.",
+    illustration: "decide",
+  },
+  {
+    stage: "I design and build it",
+    line: "Real screens, real code. No handoff, no drift.",
+    illustration: "build",
+  },
+  {
+    stage: "It ships",
+    line: "A product people understand and come back to.",
+    illustration: "ship",
+  },
+];
+
 export const PROJECTS = [
   {
     name: "Fiskil",
@@ -283,11 +310,11 @@ export const PROJECTS = [
                 Developers query product docs, API guides, and knowledge bases
                 in plain language and get instant answers.
               </li>
-              <li>
+              {/* <li>
                 <span className="font-semibold">Support Assistant</span> -
                 Answers common questions instantly and auto-creates support
                 tickets when needed.
-              </li>
+              </li> */}
               <li>
                 Currently in internal use.{" "}
                 <Link
