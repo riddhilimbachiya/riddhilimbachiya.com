@@ -47,7 +47,7 @@ const Journey = () => {
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
     >
-      <div className="flex max-w-3xl w-full py-24 px-4 flex-col gap-12 max-md:py-16">
+      <div className="flex max-w-3xl w-full py-24 px-4 flex-col gap-12 max-md:py-16" id="how-i-help">
         <Typography variant="h2" className="uppercase text-center w-full">
           What I Bring to the Table
         </Typography>
