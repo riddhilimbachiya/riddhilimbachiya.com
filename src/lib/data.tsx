@@ -59,10 +59,10 @@ import Typography from "@/components/general/typography";
 import Link from "next/link";
 
 export const NAV_LINKS = [
-  {
-    children: "What I Do",
-    href: "#what-i-do",
-  },
+  // {
+  //   children: "What I Do",
+  //   href: "#what-i-do",
+  // },
   {
     children: "How I Help",
     href: "#how-i-help",
